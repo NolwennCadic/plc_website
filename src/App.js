@@ -1,24 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import NavbarCustom from './component/NavbarCustom';
+import FormationCard from './component/FormationCard';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './component/HomePage';
+import CustomFormation from './component/CustomFormation';
+import FormationsCatalog from './component/FormationsCatalogue';
+import FormationDescription from './component/FormationDescription';
+
 
 function App() {
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavbarCustom />
+
+      <Routes>
+        <Route exact path='/' element={<HomePage />} />
+        <Route path='/formationsCatalogue' element={<FormationsCatalog />} />
+        <Route path='/formationDescription' element={<FormationDescription />} />
+        <Route path='/customFormation' element={<CustomFormation />} />
+      </Routes>
     </div>
+    
   );
 }
 
