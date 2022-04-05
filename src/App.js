@@ -9,6 +9,7 @@ import HomePage from './component/HomePage';
 import CustomFormation from './component/CustomFormation';
 import FormationsCatalog from './component/FormationsCatalogue';
 import FormationDescription from './component/FormationDescription';
+import Menu from './component/Menu';
 
 
 function App() {
@@ -22,9 +23,10 @@ function App() {
         <Route path='/formationsCatalogue' element={<FormationsCatalog />} />
         <Route path='/formationDescription' element={<FormationDescription />} />
         <Route path='/customFormation' element={<CustomFormation />} />
+        <Route path='/menu' element={<Menu />} />
       </Routes>
     </div>
-    
+
   );
 }
 
