@@ -5,6 +5,8 @@ import MenuCard from "./MenuCard";
 import formationImage from "../images/formation.png";
 import equipeImage from "../images/equipe.png";
 import missionImage from "../images/mission.png";
+import Formation from "./formationSide/Formation";
+import Equipe from "./formationSide/Equipe";
 
 const menuList = [
     "Formation",
@@ -23,18 +25,24 @@ class Menu extends React.Component {
             <>
                 <div
                     className="bg"
+                    style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        gap: "5vw"
+                    }}
                 >
-                    <div style={{ display: "flex", alignContent: "center", justifyContent: "center", gap: "10px" }}>
-                        {
-                            menuList.map((item, index) => {
-                                return (
-                                    <div key={index + "div"} style={{ width: "10vw" }}>
-                                        <MenuCard key={index + "Card"} title={item} image={mapMap[item.toLocaleLowerCase()][0]} />
-                                    </div>
-                                )
-                            })}
-                    </div>
+                    {
+                        menuList.map((item, index) => {
+                            return (
+                                <div key={index + "div"}>
+                                    <MenuCard key={index + "Card"} title={item} image={mapMap[item.toLocaleLowerCase()][0]} />
+                                </div>
+                            )
+                        })}
                 </div>
+                <Formation/>
+                <Equipe/>
             </>
         )
     }

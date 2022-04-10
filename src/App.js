@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './component/HomePage';
-import CustomFormation from './component/CustomFormation';
+import CustomFormation from './component/formationSide/CustomFormation';
 import FormationsCatalog from './component/FormationsCatalogue';
 import FormationDescription from './component/FormationDescription';
 import Menu from './component/Menu';
