@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
+import logo from "../images/logo2.png";
 
 const navigationItems = {
     cabinet: ["Presentation", "Equipe", "Missions"],
@@ -31,7 +32,13 @@ class NavbarCustom extends React.Component {
             <>
                 <Navbar bg="light" expand="lg">
                     <Container>
-                        <Navbar.Brand href="/">PLC</Navbar.Brand>
+                        <Navbar.Brand href="/">
+                            <img
+                                src={logo}
+                                style={{ width: "100px" }}
+                                alt={"logo PLC"}
+                            />
+                        </Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         {/* <Navbar.Collapse id="basic-navbar-nav"> */}
                         <Nav className="me-auto">
