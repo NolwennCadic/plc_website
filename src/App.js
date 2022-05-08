@@ -26,7 +26,6 @@ function App() {
         <Route path='/menu' element={<Menu />} />
       </Routes>
     </div>
-
   );
 }
 

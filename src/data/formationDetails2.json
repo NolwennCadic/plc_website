@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Vérifier l'équilibre du bilan",
+        "category": "compta",
+        "shortDescription": "Formation nécessitant des notions de comptabilité",
+        "pathToImage": "../images/compta.jpeg",
+        "pathToPdf": "../pdf/Vérifier l'équilibre du bilan.pdf"
+    }
+]

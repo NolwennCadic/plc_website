@@ -10,11 +10,14 @@ class FormationCard extends React.Component {
                 <Card.Img variant="top" src={comptaImage} />
                 <Card.Body>
 
-                <Card.Title>Formation comptabilité niveau 1</Card.Title>
-                <Card.Text>
-                    Apprendre les bases de la comptabilité
-                </Card.Text>
-                <Button href="/formationDescription">En savoir plus</Button>
+                    <Card.Title>Formation comptabilité niveau 1</Card.Title>
+                    <Card.Text>
+                        Apprendre les bases de la comptabilité
+                    </Card.Text>
+                    {/* <Button href="/formationDescription">En savoir plus</Button> */}
+                    <a href="../pdf/formation1.pdf" download>
+                        Download File
+                    </a>
                 </Card.Body>
             </Card>
         )
