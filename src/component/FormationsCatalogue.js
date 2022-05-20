@@ -1,6 +1,5 @@
 import React from "react";
 import FormationCard from "./FormationCard";
-import formationList from "../data/formationDetails.json";
 
 class FormationsCatalog extends React.Component {
 
@@ -9,7 +8,7 @@ class FormationsCatalog extends React.Component {
             <FormationCard />
         );
     }
-    
+
 }
 
 export default FormationsCatalog;

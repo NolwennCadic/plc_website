@@ -43,7 +43,7 @@ class Equipe extends React.Component {
                     </div>
                     {/**Right */}
                     {/* <Image src={sabineImage} style={{ width: "20%", borderRadius: "5em" }} /> */}
-                    <img src={require(`../../images/sabine.jpg`)} style={{ width: "15vw", borderRadius: "5em" }} />
+                    <img src={require(`../../images/sabine.jpg`)} style={{ width: "15vw", borderRadius: "5em" }} alt={team[0].name}/>
                 </div>
             </div>
         )
