@@ -3,7 +3,14 @@
         "name": "Vérifier l'équilibre du bilan",
         "category": "compta",
         "shortDescription": "Formation nécessitant des notions de comptabilité",
-        "pathToImage": "../images/compta.jpeg",
-        "pathToPdf": "../pdf/Vérifier l'équilibre du bilan.pdf"
+        "image": "compta",
+        "id": 1
+    },
+    {
+        "name": "Analyser et exploiter le compte de résultat",
+        "category": "compta",
+        "shortDescription": "Formation nécessitant des notions de comptabilité",
+        "image": "compta",
+        "id": 2
     }
 ]
