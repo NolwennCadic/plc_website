@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Comptabilité niveau 1",
+        "category": "compta",
+        "shortDescription": "Cette formation est destinée aux débutants",
+        "pathToImage": "../images/compta.jpeg"
+    },
+    {
+        "name": "Comptabilité niveau 2",
+        "category": "compta",
+        "shortDescription": "Cette formation est destinée aux niveaux intermédiaires",
+        "pathToImage": "../images/compta.jpeg"
+    },
+    {
+        "name": "Gestion niveau 1",
+        "category": "gestion",
+        "shortDescription": "Cette formation est destinée aux débutants",
+        "pathToImage": "../images/compta.jpeg"
+    },
+    {
+        "name": "Gestion niveau 2",
+        "category": "gestion",
+        "shortDescription": "Cette formation est destinée aux niveaux intermédiaires",
+        "pathToImage": "../images/compta.jpeg"
+    }
+]
