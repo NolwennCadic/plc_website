@@ -9,15 +9,15 @@ import Formation from "./formation/Formation";
 import Equipe from "./equipe/Equipe";
 
 const menuList = [
-    "Formation",
     "Equipe",
-    "Mission",
+    "Formations",
+    "Conseil",
 ]
 
 const mapMap = {
-    formation: [formationImage],
+    formations: [formationImage],
     equipe: [equipeImage],
-    mission: [missionImage],
+    conseil: [missionImage],
 }
 class Menu extends React.Component {
     render() {
@@ -34,6 +34,7 @@ class Menu extends React.Component {
                 >
                     {
                         menuList.map((item, index) => {
+                            console.log(item, index)
                             return (
                                 <div key={index + "div"}>
                                     <MenuCard key={index + "Card"} title={item} image={mapMap[item.toLocaleLowerCase()][0]} />

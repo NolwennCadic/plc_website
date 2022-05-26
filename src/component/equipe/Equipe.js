@@ -5,7 +5,7 @@ class Formation extends React.Component {
     render() {
         return (
             <>
-                <div style={{ height: "100vh", paddingTop: "100px" }} id={"Equipe"}>
+                <div style={{ minHeight: "100vh", paddingTop: "100px" }} id={"Equipe"}>
                     <h1>Equipe</h1>
                     <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", height:"90%" }}>
                         <EquipeCatalog />

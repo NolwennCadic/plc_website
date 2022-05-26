@@ -27,7 +27,7 @@ class FormationCard extends React.Component {
                     <Card.Text>
                         {this.props.formation.shortDescription}
                     </Card.Text>
-                    <a href={pdfMap[this.props.formation.id]} download style={{font: "bold", color:"black", textDecoration:"none"}}>Infomations supplémentaires</a>
+                    <a href={pdfMap[this.props.formation.id]} download style={{font: "bold", color:"black", textDecoration:"none"}}>Télécharger le descriptif</a>
                 </Card.Body>
             </Card>
         )
