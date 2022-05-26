@@ -8,6 +8,25 @@ const navigationItems = {
 };
 
 class NavbarCustom extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            hasSubMenu: false,
+            activeSubMenu: "",
+        };
+        this.setHasSubMenu = this.setSubMenu.bind(this);
+
+    }
+    setSubMenu(newActiveSubMenu) {
+        this.setState({
+            activeSubMenu: this.state.hasSubMenu && (this.state.activeSubMenu === newActiveSubMenu)
+                ? ""
+                : newActiveSubMenu,
+            hasSubMenu: this.state.hasSubMenu && (this.state.activeSubMenu !== newActiveSubMenu)
+                ? true
+                : !this.state.hasSubMenu
+        });
+    }
     render() {
         return (
             <>
@@ -24,7 +43,7 @@ class NavbarCustom extends React.Component {
                         {/* <Navbar.Collapse id="basic-navbar-nav"> */}
                         <Nav className="me-auto">
                             <Nav.Link onClick={() => this.setSubMenu("cabinet")}>Cabinet</Nav.Link>
-                            <Nav.Link href={"/menu"}>Formations</Nav.Link>
+                            <Nav.Link onClick={() => this.setSubMenu("formation")}>Formation</Nav.Link>
                             {/*    <NavDropdown title="" id="cabinet-dropdown">
                                     <NavDropdown.Item href="#action/3.1">Présentation</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.2">Equipe</NavDropdown.Item>
@@ -42,6 +61,15 @@ class NavbarCustom extends React.Component {
                         {/* </Navbar.Collapse> */}
                     </Container>
                 </Navbar>
+                {this.state.hasSubMenu &&
+                    <Nav className="me-auto">
+                        {
+                            navigationItems[this.state.activeSubMenu].map((item, index) => {
+                                return <Nav.Link href={`#${item.toLowerCase()}`} key={index + item}>{item}</Nav.Link>
+                            })
+                        }
+                    </Nav>
+                }
             </>
         )
 

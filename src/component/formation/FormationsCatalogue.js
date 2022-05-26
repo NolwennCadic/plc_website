@@ -34,11 +34,3 @@ class FormationsCatalogue extends React.Component {
 }
 
 export default FormationsCatalogue;
-
-
-{/* <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", gap: "15px"}}>
-                {formationsData.map((formation, index) => {
-                    return <FormationCard formation={formation} key={`formation${index}`} />
-                })
-                }
-            </div> */}

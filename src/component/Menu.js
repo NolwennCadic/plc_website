@@ -2,9 +2,9 @@
 
 import React from "react";
 import MenuCard from "./MenuCard";
-import formationImage from "../images/formation.png";
-import equipeImage from "../images/equipe.png";
-import missionImage from "../images/mission.png";
+import formationImage from "../images/menuFormation/formations.svg";
+import equipeImage from "../images/menuFormation/equipe.svg";
+import conseilImage from "../images/menuFormation/conseil.svg";
 import Formation from "./formation/Formation";
 import Equipe from "./equipe/Equipe";
 
@@ -17,7 +17,7 @@ const menuList = [
 const mapMap = {
     formations: [formationImage],
     equipe: [equipeImage],
-    conseil: [missionImage],
+    conseil: [conseilImage],
 }
 class Menu extends React.Component {
     render() {
