@@ -30,7 +30,7 @@ class NavbarCustom extends React.Component {
     render() {
         return (
             <>
-                <Navbar bg="light" expand="lg">
+                <Navbar bg="light" expand="lg" style={{position: "sticky", top: 0, zIndex: 999 }}>
                     <Container>
                         <Navbar.Brand href="/">
                             <img

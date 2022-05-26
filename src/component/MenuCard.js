@@ -1,6 +1,5 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
 class MenuCard extends React.Component {
 
@@ -38,7 +37,9 @@ class MenuCard extends React.Component {
                             marginRight: "auto",
                         }}
                     />
-                    <Card.Title><Link to={`#${this.props.title}`}>{this.props.title}</Link></Card.Title>
+                    <Card.Title>
+                        <a href={`/menu#${this.props.title}`}>{this.props.title}</a>
+                    </Card.Title>
                 </Card.Body>
             </Card>
         )

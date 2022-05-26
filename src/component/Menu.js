@@ -5,8 +5,8 @@ import MenuCard from "./MenuCard";
 import formationImage from "../images/formation.png";
 import equipeImage from "../images/equipe.png";
 import missionImage from "../images/mission.png";
-import Formation from "./formationSide/Formation";
-import Equipe from "./formationSide/Equipe";
+import Formation from "./formation/Formation";
+import Equipe from "./equipe/Equipe";
 
 const menuList = [
     "Formation",

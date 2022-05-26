@@ -1,14 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import NavbarCustom from './component/NavbarCustom';
-import FormationCard from './component/FormationCard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './component/HomePage';
-import CustomFormation from './component/formationSide/CustomFormation';
-import FormationsCatalog from './component/FormationsCatalogue';
-import FormationDescription from './component/FormationDescription';
+import CustomFormation from './component/formation/CustomFormation';
+import FormationsCatalog from './component/formation/FormationsCatalogue';
+import FormationDescription from './component/formation/FormationDescription';
 import Menu from './component/Menu';
 
 

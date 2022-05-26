@@ -11,12 +11,12 @@ class EquipeCatalog extends React.Component {
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center",
-                        gap: "10px"
+                        gap: "20px",
                     }}
                     id={"Equipe"}
                 >
-                    {team.map((member) => {
-                        return (<EquipeCard member={member} />)
+                    {team.map((member, index) => {
+                        return (<EquipeCard member={member} key={`member${index}`} />)
                     })}
                 </div>
             </div>
