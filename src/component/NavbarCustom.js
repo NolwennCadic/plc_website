@@ -2,11 +2,6 @@ import React from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
 import logo from "../images/logo2.png";
 
-const navigationItems = {
-    cabinet: ["Presentation", "Equipe", "Missions"],
-    formation: ["Catalogue", "Sur mesure"]
-};
-
 class NavbarCustom extends React.Component {
     render() {
         return (
@@ -36,8 +31,8 @@ class NavbarCustom extends React.Component {
                                 </NavDropdown>*/}
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#practical-info">Infos pratiques</Nav.Link>
-                            <Nav.Link href="#contact">Contact</Nav.Link>
+                            <Nav.Link href="/infosPratiques">Infos pratiques</Nav.Link>
+                            {/* <Nav.Link href="/contact">Contact</Nav.Link> */}
                         </Nav>
                         {/* </Navbar.Collapse> */}
                     </Container>

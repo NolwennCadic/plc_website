@@ -11,3 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.titleSubPart {
+  text-align: left;
+  color: #594011;
+  padding: 2px 0 2px 2%;
+  font-size: 20px;
+  /* color: #49908e; */
+}
+
+.SubPartColored {
+  /* background-color: #edf2ee; /*Ugly AF */
+  background-color: #f8f9fa;
+  width: 90vw;
+  padding: 20px;
+  margin: 15px 5vw 0 5vw;
+  border-radius: 0.5em;
+}
+
+.SubPartColored2 {
+  /* background-color: #edf2ee; /*Ugly AF */
+  background-color: #daeafa;
+  width: 90vw;
+  padding: 20px;
+  margin: 15px 5vw 0 5vw;
+  border-radius: 0.5em;
+}

@@ -6,6 +6,7 @@ const memberMap = {
 }
 class EquipeCard extends React.Component {
     render() {
+        
         return (
             // <div
             //     id={"Equipe"}

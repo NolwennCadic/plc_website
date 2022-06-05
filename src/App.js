@@ -8,7 +8,7 @@ import CustomFormation from './component/formation/CustomFormation';
 import FormationsCatalog from './component/formation/FormationsCatalogue';
 import FormationDescription from './component/formation/FormationDescription';
 import Menu from './component/Menu';
-
+import PracticalInformation from './component/PracticalInformation';
 
 function App() {
   return (
@@ -18,9 +18,10 @@ function App() {
 
       <Routes>
         <Route exact path='/' element={<HomePage />} />
+        <Route path='/customFormation' element={<CustomFormation />} />
         <Route path='/formationsCatalogue' element={<FormationsCatalog />} />
         <Route path='/formationDescription' element={<FormationDescription />} />
-        <Route path='/customFormation' element={<CustomFormation />} />
+        <Route path='/infosPratiques' element={<PracticalInformation />} />
         <Route path='/menu' element={<Menu />} />
       </Routes>
     </div>
