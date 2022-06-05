@@ -33,7 +33,7 @@ class PracticalInformation extends React.Component {
                 <div className="SubPartColored">
                     <div style={{ paddingBottom: "12px" }}>Nos bureaux se trouvent au sein de la Chambre de Métiers et de l'Artisanat Hauts-de-France :</div>
                     <div style={{ display: "flex", justifyContent: "center" }}>
-                        <BsPinMapFill onClick={this.setHasMap} style={{ fontSize: "40px", position: "relative", right: "115px", top: '15px' }} />
+                        <BsPinMapFill onClick={this.setHasMap} style={{ fontSize: "40px", position: "relative", right: "115px", top: '15px', cursor: "pointer" }} />
                         <div>
                             <div>7 rue de l’Ile Mystérieuse </div>
                             <div>80440 BOVES CS 51006</div>
@@ -42,13 +42,13 @@ class PracticalInformation extends React.Component {
                     </div>
                     <div className="titleSubPart">
                         <div >Nous</div>
-                        <div style={{ marginLeft: "35px" }} >trouver</div>
+                        <div style={{ marginLeft: "35px" }} >trouver:</div>
                     </div>
                     {this.state.hasMap &&
                         <>
                             <img src={map} style={{ width: "90%", padding: "2px 0 2px 0" }} alt={"emplacement de la Chambe des Métier sur une carte"} />
                             {/* <Map location={location} zoomLevel={1} /> {/* Voir les conditions d'utilisation de google Map*/}
-                            <BsXLg onClick={this.setHasMap} style={{ position: "relative", top: "10px" }} />
+                            <BsXLg onClick={this.setHasMap} style={{ position: "relative", top: "10px", cursor: "pointer"}} />
                         </>
                     }
                 </div>
@@ -61,7 +61,7 @@ class PracticalInformation extends React.Component {
                     </div>
                     <div className="titleSubPart">
                         <div >Nous</div>
-                        <div style={{ marginLeft: "35px" }} >contacter</div>
+                        <div style={{ marginLeft: "35px" }} >contacter:</div>
                     </div>
                     {/* Le numéro de téléphone */}
                     {/* On veut l'heure d'ouverture  */}
