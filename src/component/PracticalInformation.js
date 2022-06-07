@@ -4,6 +4,7 @@ import React from "react";
 // import { Map } from "./Map";
 import map from "../images/mapCMA.PNG"
 import { BsPinMapFill, BsFillClockFill, BsFillTelephoneFill, BsXLg } from "react-icons/bs";
+import { Nav } from "react-bootstrap";
 
 class PracticalInformation extends React.Component {
     constructor() {
@@ -48,16 +49,20 @@ class PracticalInformation extends React.Component {
                         <>
                             <img src={map} style={{ width: "90%", padding: "2px 0 2px 0" }} alt={"emplacement de la Chambe des Métier sur une carte"} />
                             {/* <Map location={location} zoomLevel={1} /> {/* Voir les conditions d'utilisation de google Map*/}
-                            <BsXLg onClick={this.setHasMap} style={{ position: "relative", top: "10px", cursor: "pointer"}} />
+                            <BsXLg onClick={this.setHasMap} style={{ position: "relative", top: "10px", cursor: "pointer" }} />
                         </>
                     }
                 </div>
                 <div className="SubPartColored2">
                     <div>
+                        {/* // 8h30-12h 13h30-17h */}
                         <BsFillClockFill />
+                        <div>8h30 - 12h</div>
+                        <div>13h30 - 17h</div>
                     </div>
                     <div>
                         <BsFillTelephoneFill />
+                        <div>03 22 35 37 20</div>
                     </div>
                     <div className="titleSubPart">
                         <div >Nous</div>
@@ -67,7 +72,22 @@ class PracticalInformation extends React.Component {
                     {/* On veut l'heure d'ouverture  */}
                     {/* Quelles autres informations? */}
                 </div>
+                {/* More information: https://www.societe.com/societe/p-l-c-498965763.html */}
+                <div className="SubPartColored">
+                    <div style={{ display: "flex", justifyContent: "center" }}>
+                        <BsPinMapFill onClick={this.setHasMap} style={{ fontSize: "40px", position: "relative", right: "115px", top: '15px', cursor: "pointer" }} />
+                        <div>
+                            <Nav.Link href={"https://www.societe.com/societe/p-l-c-498965763.html"} className={"clickableItem"}>Informations légales</Nav.Link>
+                        </div>
+                    </div>
+                    <div className="titleSubPart">
+                        <div >Plus</div>
+                        <div style={{ marginLeft: "35px" }} >d'informations:</div>
+                    </div>
+                </div>
             </div>
+
+
         )
     }
 

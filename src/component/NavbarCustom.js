@@ -18,8 +18,9 @@ class NavbarCustom extends React.Component {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
-                                <Nav.Link onClick={() => this.setSubMenu("cabinet")}>Cabinet</Nav.Link>
-                                <Nav.Link href={"/menu"}>Formations</Nav.Link>
+                                {/* <Nav.Link onClick={() => this.setSubMenu("cabinet")}>Cabinet</Nav.Link> */}
+                                <Nav.Link href={"/cabinetMenu"}>Cabinet</Nav.Link>
+                                <Nav.Link href={"/formationMenu"}>Formations</Nav.Link>
                             </Nav>
                             <Nav>
                                 <Nav.Link href="/infosPratiques">Infos pratiques</Nav.Link>

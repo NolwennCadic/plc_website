@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import FormationCard from "./FormationCard";
-import formationList from "../../data/formationDetails2.json";
+import formationList from "../../../data/formationDetails2.json";
 
 class FormationsCatalogue extends React.Component {
 
