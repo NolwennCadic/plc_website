@@ -11,6 +11,7 @@ class FormationsCatalogue extends React.Component {
 
     getColCardsForGrid() {
        return formationList.map((formation, index) => {
+        console.log(formation, index)
             return (
                 <Col>
                     <FormationCard formation={formation} key={`formation${index}`} />

@@ -1,6 +1,9 @@
 
 
 import React from "react";
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 import MenuCard from "./MenuCard";
 import formationImage from "../images/formation.png";
 import equipeImage from "../images/equipe.png";
@@ -20,28 +23,33 @@ const mapMap = {
     conseil: [missionImage],
 }
 class Menu extends React.Component {
+
+    columnsPerRow = 4;
+
     render() {
         return (
+            
             <>
-                <div
-                    className="bg"
-                    style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        gap: "5vw"
-                    }}
-                >
-                    {
-                        menuList.map((item, index) => {
-                            console.log(item, index)
-                            return (
-                                <div key={index + "div"}>
-                                    <MenuCard key={index + "Card"} title={item} image={mapMap[item.toLocaleLowerCase()][0]} />
-                                </div>
-                            )
-                        })}
-                </div>
+                <Container 
+                className="bg"
+                style={{
+                    gap: "5vw", 
+                    marginTop: 50, 
+                    marginBottom: 50
+                }} fluid>
+                    <Row xs={1} sm={1} md={this.columnsPerRow} className="justify-content-md-center">
+                        {menuList.map((item, index) => {
+                        console.log(item, index)
+                        return (
+                            <Col>
+                                <MenuCard key={index + "Card"} title={item} image={mapMap[item.toLocaleLowerCase()][0]} />
+                            </Col>
+
+                        )
+                    })}
+                    </Row>
+                       
+                </Container>
                 <Formation/>
                 <Equipe/>
             </>

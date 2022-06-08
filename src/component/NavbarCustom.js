@@ -31,6 +31,7 @@ class NavbarCustom extends React.Component {
         return (
             <>
                 <Navbar bg="light" expand="lg" style={{position: "sticky", top: 0, zIndex: 999 }}>
+                    <i class="bi bi-clock"></i>
                     <Container>
                         <Navbar.Brand href="/">
                             <img

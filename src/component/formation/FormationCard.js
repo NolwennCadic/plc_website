@@ -25,9 +25,15 @@ class FormationCard extends React.Component {
 
                     <Card.Title style={{height: "50px"}}>{this.props.formation.name}</Card.Title>
                     <Card.Text>
+                        <div>
+                            <i class="bi bi-clock"> {this.props.formation.time}</i>
+                        </div>
+                        <div>
+                            <i class="bi bi-bar-chart-fill"> {this.props.formation.level}</i>
+                        </div>
                         {this.props.formation.shortDescription}
                     </Card.Text>
-                    <a href={pdfMap[this.props.formation.id]} download style={{font: "bold", color:"black", textDecoration:"none"}}>Télécharger le descriptif</a>
+                    <a href={pdfMap[this.props.formation.id]} download style={{font: "bold", color:"black", textDecoration:"none"}}><i class="bi bi-download"> Descriptif</i></a>
                 </Card.Body>
             </Card>
         )
