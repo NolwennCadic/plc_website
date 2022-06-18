@@ -1,11 +1,12 @@
 import React from "react";
-import member1 from "../../images/sabine.jpg";
+import member1 from "../../../images/sabine.jpg";
 
 const memberMap = {
     1: member1,
 }
 class EquipeCard extends React.Component {
     render() {
+
         return (
             // <div
             //     id={"Equipe"}
