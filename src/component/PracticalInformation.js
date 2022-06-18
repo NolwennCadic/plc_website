@@ -53,6 +53,7 @@ class PracticalInformation extends React.Component {
                         </>
                     }
                 </div>
+                {/* <div className="SubPartColored2"> */}
                 <div className="SubPartColored2">
                     <div>
                         {/* // 8h30-12h 13h30-17h */}
@@ -75,9 +76,8 @@ class PracticalInformation extends React.Component {
                 {/* More information: https://www.societe.com/societe/p-l-c-498965763.html */}
                 <div className="SubPartColored">
                     <div style={{ display: "flex", justifyContent: "center" }}>
-                        <BsPinMapFill onClick={this.setHasMap} style={{ fontSize: "40px", position: "relative", right: "115px", top: '15px', cursor: "pointer" }} />
                         <div>
-                            <Nav.Link href={"https://www.societe.com/societe/p-l-c-498965763.html"} className={"clickableItem"}>Informations légales</Nav.Link>
+                            <Nav.Link href={"https://www.societe.com/societe/p-l-c-498965763.html"} className={"clickableItem"}>Renseignements juridiques</Nav.Link>
                         </div>
                     </div>
                     <div className="titleSubPart">

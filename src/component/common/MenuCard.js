@@ -38,7 +38,7 @@ class MenuCard extends React.Component {
                         }}
                     />
                     <Card.Title>
-                        <a href={`/menu#${this.props.title}`} className={"clickableItem"}>{this.props.title}</a>
+                        <a href={`#${this.props.title}`} className={"clickableItem"}>{this.props.title}</a>
                     </Card.Title>
                 </Card.Body>
             </Card>
