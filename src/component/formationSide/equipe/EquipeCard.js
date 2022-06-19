@@ -16,33 +16,31 @@ class EquipeCard extends React.Component {
                     style={{
                         color: "#efefefff",
                         display: "flex",
-                        borderTop: "1px black solid",
-                        borderBottom: "1px black solid",
+                        borderTop: "1px #004C38 solid",
+                        borderBottom: "1px #004C38 solid",
                         padding: "5px",
                         gap: "10px",
                         alignItems: "center",
-                        flexDirection: "row"
-
+                        flexDirection: "row",
+                        marginRight: "40px",
+                        marginLeft: "40px",
                     }}
                 >
                     {/**Left */}
                     <div style={{
                         color: "#efefefff",
                         display: "flex",
-                        // padding: "10px",
-                        // margin: "25px",
                         gap: "20px",
-                        // alignItems: "center"
                         flexDirection: "column"
                     }}>
-                        <h3>{this.props.member.name}</h3> {/* Name at the top */}
+                        <h3 style={{color: "#004C38"}}>{this.props.member.name}</h3> {/* Name at the top */}
                         <div style={{ color: "black", padding: "10px" }}>
                             {this.props.member.description}
                         </div>
                     </div>
                     {/**Right */}
                     {/* <Image src={sabineImage} style={{ width: "20%", borderRadius: "5em" }} /> */}
-                    <img src={memberMap[this.props.member.id]} style={{ width: "15vw", borderRadius: "5em" }} alt={this.props.member.name} />
+                    <img src={memberMap[this.props.member.id]} style={{ width: "15vw", borderRadius: "100%" }} alt={this.props.member.name} />
                 </div>
             // </div>
         )

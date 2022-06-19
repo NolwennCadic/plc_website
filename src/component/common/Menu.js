@@ -2,6 +2,7 @@
 
 import React from "react";
 import MenuCard from "./MenuCard";
+import MenuRound from "./MenuRound";
 
 class Menu extends React.Component {
     render() {
@@ -21,7 +22,7 @@ class Menu extends React.Component {
                             console.log(item, index)
                             return (
                                 <div key={index + "div"}>
-                                    <MenuCard key={index + "Card"} title={item} image={this.props.mapMap[item.toLocaleLowerCase()][0]} />
+                                    <MenuRound key={index + "Card"} title={item} image={this.props.mapMap[item.toLocaleLowerCase()][0]} />
                                 </div>
                             )
                         })}

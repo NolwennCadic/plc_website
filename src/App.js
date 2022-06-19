@@ -8,7 +8,7 @@ import CustomFormation from './component/formationSide/formation/CustomFormation
 import FormationsCatalog from './component/formationSide/formation/FormationsCatalogue';
 import FormationDescription from './component/formationSide/formation/FormationDescription';
 import FormationMenu from './component/formationSide/FormationMenu';
-import PracticalInformation from './component/PracticalInformation';
+import PracticalInformation from './component/PracticalInformation2';
 import CabinetMenu from './component/cabinetSide/CabinetMenu';
 // import BottomMessage from './component/common/BottomMessage';
 import React from 'react';

@@ -5,6 +5,7 @@ import React from "react";
 import map from "../images/mapCMA.PNG"
 import { BsPinMapFill, BsFillClockFill, BsFillTelephoneFill, BsXLg } from "react-icons/bs";
 import { Nav } from "react-bootstrap";
+import loupe from "../images/loupe.svg";
 
 class PracticalInformation extends React.Component {
     constructor() {
@@ -41,6 +42,7 @@ class PracticalInformation extends React.Component {
                             <div> 80332 LONGUEAU CEDEX</div>
                         </div>
                     </div>
+                    <img src={loupe} style={{ width: "15vw", position: "relative", left: "40vw" }} alt={"loupe"} />{/**ça fait trop gamin */}
                     <div className="titleSubPart">
                         <div >Nous</div>
                         <div style={{ marginLeft: "35px" }} >trouver:</div>
@@ -79,6 +81,15 @@ class PracticalInformation extends React.Component {
                         <div>
                             <Nav.Link href={"https://www.societe.com/societe/p-l-c-498965763.html"} className={"clickableItem"}>Renseignements juridiques</Nav.Link>
                         </div>
+                    </div>
+                    <div className="titleSubPart">
+                        <div >Nos</div>
+                        <div style={{ marginLeft: "35px" }} >Réseaux::</div>
+                    </div>
+                </div>
+                <div className="SubPartColored">
+                    <div style={{ display: "flex", justifyContent: "center" }}>
+                        <div style={{ paddingBottom: "12px" }}>Seule notre partie formation est accessible sur les réseaux, </div>
                     </div>
                     <div className="titleSubPart">
                         <div >Plus</div>
