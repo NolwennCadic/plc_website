@@ -130,3 +130,15 @@ code {
 
 /* .InfoContent {
 } */
+.flexEquipe {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 800px) {
+  .flexEquipe {
+    display: flex;
+    flex-direction: row;
+    font-size: small;
+  }
+}
