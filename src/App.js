@@ -1,6 +1,5 @@
 import './App.css';
 import NavbarCustom from './component/NavbarCustom';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './component/HomePage';

@@ -10,7 +10,8 @@ class FormationsCatalogue extends React.Component {
     columnsPerRow = 4;
 
     getColCardsForGrid() {
-        return formationList.map((formation, index) => {
+       return formationList.map((formation, index) => {
+        console.log(formation, index)
             return (
                 <Col key={`formationColumn${index}`}>
                     <FormationCard formation={formation} key={`formation${index}`} />

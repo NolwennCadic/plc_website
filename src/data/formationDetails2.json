@@ -4,6 +4,8 @@
         "category": "compta",
         "shortDescription": "Formation nécessitant des notions de comptabilité",
         "image": "compta",
+        "time": "10 heures",
+        "level": "Débutant",
         "id": 1
     },
     {
@@ -11,6 +13,8 @@
         "category": "compta",
         "shortDescription": "Formation nécessitant des notions de comptabilité",
         "image": "compta",
+        "time": "5 heures",
+        "level": "Intermédiaire",
         "id": 2
     }
 ]
