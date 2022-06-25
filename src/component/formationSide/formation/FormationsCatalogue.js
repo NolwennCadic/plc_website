@@ -13,7 +13,7 @@ class FormationsCatalogue extends React.Component {
        return formationList.map((formation, index) => {
         console.log(formation, index)
             return (
-                <Col>
+                <Col key={`formationColumn${index}`}>
                     <FormationCard formation={formation} key={`formation${index}`} />
                 </Col>
 
@@ -23,7 +23,7 @@ class FormationsCatalogue extends React.Component {
 
     render() {
 
-        return(
+        return (
             <Container >
                 <Row xs={1} sm={1} md={this.columnsPerRow} className="justify-content-md-center">
                     {this.getColCardsForGrid()}
