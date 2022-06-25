@@ -16,7 +16,7 @@ class EquipeCardBis extends React.Component {
                         <img src={memberMap[this.props.member.id]} style={{ width: "20vw", borderRadius: "100%" }} alt={this.props.member.nom} />
                         <div style={{ display: "flex", flexDirection: "row" }}>
                             <BsLinkedin style={{ fontsize: "35px", marginTop: "12px" }} />
-                            <Nav.Link href={this.props.member.linkedIn}>{this.props.member.nom}</Nav.Link>
+                            <Nav.Link href={this.props.member.linkedIn} className="InfoContentEquipe">{this.props.member.nom}</Nav.Link>
                         </div>
                     </div>
                     <div>
@@ -26,7 +26,7 @@ class EquipeCardBis extends React.Component {
                             <ul>
                                 {this.props.member.diplomes.map((diplome) => {
                                     return (
-                                        <li key={`li1${diplome.nom}`}>
+                                        <li key={`li1${diplome.nom}`} className="InfoContentEquipe">
                                             <span className="bold" key={`span1${diplome.nom}`}>
                                                 {diplome.date}
                                             </span>
@@ -41,7 +41,7 @@ class EquipeCardBis extends React.Component {
                             <ul>
                                 {this.props.member.experience.map((xp) => {
                                     return (
-                                        <li key={`li2${xp.nom}`}>
+                                        <li key={`li2${xp.nom}`} className="InfoContentEquipe">
                                             <span className="bold" key={`span2${xp.nom}`}>
                                                 {xp.date}
                                             </span>
@@ -59,7 +59,7 @@ class EquipeCardBis extends React.Component {
                                     {this.props.member.qualite.map((nom, index) => {
                                         if (index % 2 === 0)
                                             return (
-                                                <li key={`li3${nom}`}>
+                                                <li key={`li3${nom}`} className="InfoContentEquipe">
                                                     {nom}
                                                 </li>)
                                         else return null;
@@ -69,7 +69,7 @@ class EquipeCardBis extends React.Component {
                                     {this.props.member.qualite.map((nom, index) => {
                                         if (index % 2 === 1)
                                             return (
-                                                <li key={`li4${nom}`}>
+                                                <li key={`li4${nom}`} className="InfoContentEquipe">
                                                     {nom}
                                                 </li>
                                             )
