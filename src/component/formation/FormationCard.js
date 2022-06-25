@@ -26,10 +26,10 @@ class FormationCard extends React.Component {
                     <Card.Title style={{height: "50px"}}>{this.props.formation.name}</Card.Title>
                     <Card.Text>
                         <div>
-                            <i class="bi bi-clock"> {this.props.formation.time}</i>
+                            <i className="bi bi-clock"> {this.props.formation.time}</i>
                         </div>
                         <div>
-                            <i class="bi bi-bar-chart-fill"> {this.props.formation.level}</i>
+                            <i className="bi bi-bar-chart-fill"> {this.props.formation.level}</i>
                         </div>
                         {this.props.formation.shortDescription}
                     </Card.Text>

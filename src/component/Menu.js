@@ -10,6 +10,7 @@ import equipeImage from "../images/equipe.png";
 import missionImage from "../images/mission.png";
 import Formation from "./formation/Formation";
 import Equipe from "./equipe/Equipe";
+import { ContactUs } from "./ContactUs";
 
 const menuList = [
     "Equipe",
@@ -52,6 +53,7 @@ class Menu extends React.Component {
                 </Container>
                 <Formation/>
                 <Equipe/>
+                <ContactUs />
             </>
         )
     }
