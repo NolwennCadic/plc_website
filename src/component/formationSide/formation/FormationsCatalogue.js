@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import FormationCard from "./FormationCard";
-import formationList from "../../data/formationDetails2.json";
+import formationList from "../../../data/formationDetails2.json";
 
 class FormationsCatalogue extends React.Component {
 
@@ -35,11 +35,3 @@ class FormationsCatalogue extends React.Component {
 }
 
 export default FormationsCatalogue;
-
-
-{/* <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", gap: "15px"}}>
-                {formationsData.map((formation, index) => {
-                    return <FormationCard formation={formation} key={`formation${index}`} />
-                })
-                }
-            </div> */}

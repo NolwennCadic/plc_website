@@ -11,3 +11,122 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.titleSubPart {
+  text-align: left;
+  /* color: #594011; */
+  color: #004C38;
+  padding: 2px 0 2px 2%;
+  font-size: 20px;
+  /* color: #49908e; */
+}
+
+.SubPartColored {
+  /* background-color: #edf2ee; /*Ugly AF */
+  /* background-color: #f8f9fa; */
+  background-color: rgba(248, 249, 250, 0.8);
+  width: 90vw;
+  padding: 20px;
+  margin: 15px 5vw 0 5vw;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+.SubPartColored2 {
+  /* background-color: #edf2ee; /*Ugly AF */
+  /* background-color: #daeafa; */
+  /* background-color: rgb(218, 234, 250, 0.8); */
+  width: 90vw;
+  padding: 20px;
+  margin: 15px 5vw 0 5vw;
+  border-radius: 0.5em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.titleMission {
+  text-decoration: underline;
+  font-size: 20px;
+  /* color: #594011; */
+}
+
+.clickableItem {
+  font: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.clickableItem:hover {
+  font: bold;
+  color: rgb(78, 76, 76);
+  text-decoration: none;
+}
+
+.InfoMenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.subPartInfoLine {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.subPartInfoGray {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 2vw 10px 2vw;
+  background-color: #E7E6E6;
+  width: 45vw;
+  height: 20vh;
+  color: #004C38;
+  border-radius: 0.5em;
+}
+
+.subPartInfoGreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 2vw 10px 2vw;
+  background-color: #004C38;
+  width: 45vw;
+  height: 20vh;
+  color: #E7E6E6;
+  border-radius: 0.5em;
+}
+
+.subPartInfoGrayLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 3vw 10px 3vw;
+  background-color: #E7E6E6;
+  width: 94vw;
+  height: auto;
+  color: #004C38;
+  border-radius: 0.5em;
+  min-height: 20vh;
+}
+
+.InfoIconGreen {
+  font-size: 25px;
+  /* width: 500px; */
+  color: #004C38;
+}
+
+.InfoIconGray {
+  font-size: 25px;
+  /* width: 500px; */
+  color: #E7E6E6;
+}
+
+/* .InfoContent {
+} */
