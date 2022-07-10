@@ -101,7 +101,7 @@ class DialogNewsletter extends React.Component {
                     />
                 </div>
                 <Modal.Footer>
-                    <Button onClick={() => { this.props.setShowDialog() }} variant="secondary">Close</Button>
+                    <Button onClick={() => { this.props.setShowDialog() }} variant="secondary">Quitter</Button>
                     {/* Devrait être sorti du composant --> Only need the formCheck --> Mais n'a pas de onClick pour le moment */}
                     <Button onClick={this.handleSubmit} disabled={!this.state.emailData.formCheck} variant="primary" type="submit" style={{ backgroundColor: "#004C38", borderColor: "#004C38" }}>
                         Envoyer
