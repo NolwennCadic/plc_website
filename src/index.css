@@ -141,13 +141,13 @@ code {
   }
 
   .InfoContent {
-    font-size: auto;
+    font-size: 12px;
   }
 }
 
 @media (max-width: 600px) {
 
   .InfoContentEquipe {
-    font-size: auto;
+    font-size: 10px;
   }
 }

@@ -1,10 +1,6 @@
 
 
 import React from "react";
-import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import MenuCard from "./MenuCard";
 import MenuRound from "./MenuRound";
 
 class Menu extends React.Component {
@@ -13,7 +9,7 @@ class Menu extends React.Component {
 
     render() {
         return (
-            
+
             <>
                 <div
                     className="bg"

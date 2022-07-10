@@ -16,5 +16,23 @@
         "time": "5 heures",
         "level": "Intermédiaire",
         "id": 2
+    },
+    {
+        "name": "Introduction à la comptabilité",
+        "category": "compta",
+        "shortDescription": "Formation ne nécessitant pas de notions de comptabilité",
+        "image": "compta",
+        "time": "1 jour",
+        "level": "Débutant",
+        "id": 3
+    },
+    {
+        "name": "Formation sur-mesure",
+        "category": "compta",
+        "shortDescription": "Formation adaptée à tous",
+        "image": "compta",
+        "time": "Variable",
+        "level": "Tout niveaux",
+        "id": 4
     }
 ]
