@@ -1,26 +1,38 @@
 [
     {
-        "name": "Comptabilité niveau 1",
+        "nom": "Vérifier l'équilibre du bilan",
         "category": "compta",
-        "shortDescription": "Cette formation est destinée aux débutants",
-        "pathToImage": "../images/compta.jpeg"
+        "shortDescription": "Formation nécessitant des notions de comptabilité",
+        "type": 1,
+        "time": "10 heures",
+        "level": "Débutant",
+        "id": 1
     },
     {
-        "name": "Comptabilité niveau 2",
+        "nom": "Analyser et exploiter le compte de résultat",
         "category": "compta",
-        "shortDescription": "Cette formation est destinée aux niveaux intermédiaires",
-        "pathToImage": "../images/compta.jpeg"
+        "shortDescription": "Formation nécessitant des notions de comptabilité",
+        "type": 1,
+        "time": "5 heures",
+        "level": "Intermédiaire",
+        "id": 2
     },
     {
-        "name": "Gestion niveau 1",
-        "category": "gestion",
-        "shortDescription": "Cette formation est destinée aux débutants",
-        "pathToImage": "../images/compta.jpeg"
+        "nom": "Introduction à la comptabilité",
+        "category": "compta",
+        "shortDescription": "Formation ne nécessitant pas de notions de comptabilité",
+        "type": 1,
+        "time": "1 jour",
+        "level": "Débutant",
+        "id": 3
     },
     {
-        "name": "Gestion niveau 2",
-        "category": "gestion",
-        "shortDescription": "Cette formation est destinée aux niveaux intermédiaires",
-        "pathToImage": "../images/compta.jpeg"
+        "nom": "Formation sur-mesure",
+        "category": "compta",
+        "shortDescription": "Formation adaptée à tous",
+        "type": 2,
+        "time": "Variable",
+        "level": "Tout niveaux",
+        "id": 4
     }
 ]

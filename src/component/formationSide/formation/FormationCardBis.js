@@ -24,8 +24,8 @@ const imagesMap = {
 }
 
 const colorMap = {
-    compta: ["rgb(43, 79, 49)", "rgb(43, 79, 49, 0.05)"],
-    tout: ["rgb(122, 12, 12)", "rgb(122, 12, 12, 0.05)"],
+    1: ["rgb(43, 79, 49)", "rgb(43, 79, 49, 0.05)"],
+    2: ["rgb(122, 12, 12)", "rgb(122, 12, 12, 0.05)"],
 }
 
 //Input, wa have formation data

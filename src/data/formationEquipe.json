@@ -1,8 +1,39 @@
 [
     {
-        "name": "Sabine Cadic",
-        "description": "Diplômée d’expertise comptable depuis 1997 et associée du cabinet d’expertise PLC, Sabine a toujours eu la volonté de transmettre son savoir.\nAprès être intervenue en tant que vacataire auprès du CNAM et de l’IUT de 1996 à 2007, tout en exerçant une activité professionnelle à temps plein en tant que directrice d’établissement de santé jusque 2020, elle développe désormais l’activité de formation au sein de notre structure.\nSon expérience professionnelle associée à ses compétences techniques liées au diplôme d’expertise comptables lui confère toute légitimité pour vous accompagner dans vos projets de création d’entreprises et de formation. Son aisance à l’oral et sa pédagogie sont de véritables outils de transmission de ses connaissances.",
+        "nom": "Sabine Cadic",
+        "diplomes": [
+            {
+                "nom": "Expertise comptable",
+                "date": "1997"
+            }
+        ],
+        "experience": [
+            {
+                "nom": "Développement de l'activité formation chez PLC",
+                "date": "2020 -"
+            },
+            {
+                "nom": "Directrice d’établissement de santé",
+                "date": "1997-2020"
+            },
+            {
+                "nom": "Vacataire CNAM et IUT",
+                "date": "1996-2007"
+            }
+        ],
+        "qualite": [
+            "Expérience professionnelle",
+            "Compétences techniques",
+            "Aisance à l’oral",
+            "Pédagogie",
+            "À l'écoute"
+        ],
+        "citation": {
+            "phrase": "Confronté à la roche, le ruisseau l'emporte toujours, non pas par la force, mais par la persévérance.",
+            "auteur": "Confucius"
+        },
         "pathToImage": "../images/sabine.png",
+        "linkedIn": "https://www.linkedin.com/in/sabine-cadic",
         "id": 1
     }
 ]

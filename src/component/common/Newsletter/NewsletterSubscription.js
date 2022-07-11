@@ -59,7 +59,9 @@ class NewsletterSubscription extends React.Component {
                         column="sm"
                         label="En indiquant votre adresse mail,
                     vous acceptez de recevoir la newsletter du cabinet PLC.
-                    Vous pourrez vous désinscrire à tout moment par simple email." />
+                    Vous pourrez vous désinscrire à tout moment par simple email."
+                        style={{ fontSize: "13px" }}
+                    />
                 </Form.Group>
 
             </Form>

@@ -1,0 +1,12 @@
+[
+    {
+        "key": 1,
+        "type": "comptabilité",
+        "color": "rgb(43, 79, 49)"
+    },
+    {
+        "key": 2,
+        "type": "tous",
+        "color": "rgb(122, 12, 12)"
+    }
+]

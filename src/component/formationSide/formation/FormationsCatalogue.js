@@ -1,20 +1,30 @@
 import React from "react";
 // import FormationCard from "./FormationCard";
-import formationList from "../../../data/formationDetails2.json";
+import formationList from "../../../data/formationDetails.json";
 import ButtonFormation from "./ButtonFormation";
 import FormationCardBis from "./FormationCardBis";
+import typeList from "../../../data/formationTypes.json";
 
-const listButton = [
-    {
-        key: 1,
-        type: "compta",
-        color: "rgb(43, 79, 49)"
-    }, {
-        key: 2,
-        type: "tout",
-        color: "rgb(122, 12, 12)",//En terme d'UX, tout veut un peut dire 2 choses en même temps...
-    },
-]
+const hasKey = (items, key) => {
+    let elements = items.filter(item => item.key === key);
+    return (elements.length > 0);
+}
+
+const accessType = (key, typeList) => {
+    let items = typeList.filter(type => {
+        return (type.key === key)
+    });
+    return items[0];
+}
+const generateTypes = (listForm, typeList) => {
+    let output = [];
+    listForm.forEach((formation) => {
+        if (!hasKey(output, formation.type)) {
+            output.push(accessType(formation.type, typeList));
+        }
+    })
+    return output
+}
 class FormationsCatalogue extends React.Component {
     constructor() {
         super();
@@ -32,12 +42,20 @@ class FormationsCatalogue extends React.Component {
         });
     }
 
+
     render() {
+        const types = generateTypes(formationList, typeList);
+        console.log("formationList =", formationList);
+        console.log("typeList =", typeList);
+        console.log("types =", types);
+        console.log("this.state.itemsToShow =", this.state.itemsToShow);
+
+        console.log()
         return (
             <div>
-                {listButton.map((button) => {
+                {types.map((type, index) => {
                     return (
-                        <ButtonFormation type={button.type} color={button.color} setTypeFiltered={this.setTypeFiltered} />
+                        <ButtonFormation type={type.type} color={type.color} setTypeFiltered={this.setTypeFiltered} key={`${index}Button`} />
                     )
                 })
                 }
