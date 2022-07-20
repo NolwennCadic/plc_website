@@ -7,6 +7,8 @@ import image4 from "../../../images/formations/formation4.jpg";
 import image5 from "../../../images/formations/formation5.jpg";
 import image6 from "../../../images/formations/formation6.jpg";
 import image7 from "../../../images/formations/formation7.jpg";
+import image8 from "../../../images/formations/formation8.jpg";
+import image9 from "../../../images/formations/formation9.jpg";
 // import formation1 from "../../../pdf/formation1.pdf";
 // import formation2 from "../../../pdf/formation2.pdf";
 // import formation3 from "../../../pdf/formation3.pdf";
@@ -20,18 +22,21 @@ import image7 from "../../../images/formations/formation7.jpg";
 // };
 
 const imagesMap = {
-    1: image1,
-    2: image2,
-    3: image3,
-    4: image4,
-    5: image5,
-    6: image6,
-    7: image7,
+    0: image1,
+    1: image2,
+    2: image3,
+    3: image4,
+    4: image5,
+    5: image6,
+    6: image7,
+    7: image8,
+    8: image9,
 }
 
 const colorMap = {
     0: ["rgb(43, 79, 49)", "rgb(43, 79, 49, 0.05)"],
     1: ["rgb(122, 12, 12)", "rgb(122, 12, 12, 0.05)"],
+    2: ["rgb(122, 12, 12)", "rgb(122, 12, 12, 0.05)"],
     3: ["rgb(122, 12, 12)", "rgb(122, 12, 12, 0.05)"],
 }
 

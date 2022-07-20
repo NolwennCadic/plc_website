@@ -301,7 +301,7 @@
     {
         "nom": "Du résultat comptable au résultat fiscal/BIC",
         "shortDescription": "Cette formation s’adresse à toute personne souhaitant maîtriser le passage du résultat comptable au résultat fiscal dans le cadre du régime BIC/IS.",
-        "type": 3,
+        "type": 2,
         "time": "2 jours",
         "level": "ASK",
         "id": 6,
@@ -362,9 +362,9 @@
     {
         "nom": "TVA intracommunautaire initiation",
         "shortDescription": "Cette formation s’adresse à toute personne ayant des connaissances du principe générale de la TVA ",
-        "type": 3,
-        "time": "Variable",
-        "level": "Tout niveaux",
+        "type": 2,
+        "time": "2 jours",
+        "level": "ASK",
         "id": 7,
         "content": [
             {

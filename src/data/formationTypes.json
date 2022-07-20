@@ -14,14 +14,14 @@
     {
         "key": 2,
         "type": "Fiscalité",
-        "couleur1": "#3d1121",
+        "couleur1": "#5c1931",
         "couleur2": "#8f8d8e"
     },
     {
         "key": 3,
         "type": "Sur-mesure",
         "couleur1": "#e8eba9",
-        "couleur2": "##9e0e21"
+        "couleur2": "#9e0e21"
     }
 
 ]
