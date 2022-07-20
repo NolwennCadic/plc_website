@@ -4,6 +4,8 @@ import formationList from "../../../data/formationDetails.json";
 import ButtonFormation from "./ButtonFormation";
 import FormationCardBis from "./FormationCardBis";
 import typeList from "../../../data/formationTypes.json";
+import { Modal } from "react-bootstrap";
+import FormationPresentation from "./FormationPresentation";
 
 const hasKey = (items, key) => {
     let elements = items.filter(item => item.key === key);
@@ -31,43 +33,55 @@ class FormationsCatalogue extends React.Component {
         this.state = {
             typeFiltered: "tout",
             itemsToShow: formationList,
+            formationClicked: undefined,
         };
         this.setTypeFiltered = this.setTypeFiltered.bind(this);
+        this.setFormationClicked = this.setFormationClicked.bind(this);
+
 
     }
     setTypeFiltered(newType) {
         this.setState({
             typeFiltered: newType,
-            itemsToShow: formationList.filter(item => newType === "tout" || item.type === newType || item.type === "tout"),
+            itemsToShow: formationList.filter(formation => {
+                return (newType === "Tous" || formation.type === newType || formation.type === "Sur-Mesure");
+            }),
+        });
+    }
+    setFormationClicked(formation) {
+        this.setState({
+            formationClicked: formation,
         });
     }
 
 
     render() {
-        const types = generateTypes(formationList, typeList);
-        console.log("formationList =", formationList);
-        console.log("typeList =", typeList);
+        const types = generateTypes(formationList, typeList).concat({ key: 5, type: "Tous",couleur1: "#e8eba9",couleur2: "##9e0e21" });
         console.log("types =", types);
-        console.log("this.state.itemsToShow =", this.state.itemsToShow);
 
-        console.log()
         return (
             <div>
                 {types.map((type, index) => {
                     return (
-                        <ButtonFormation type={type.type} color={type.color} setTypeFiltered={this.setTypeFiltered} key={`${index}Button`} />
+                        <ButtonFormation type={type} color={type.couleur1} setTypeFiltered={this.setTypeFiltered} key={`${index}Button`} />
                     )
                 })
                 }
                 {
                     this.state.itemsToShow.map((formation, index) => {
                         return (
-                            <FormationCardBis formation={formation} key={`formation${index}`} />
+                            <FormationCardBis formation={formation} key={`formation${index}`} setFormationClicked={this.setFormationClicked} />
                         )
                     })
                 }
+                {this.state.formationClicked !== undefined &&
+                    <Modal size="lg" show={this.state.formationClicked !== undefined} onHide={() => { this.setFormationClicked(undefined) }}>
+                        <FormationPresentation title={this.state.formationClicked.nom} content={this.state.formationClicked.content} type={typeList.filter(type => type.key === this.state.formationClicked.type)[0]} />
+                    </Modal>
+                }
             </div>
         )
+
     }
 
 }

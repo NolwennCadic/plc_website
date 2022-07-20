@@ -1,12 +1,27 @@
 [
     {
+        "key": 0,
+        "type": "Comptabilité",
+        "couleur1": "#633812",
+        "couleur2": "#0e6144"
+    },
+    {
         "key": 1,
-        "type": "comptabilité",
-        "color": "rgb(43, 79, 49)"
+        "type": "Contrôle de gestion",
+        "couleur1": "#8491b5",
+        "couleur2": "black"
     },
     {
         "key": 2,
-        "type": "tous",
-        "color": "rgb(122, 12, 12)"
+        "type": "Fiscalité",
+        "couleur1": "#3d1121",
+        "couleur2": "#8f8d8e"
+    },
+    {
+        "key": 3,
+        "type": "Sur-mesure",
+        "couleur1": "#e8eba9",
+        "couleur2": "##9e0e21"
     }
+
 ]

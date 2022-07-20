@@ -1,38 +1,416 @@
 [
     {
-        "nom": "Vérifier l'équilibre du bilan",
-        "category": "compta",
-        "shortDescription": "Formation nécessitant des notions de comptabilité",
-        "type": 1,
-        "time": "10 heures",
+        "nom": "Introduction à la comptabilité",
+        "shortDescription": "Formation ne nécessitant pas de notions de comptabilité",
+        "type": 0,
+        "time": "1 jour",
         "level": "Débutant",
-        "id": 1
+        "id": 0,
+        "content": [
+            {
+                "title": "Programme",
+                "content": [
+                    {
+                        "title": "Qu'est-ce que la comptabilité ?",
+                        "content": [
+                            "Place de l'entreprise dans le circuit économique",
+                            "Les obligations liées à la tenue d'une comptabilité dans l'entreprise",
+                            "Le rôle de la comptabilité pour l’entreprise et pour les tiers"
+                        ]
+                    },
+                    {
+                        "title": "Qu'est-ce que la comptabilité ?",
+                        "content": [
+                            "Étude des mouvements, flux positifs et négatifs",
+                            "Principes de la partie double, débit/crédit",
+                            "La chaîne comptable :",
+                            [
+                                "Les journaux.",
+                                "Les comptes",
+                                "La balance.",
+                                "Le Grand livre"
+                            ],
+                            "Les états comptables :",
+                            [
+                                "Le compte de résultat et la rentabilité de l’entreprise : les produits et les charges rattachés à l’activité exploitation, financière et exceptionnelle",
+                                "Le bilan et la notion de patrimoine : l’actif immobilisé, l’actif circulant, les capitaux propres et les dettes"
+                            ]
+                        ]
+                    },
+                    {
+                        "title": "Qu'est-ce que la comptabilité ?"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "nom": "Techniques comptables approfondies",
+        "shortDescription": "Cette formation s’adresse à toute personne ayant quelques notions de comptabilité.",
+        "type": 0,
+        "time": "1 jour",
+        "level": "Débutant",
+        "id": 1,
+        "content": [
+            {
+                "title": "Introduction",
+                "content": "Cette formation a pour objectif d’expliquer le traitement de points particuliers. Voici une liste des possibilité. Elle n’est pas exhaustive et peut être personnalisée"
+            },
+            {
+                "title": "Programmes",
+                "content": [
+                    {
+                        "title": "1) Créances et dettes en monnaies étrangères",
+                        "content": [
+                            "Principes généraux",
+                            "Ecart de conversion à la clôture",
+                            "Gains latents et pertes latentes",
+                            "Ecritures de règlement",
+                            "Cas particuliers : créances douteuses, intérêts sur emprunts.",
+                            "Divergences entre résultat comptable et résultat fiscal",
+                            "Exercices"
+                        ]
+                    },
+                    {
+                        "title": "2) Crédit-bail",
+                        "content": [
+                            "Principes généraux ; distinction contrat de crédit-bail et contrat de location",
+                            "Crédit-bail mobilier:",
+                            [
+                                "durant la période du contrat",
+                                "lors de la levée d’option",
+                                "régime fiscal ; particularité du véhicule de tourisme"
+                            ],
+                            "Crédit-bail immobilier :",
+                            [
+                                "durant la période du contrat",
+                                "lors de la levée d’option",
+                                "régime fiscal"
+                            ],
+                            "Exercices"
+                        ]
+                    },
+                    {
+                        "title": "3) Décomposition des immobilisations corporelles",
+                        "content": [
+                            "Principe/règle",
+                            "Décomposition à l’origine",
+                            "Décomposition ultérieure",
+                            "Régime fiscal",
+                            "Exemples"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "nom": "Vérifier l'équilibre du bilan",
+        "shortDescription": "Formation nécessitant des notions de comptabilité",
+        "type": 0,
+        "time": "1 jour",
+        "level": "Débutant",
+        "id": 2,
+        "content": [
+            {
+                "title": "Programme",
+                "content": [
+                    {
+                        "title": "Observer la structure du bilan comptable",
+                        "content": [
+                            "Présentation générale d’un bilan comptable",
+                            "Lire et analyser l’actif du bilan comptable",
+                            "Lire et analyser le passif du bilan comptable",
+                            "Déduire la valeur du patrimoine de l’unité commerciale"
+                        ]
+                    },
+                    {
+                        "title": "Calculer et interpréter les principaux ratios issus du bilan comptable",
+                        "content": [
+                            "Le ratio de structure",
+                            "Les ratios de rotation"
+                        ]
+                    },
+                    {
+                        "title": "Etudier le principe d’un bilan fonctionnel",
+                        "content": [
+                            "Le principe d’un bilan fonctionnel",
+                            "La structure d’un bilan fonctionnel"
+                        ]
+                    },
+                    {
+                        "title": "Analyser l’équilibre financier de l’unité commerciale",
+                        "content": [
+                            "Respecter le principe de l’équilibre financier",
+                            "Déterminer le FRNG, le BFR et la trésorerie nette",
+                            "Analyser l’équilibre financier"
+                        ]
+                    },
+                    {
+                        "title": "Cas Pratiques"
+                    }
+                ]
+            }
+        ]
     },
     {
         "nom": "Analyser et exploiter le compte de résultat",
-        "category": "compta",
         "shortDescription": "Formation nécessitant des notions de comptabilité",
-        "type": 1,
-        "time": "5 heures",
+        "type": 0,
+        "time": "1 jour",
         "level": "Intermédiaire",
-        "id": 2
+        "id": 3,
+        "content": [
+            {
+                "title": "Programme",
+                "content": [
+                    {
+                        "title": "Analyser l'exploitation",
+                        "content": [
+                            "Connaitre les charges et les produits",
+                            "Distinguer les différents types de charges et de produits"
+                        ]
+                    },
+                    {
+                        "title": "Lire un compte de résultat",
+                        "content": [
+                            "Lire un compte de résultat de base",
+                            "Lire un compte de résultat présenté en liste"
+                        ]
+                    },
+                    {
+                        "title": "Calculer les soldes intermédiaires de gestion",
+                        "content": [
+                            "Comprendre l’intérêt du calcul des SIG",
+                            "Le schéma de calcul des SIG"
+                        ]
+                    },
+                    {
+                        "title": "Calculer et interpréter la marge commerciale",
+                        "content": [
+                            "L’intérêt de calculer la marge commerciale",
+                            "De la marge commerciale unitaire…",
+                            "A la marge commerciale globale"
+                        ]
+                    },
+                    {
+                        "title": "Interpréter les SIG",
+                        "content": [
+                            "La production de l’exercice",
+                            "La valeur ajoutée",
+                            "L’excédent brut d’exploitation",
+                            "Le résultat d’exploitation"
+                        ]
+                    },
+                    {
+                        "title": "Calculer les ratios à partir des SIG",
+                        "content": [
+                            "Apprécier l’évolution de l’activité",
+                            "Comparer les résultats au chiffre d’affaires"
+                        ]
+                    },
+                    {
+                        "title": "Cas Pratiques"
+                    }
+                ]
+            }
+        ]
     },
     {
-        "nom": "Introduction à la comptabilité",
-        "category": "compta",
-        "shortDescription": "Formation ne nécessitant pas de notions de comptabilité",
+        "nom": "Analyse des coûts/démarche des coûts complets",
+        "shortDescription": "Formation nécessitant des connaissance du compte de résultat et de la notion de charges",
         "type": 1,
-        "time": "1 jour",
-        "level": "Débutant",
-        "id": 3
+        "time": "2 jours",
+        "level": "Tout niveaux",
+        "id": 4,
+        "content": [
+            {
+                "title": "Programme",
+                "content": [
+                    {
+                        "title": "Le passage des charges aux coûts"
+                    },
+                    {
+                        "title": "Les charges fixes et les charges variables"
+                    },
+                    {
+                        "title": "Analyser des coûts partiels",
+                        "content": [
+                            "L’évolution des charges en fonction de leur nature",
+                            "L’usage des coûts partiels"
+                        ]
+                    },
+                    {
+                        "title": "Connaître le seuil de rentabilité",
+                        "content": [
+                            "La notion de seuil de rentabilité",
+                            "Déterminer le résultat par variabilité",
+                            "Calculer le seuil de rentabilité"
+                        ]
+                    },
+                    {
+                        "title": "Notions de marge de sécurité, indice de sécurité",
+                        "content": [
+                            "Notions de coût d’achat, de coût de production, de coût hors production, de coût de revient des produits vendus"
+                        ]
+                    },
+                    {
+                        "title": "Cas Pratiques"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "nom": "Analyse des coûts/démarche des coûts partiels",
+        "shortDescription": "Formation nécessitant des connaissance du compte de résultat et de la notion de charges",
+        "type": 1,
+        "time": "2 jours",
+        "level": "ASK",
+        "id": 5,
+        "content": [
+            {
+                "title": "Programme",
+                "content": [
+                    {
+                        "title": "Le passage des charges aux coûts"
+                    },
+                    {
+                        "title": "Les charges fixes et les charges indirectes"
+                    },
+                    {
+                        "title": "Le rôle du processus de fabrication dans le calcul du coût de revient d’un produit",
+                        "content": [
+                            "La répartition des charges indirectes sur les services",
+                            "La répartition du coût des services sur les produits"
+                        ]
+                    },
+                    {
+                        "title": "Calculer un coût de production et calculer un coût de revient complet",
+                        "content": [
+                            "Notions de coût d’achat, de coût de production, de coût hors production, de coût de revient des produits vendus"
+                        ]
+                    },
+                    {
+                        "title": "Cas Pratiques"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "nom": "Du résultat comptable au résultat fiscal/BIC",
+        "shortDescription": "Cette formation s’adresse à toute personne souhaitant maîtriser le passage du résultat comptable au résultat fiscal dans le cadre du régime BIC/IS.",
+        "type": 3,
+        "time": "2 jours",
+        "level": "ASK",
+        "id": 6,
+        "content": [
+            {
+                "title": "Programme",
+                "content": [
+                    {
+                        "title": "Introduction et définitions"
+                    },
+                    {
+                        "title": "Echanges intracommunautaires de biens : les livraisons",
+                        "content": [
+                            "Conditions d’exonération",
+                            "Transferts assimilés",
+                            "Obligations des assujettis"
+                        ]
+                    },
+                    {
+                        "title": "Echanges intracommunautaires de biens : les acquisitions",
+                        "content": [
+                            "Impositions",
+                            "Déclaration CA3",
+                            "Opérations assimilées"
+                        ]
+                    },
+                    {
+                        "title": "Cas particuliers",
+                        "content": [
+                            "Opérations en chaine",
+                            "Commerce électronique",
+                            "Opérations triangulaires"
+                        ]
+                    },
+                    {
+                        "title": "La DEB"
+                    },
+                    {
+                        "title": "Echanges intracommunautaires : prestations de services",
+                        "content": [
+                            "Territorialité",
+                            "Cas particuliers"
+                        ]
+                    },
+                    {
+                        "title": "La DES"
+                    },
+                    {
+                        "title": "Le guichet unique"
+                    },
+                    {
+                        "title": "Cas Pratiques"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "nom": "TVA intracommunautaire initiation",
+        "shortDescription": "Cette formation s’adresse à toute personne ayant des connaissances du principe générale de la TVA ",
+        "type": 3,
+        "time": "Variable",
+        "level": "Tout niveaux",
+        "id": 7,
+        "content": [
+            {
+                "title": "Programme",
+                "content": [
+                    {
+                        "title": "Définition"
+                    },
+                    {
+                        "title": "Principes généraux:",
+                        "content": [
+                            "Détermination du bénéfice imposable",
+                            [
+                                "Application des règles des BIC"
+                            ],
+                            "Régimes d’imposition du résultat",
+                            [
+                                "Micro entreprise, réel simplifié ou réel"
+                            ]
+                        ]
+                    },
+                    {
+                        "title": "Impôts sur les sociétés:",
+                        "content": [
+                            "Champ d’application de l’IS",
+                            "Détermination du bénéfice imposable",
+                            [
+                                "Règles des BIC",
+                                "Exceptions aux règles des BIC"
+                            ],
+                            "Calculs de l’IS et paiement"
+                        ]
+                    },
+                    {
+                        "title": "Cas Pratiques"
+                    }
+                ]
+            }
+        ]
     },
     {
         "nom": "Formation sur-mesure",
-        "category": "compta",
         "shortDescription": "Formation adaptée à tous",
-        "type": 2,
+        "type": 3,
         "time": "Variable",
         "level": "Tout niveaux",
-        "id": 4
+        "id": 8
     }
 ]
