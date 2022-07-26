@@ -32,14 +32,18 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
 .bg {
-  background-image: url("images/backgroundDark.svg");
-  height: 100vh;
+  /* background-image: url("images/backgroundDark.svg"); */
+  background-image: url("images/background_gray.svg");
+  margin-top: calc(20vh - 93px);
+  margin-bottom: calc(20vh - 93px);
+  height: 60vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

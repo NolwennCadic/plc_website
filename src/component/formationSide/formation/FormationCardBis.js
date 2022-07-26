@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Tooltip, OverlayTrigger } from "react-bootstrap";
+import { Stack } from "react-bootstrap";
 import image1 from "../../../images/formations/formation1.jpg";
 import image2 from "../../../images/formations/formation2.jpg";
 import image3 from "../../../images/formations/formation3.jpg";
@@ -9,17 +9,7 @@ import image6 from "../../../images/formations/formation6.jpg";
 import image7 from "../../../images/formations/formation7.jpg";
 import image8 from "../../../images/formations/formation8.jpg";
 import image9 from "../../../images/formations/formation9.jpg";
-// import formation1 from "../../../pdf/formation1.pdf";
-// import formation2 from "../../../pdf/formation2.pdf";
-// import formation3 from "../../../pdf/formation3.pdf";
-// import formation4 from "../../../pdf/formation4.pdf";
-
-// const pdfMap = {
-//     1: formation1,
-//     2: formation2,
-//     3: formation3,
-//     4: formation4,
-// };
+import typeList from "../../../data/formationTypes.json";
 
 const imagesMap = {
     0: image1,
@@ -33,12 +23,16 @@ const imagesMap = {
     8: image9,
 }
 
-const colorMap = {
-    0: ["rgb(43, 79, 49)", "rgb(43, 79, 49, 0.05)"],
-    1: ["rgb(122, 12, 12)", "rgb(122, 12, 12, 0.05)"],
-    2: ["rgb(122, 12, 12)", "rgb(122, 12, 12, 0.05)"],
-    3: ["rgb(122, 12, 12)", "rgb(122, 12, 12, 0.05)"],
+const generateColorMap = (types) => {
+    let output = {};
+    types.forEach((type, index) => {
+        output[index] = ([`rgb(${type.couleur1RGB[0]}, ${type.couleur1RGB[1]}, ${type.couleur1RGB[2]})`, `rgb(${type.couleur1RGB[0]}, ${type.couleur1RGB[1]}, ${type.couleur1RGB[2]}, 0.05)`])
+    })
+    return output
 }
+
+        //Try that for the OnMouseOver
+        // <tr style="background-color:#FFFFFF" onmouseover="this.style.backgroundColor='#000000'" onmouseout="this.style.backgroundColor='#FFFFFF'">
 
 //Input, wa have formation data
 class FormationCardBis extends React.Component {
@@ -56,6 +50,7 @@ class FormationCardBis extends React.Component {
         });
     }
     render() {
+        const colorMap = generateColorMap(typeList)
         return (
             <>
                 {/* <OverlayTrigger
@@ -77,7 +72,8 @@ class FormationCardBis extends React.Component {
                                 // backgroundColor: "#f8f9fa",
                                 backgroundColor: `${colorMap[this.props.formation.type][1]}`,
                                 opacity: "0.5",
-                                boxShadow: "0px 3px 5px -1px rgb(0,0,0,20%), 0px 6px 10px 0px rgb(0,0,0,14%),0px 1px 18px 0px rgb(0,0,0,12%)"
+                                boxShadow: "0px 3px 5px -1px rgb(0,0,0,20%), 0px 6px 10px 0px rgb(0,0,0,14%),0px 1px 18px 0px rgb(0,0,0,12%)",
+                                cursor: "pointer"
                             } : {
                                 padding: "10px",
                                 backgroundColor: "white",

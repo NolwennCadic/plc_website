@@ -56,8 +56,7 @@ class FormationsCatalogue extends React.Component {
 
 
     render() {
-        const types = generateTypes(formationList, typeList).concat({ key: 5, type: "Tous",couleur1: "#e8eba9",couleur2: "##9e0e21" });
-        console.log("types =", types);
+        const types = generateTypes(formationList, typeList).concat({ key: 5, type: "Tous", couleur1: "#e8eba9", couleur2: "##9e0e21" });
 
         return (
             <div>
@@ -76,7 +75,7 @@ class FormationsCatalogue extends React.Component {
                 }
                 {this.state.formationClicked !== undefined &&
                     <Modal size="lg" show={this.state.formationClicked !== undefined} onHide={() => { this.setFormationClicked(undefined) }}>
-                        <FormationPresentation title={this.state.formationClicked.nom} content={this.state.formationClicked.content} type={typeList.filter(type => type.key === this.state.formationClicked.type)[0]} />
+                        <FormationPresentation title={this.state.formationClicked.nom} content={this.state.formationClicked.content} type={typeList.filter(type => type.key === this.state.formationClicked.type)[0]} index={this.state.formationClicked.id} />
                     </Modal>
                 }
             </div>
