@@ -12,22 +12,22 @@ import Mission from "./Mission/Mission";
 const menuList = [
     "Equipe",
     "Formations",
-    "Conseil",
+    "Mission",
 ]
 
 const mapMap = {
     formations: [formationImage],
     equipe: [equipeImage],
-    conseil: [conseilImage],
+    mission: [conseilImage],
 }
 class FormationMenu extends React.Component {
     render() {
         return (
             <>
                 <Menu mapMap={mapMap} menuList={menuList} />
+                <Mission />
                 <Formation />
                 <Equipe />
-                <Mission />
             </>
         )
     }

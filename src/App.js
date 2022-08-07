@@ -11,23 +11,48 @@ import PracticalInformation from './component/PracticalInformation2';
 import CabinetMenu from './component/cabinetSide/CabinetMenu';
 // import BottomMessage from './component/common/BottomMessage';
 import React from 'react';
+import Footer from './component/Footer';
+import DialogNewsletter from './component/common/Newsletter/DialogNewsletter';
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      showDialog: false,
+    };
+    this.setShowDialog = this.setShowDialog.bind(this);
+
+  }
+  setShowDialog() {
+    this.setState({
+      showDialog: !this.state.showDialog,
+    });
+  }
   render() {
+    console.log(this.state.showDialog);
     return (
       <div className="App">
         <NavbarCustom />
+        <div style={{ minHeight: "80vh" }}>
+          {this.state.showDialog &&
+            <DialogNewsletter
+              setShowDialog={this.setShowDialog}
+              showDialog={this.state.showDialog}
+            />
+          }
+          <Routes>
+            <Route path='/cabinetMenu' element={<CabinetMenu />} />
+            <Route path='/customFormation' element={<CustomFormation />} />
+            <Route path='/formationsCatalogue' element={<FormationsCatalog />} />
+            <Route path='/formationDescription' element={<FormationDescription />} />
+            <Route path='/formationMenu' element={<FormationMenu />} />
+            <Route exact path='/' element={<HomePage />} />
+            <Route path='/infosPratiques' element={<PracticalInformation />} />
+          </Routes>
+          {/* <BottomMessage /> */}
+        </div>
 
-        <Routes>
-          <Route path='/cabinetMenu' element={<CabinetMenu />} />
-          <Route path='/customFormation' element={<CustomFormation />} />
-          <Route path='/formationsCatalogue' element={<FormationsCatalog />} />
-          <Route path='/formationDescription' element={<FormationDescription />} />
-          <Route path='/formationMenu' element={<FormationMenu />} />
-          <Route exact path='/' element={<HomePage />} />
-          <Route path='/infosPratiques' element={<PracticalInformation />} />
-        </Routes>
-        {/* <BottomMessage /> */}
+        <Footer setShowDialog={this.setShowDialog} />
       </div>
     );
   }

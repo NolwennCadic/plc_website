@@ -8,10 +8,9 @@ const memberMap = {
 class EquipeCardBis extends React.Component {
     render() {
         console.log()
-
         return (
             <div>
-                <div style={{ display: "flex", flexDirection: "row", textAlign: "left", width: "94vw", justifyContent: "center" }}>
+                <div style={{ display: "flex", flexDirection: "row", textAlign: "left", width: "94vw", justifyContent: "center", backgroundColor: "#E7E6E6", padding: "2%" }}>
                     <div style={{ width: "30vw" }}>
                         <img src={memberMap[this.props.member.id]} style={{ width: "20vw", borderRadius: "100%" }} alt={this.props.member.nom} />
                         <div style={{ display: "flex", flexDirection: "row" }}>

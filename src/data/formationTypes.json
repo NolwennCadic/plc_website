@@ -1,0 +1,35 @@
+[
+    {
+        "key": 0,
+        "type": "Comptabilité",
+        "couleur1": "#633812",
+        "couleur1RGB": [99, 56, 18],
+        "couleur2": "#0e6144",
+        "couleur2RGB": [14, 97, 68]
+    },
+    {
+        "key": 1,
+        "type": "Contrôle de gestion",
+        "couleur1": "#8491b5",
+        "couleur1RGB": [132, 145, 181],
+        "couleur2": "black",
+        "couleur2RGB": [0, 0, 0]
+    },
+    {
+        "key": 2,
+        "type": "Fiscalité",
+        "couleur1": "#5c1931",
+        "couleur1RGB": [92, 25, 49],
+        "couleur2": "#8f8d8e",
+        "couleur2RGB": [143, 141, 142]
+    },
+    {
+        "key": 3,
+        "type": "Sur-mesure",
+        "couleur1": "#e8eba9",
+        "couleur1RGB": [232, 235, 169],
+        "couleur2": "#9e0e21",
+        "couleur2RGB": [158, 14, 33]
+    }
+
+]

@@ -3,10 +3,14 @@ import { Card } from "react-bootstrap";
 import comptaImage from "../../../images/compta.jpeg";
 import formation1 from "../../../pdf/formation1.pdf";
 import formation2 from "../../../pdf/formation2.pdf";
+import formation3 from "../../../pdf/formation3.pdf";
+import formation4 from "../../../pdf/formation4.pdf";
 
 const pdfMap = {
     1: formation1,
     2: formation2,
+    3: formation3,
+    4: formation4,
 };
 
 const imagesMap = {

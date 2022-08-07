@@ -1,13 +1,11 @@
 import React from "react";
-import NewsletterSubscription from './NewsletterSubscription';
 
 class HomePage extends React.Component {
 
     render() {
-        return( 
+        return(
         <div>
             <div>Page d'accueil </div>
-            <NewsletterSubscription />
         </div>
 
         )
