@@ -128,5 +128,26 @@ code {
   color: #E7E6E6;
 }
 
-/* .InfoContent {
-} */
+.flexEquipe {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 800px) {
+  .flexEquipe {
+    display: flex;
+    flex-direction: row;
+    font-size: small;
+  }
+
+  .InfoContent {
+    font-size: auto;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .InfoContentEquipe {
+    font-size: auto;
+  }
+}
