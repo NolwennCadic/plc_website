@@ -1,7 +1,7 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { isAddressEmailValid, sendEmail } from "../utils/sendEmailUtils";
+import { sendEmail } from "../utils/sendEmailUtils";
 
 class NewsletterSubscription extends React.Component {
 
@@ -55,6 +55,7 @@ class NewsletterSubscription extends React.Component {
 
     checkFormErrors() {
         let newErrors = {};
+        let emailAddressRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i;
         
         if(this.state.emailData === null) {
             return newErrors;
@@ -65,7 +66,7 @@ class NewsletterSubscription extends React.Component {
         if(!this.state.emailData.lastName == null || this.state.emailData.lastName.trim() === "") {
             newErrors.lastNameError = "Veuillez entrer votre nom";
         }
-        if (this.state.emailData.emailAddress == null || !isAddressEmailValid(this.state.emailData.emailAddress)) {
+        if (this.state.emailData.emailAddress == null || !emailAddressRegex.test(this.state.emailData.emailAddress)) {
             newErrors.emailAddressError = "Veuillez entrer une adresse email valide"
         }
         return newErrors;
