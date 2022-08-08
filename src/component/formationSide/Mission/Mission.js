@@ -11,25 +11,39 @@ class Mission extends React.Component {
                 </div>
                 <div style={{ margin: "2%" }}>
                     <div className={"titleMission"}>Vous souhaitez préparer votre avenir, acquérir de nouvelles compétences, changer de voie professionnelle ? </div>
+                    <div className={"titleMission"}>La formation professionnelle est faite pour VOUS ! </div>
                     <div style={{ textAlign: "left", padding: "2%" }}>
                         <div>
-                            La <span className={"bold"}>formation professionnelle</span> peut avoir beaucoup d'ojectifs différent. C'est un moyen de:
+                            Cette dernière peut vous permettre :
                             <ul>
-                                <li>Gérer votre carrière professionnelle,</li>
-                                <li>Evoluer vers de nouvelles fonctions ou responsabilités hiérarchiques</li>
-                                <li>Revaloriser votre salaire.</li>
+                                <li>De gérer votre <span className={"bold"}>carrière professionnelle</span>,</li>
+                                <li>D'évoluer vers de nouvelles fonctions ou <span className={"bold"}>responsabilités hiérarchiques</span></li>
+                                <li>De <span className={"bold"}>revaloriser</span> votre salaire.</li>
                             </ul>
                         </div>
+                        <div className={"titleMission"}>Ses atouts :</div>
                         <div style={{ paddingTop: "10px" }}>
-                            La formation professionnelle présente de nombreux bénéfices et vous permet de développer et d'approfondir vos compétences techniques
-                            (<span className={"bold"}>hard skills</span>) ainsi que vos compétences comportementales (<span className={"bold"}>soft skills</span>), tout en améliorant, par ces bienfaits, votre
-                            <span className={"bold"}> développement professionnel</span> continu: la compétitivité, développement...
+                            Elle vous aide :
+                            <ul>
+                                <li>A développer et approfondir vos compétences techniques <span className={"bold"}>(hard skills)</span>,</li>
+                                <li>A développer et approfondir vos compétences comportementales <span className={"bold"}>(soft skills)</span>,</li>
+                                <li>A améliorer votre <span className={"bold"}>développement professionnel</span> continu : la compétitivité, développement...</li>
+                            </ul>
                         </div>
+                        <div className={"titleMission"}>Pourquoi le cabinet PLC ?</div>
                         <div style={{ paddingTop: "10px" }}>
-                            Notre <span className={"bold"}>cabinet PLC</span>, et plus particulièrement Sabine Cadic, vous accompagne dans vos démarches. Son sens de l’écoute
+                            Le <span className={"bold"}>cabinet PLC</span>, et plus particulièrement Sabine Cadic, vous accompagne dans vos démarches. Son sens de l’écoute
                             et sa pédagogie lui permettent de définir les <span className={"bold"}>objectifs précis</span> de la formation et de construire
                             un contenu <span className={"bold"}>adapté à votre besoin</span>.
                         </div>
+                        <span className={"bold"}>Ensemble</span> nous identifions vos besoins (contexte, public, objectifs…) et nous élaborons des programmes de formation adaptés.
+                        <ul>
+                            <li>ETAPE 1: Prise de contact,</li>
+                            <li>ETAPE 2: Rendez-vous à distance ou non pour définir vos attentes,</li>
+                            <li>ETAPE 3: Elaboration et validation ensemble du programme personnalisé,</li>
+                            <li>ETAPE 4: Conclusion (choix de la date, lieu…)</li>
+                        </ul>
+                        Une prise en compte individuelle du stagiaire, son niveau de compétence et les attendus de la formation sont analysés pour l’élaboration d’un programme sur mesure.
                     </div>
                     <div className={"titleMission"}>Envie de créer votre entreprise ? Besoin de conseil en création ? </div>
                     <div style={{ textAlign: "left", padding: "2%" }}>
@@ -40,7 +54,7 @@ class Mission extends React.Component {
                                 <li>Etudier sa faisabilité (vérification de l’étude de marché et du modèle économique…), prérequis indispensable à toute création de structure.</li>
                                 <li>
                                     Faire le choix juridique, en respectant vos contraintes (conjoint, responsabilité, nombre
-                                    de participants…) ainsi qu'en élaborerons, ensemble, le montage financier (bilan,BFR..) pour travailler la présentation aux banques.
+                                    de participants…) ainsi qu'en élaborant, ensemble, le montage financier (bilan,BFR..) pour travailler la présentation aux banques.
                                 </li>
                                 <li>
                                     Développer, ensemble, l’argumentaire pour lever des fonds (bancaires, partenaires…).

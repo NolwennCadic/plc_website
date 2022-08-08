@@ -1,0 +1,13 @@
+/* OrgChart.css */
+.diagram-component {
+  width: 1550px;
+  height: 600px;
+  border: none black;
+  margin: 10px 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 2px;
+  /* background-color: #696969;  */
+}

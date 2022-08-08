@@ -2,7 +2,7 @@ import React from "react";
 import EquipeCatalog from "./EquipeCatalog";
 import {BsPeopleFill} from "react-icons/bs";
 
-class Formation extends React.Component {
+class Equipe extends React.Component {
     render() {
         return (
             <>
@@ -21,4 +21,4 @@ class Formation extends React.Component {
 
 }
 
-export default Formation;
+export default Equipe;

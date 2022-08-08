@@ -1,0 +1,40 @@
+[
+    {
+        "nom": "Yann CADIC",
+        "titre": "Expert comptable",
+        "branches": [
+            {
+                "branche": "Comptabilité",
+                "membres": [
+                    {
+                        "responsable": "V. Fardoux",
+                        "membres": [
+                            {
+                                "nom": "S. Yvart"
+                            },
+                            {
+                                "nom": "Else Dieu"
+                            },
+                            {
+                                "nom": "Rachel Alexandre"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "branche": "Social",
+                "membres": [
+                    {
+                        "responsable": "J.Luz",
+                        "membres": [
+                            {
+                                "nom": "Rachel Alexandre"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

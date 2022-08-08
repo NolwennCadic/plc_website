@@ -5,6 +5,7 @@ import Menu from "../common/Menu";
 import formationImage from "../../images/menuFormation/formations.svg";
 import equipeImage from "../../images/menuFormation/equipe.svg";
 import Histoire from "./Histoire/Histoire";
+import SandBoxOrganigramme from "./equipe/SandBoxOrganigramme";
 
 const menuList = [
     "Histoire",
@@ -21,6 +22,7 @@ class ComptableMenu extends React.Component {
             <>
                 <Menu mapMap={mapMap} menuList={menuList} />
                 <Histoire />
+                <SandBoxOrganigramme/>
             </>
         )
     }

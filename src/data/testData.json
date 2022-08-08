@@ -1,0 +1,79 @@
+[
+    {
+      "key": 0,
+      "name": "Yann CADIC",
+      "office": "Expert Comptable",
+      "color": "gray",
+      "team":0
+    },
+    {
+      "key": 1,
+      "name": "Comptabilité",
+      "parent": 0,
+      "color": "darkblue",
+      "team": 1
+    },
+    {
+      "key": 2,
+      "name": "V. Fardoux",
+      "parent": 1,
+      "color": "darkblue",
+      "team": 1
+    },
+    {
+      "key": 3,
+      "name": "S. Yvart",
+      "parent": 2,
+      "color": "darkblue",
+      "team": 1
+    },
+    {
+      "key": 4,
+      "name": "Elsa Dieu",
+      "parent": 2,
+      "color": "darkblue",
+      "team": 1
+    },
+    {
+      "key": 5,
+      "name": "Rachel",
+      "parent": 2,
+      "color": "darkblue",
+      "team": 3
+    },
+    {
+      "key": 6,
+      "name": "Alexandre",
+      "parent": 2,
+      "color": "darkblue",
+      "team": 3
+    },
+    {
+      "key": 7,
+      "name": "Social",
+      "parent": 0,
+      "color": "lightcoral",
+      "team": 2
+    },
+    {
+      "key": 8,
+      "name": "I. Luz",
+      "parent": 7,
+      "color": "lightcoral",
+      "team": 2
+    },
+    {
+      "key": 9,
+      "name": "Rachel",
+      "parent": 8,
+      "color": "lightcoral",
+      "team": 3
+    },
+    {
+      "key": 10,
+      "name": "Alexandre",
+      "parent": 8,
+      "color": "lightcoral",
+      "team": 3
+    }
+  ]
