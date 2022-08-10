@@ -9,6 +9,7 @@ import formation6 from "../../../pdf/formation6.pdf";
 import formation7 from "../../../pdf/formation7.pdf";
 import formation8 from "../../../pdf/formation8.pdf";
 import formation9 from "../../../pdf/formation9.pdf";
+import "./formation.css";
 
 const pdfMap = {
     0: formation1,
@@ -29,19 +30,17 @@ class FormationPresentation extends React.Component {
     //props: index
     render() {
         return (
-            <>{
+            <div key={`main${this.props.title}`}>{
                 this.props.content &&
-                <>
-                    <h1 style={{ color: this.props.type.couleur1 }}>{this.props.title}</h1>
+                <div key={`submain${this.props.title}`} class={"formation-body"}>
+                    <h1 style={{ color: this.props.type.couleur1 }} class={"formation-title"}>{this.props.title}</h1>
                     {this.props.content.map((submenu) => {
-                        console.log("submenu =", submenu);
                         return (
                             <div>
-                                <h2 style={{ color: this.props.couleur2 }}>{submenu.title}</h2>
+                                <h2 style={{ color: this.props.couleur2 }} class={"formation-submenu-title"}>{submenu.title}</h2>
                                 {submenu.content.constructor === Array ?
-                                    <>
+                                    <div key={`sub${submenu.title}`} class={"formation-submenu"}>
                                         {submenu.content.map((subsubmenu) => {
-                                            console.log("subsubmenu =", subsubmenu);
                                             return (
                                                 <div>
                                                     <div className="bold">{subsubmenu.title}</div>
@@ -65,20 +64,22 @@ class FormationPresentation extends React.Component {
                                             )
                                         })
                                         }
-                                    </>
+                                    </div>
                                     : <span>{submenu.content}</span>
 
                                 }
-                                <div style={{ textAlign: "center", width: "100%" }}>
-                                    <a href={pdfMap[this.props.index]} download style={{ font: "bold", color: "black", textDecoration: "none" }}><BsDownload style={{ fontSize: "30px", paddingRight: "5px" }} />Telecharger la fiche</a>
-                                </div>
+
                             </div>
                         )
                     })
 
                     }
-                </>
-            }</>
+                </div>
+            }
+                <div style={{ textAlign: "center", width: "100%", marginBottom: "1%"}}>
+                    <a href={pdfMap[this.props.index]} download style={{ font: "bold", color: this.props.type.couleur2, textDecoration: "none" }}><BsDownload style={{ fontSize: "30px", paddingRight: "5px" }} />Telecharger la fiche</a>
+                </div>
+            </div>
         )
     }
 }

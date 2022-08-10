@@ -36,43 +36,29 @@
     },
     {
       "key": 5,
-      "name": "Rachel",
+      "name": "Rachel Alexandre",
       "parent": 2,
       "color": "darkblue",
       "team": 3
     },
     {
       "key": 6,
-      "name": "Alexandre",
-      "parent": 2,
-      "color": "darkblue",
-      "team": 3
-    },
-    {
-      "key": 7,
       "name": "Social",
       "parent": 0,
       "color": "lightcoral",
       "team": 2
     },
     {
-      "key": 8,
+      "key": 7,
       "name": "I. Luz",
-      "parent": 7,
+      "parent": 6,
       "color": "lightcoral",
       "team": 2
     },
     {
-      "key": 9,
-      "name": "Rachel",
-      "parent": 8,
-      "color": "lightcoral",
-      "team": 3
-    },
-    {
-      "key": 10,
-      "name": "Alexandre",
-      "parent": 8,
+      "key": 8,
+      "name": "Rachel Alexandre",
+      "parent": 7,
       "color": "lightcoral",
       "team": 3
     }
