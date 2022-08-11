@@ -10,6 +10,7 @@ import image7 from "../../../images/formations/formation7.jpg";
 import image8 from "../../../images/formations/formation8.jpg";
 import image9 from "../../../images/formations/formation9.jpg";
 import typeList from "../../../data/formationTypes.json";
+import "./formation.css";
 
 const imagesMap = {
     0: image1,
@@ -31,8 +32,8 @@ const generateColorMap = (types) => {
     return output
 }
 
-        //Try that for the OnMouseOver
-        // <tr style="background-color:#FFFFFF" onmouseover="this.style.backgroundColor='#000000'" onmouseout="this.style.backgroundColor='#FFFFFF'">
+//Try that for the OnMouseOver
+// <tr style="background-color:#FFFFFF" onmouseover="this.style.backgroundColor='#000000'" onmouseout="this.style.backgroundColor='#FFFFFF'">
 
 //Input, wa have formation data
 class FormationCardBis extends React.Component {
@@ -68,16 +69,16 @@ class FormationCardBis extends React.Component {
                     style={
                         this.state.isHovered
                             ? {
-                                padding: "10px",
-                                // backgroundColor: "#f8f9fa",
                                 backgroundColor: `${colorMap[this.props.formation.type][1]}`,
-                                opacity: "0.5",
                                 boxShadow: "0px 3px 5px -1px rgb(0,0,0,20%), 0px 6px 10px 0px rgb(0,0,0,14%),0px 1px 18px 0px rgb(0,0,0,12%)",
-                                cursor: "pointer"
+                                cursor: "pointer",
+                                margin: "0 1% 0 1%",
                             } : {
-                                padding: "10px",
                                 backgroundColor: "white",
-                                boxShadow: "rgb(0 0 0 / 20%) 0px 1px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px"
+                                border: "1px solid lightgray ",
+                                borderRight: "none",
+                                borderLeft: "none",
+                                margin: "0 2% 0 2%",
                             }
                     }
                     onMouseEnter={this.toggleIsHovered}

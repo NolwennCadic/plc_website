@@ -10,7 +10,7 @@ class Mission extends React.Component {
                     Mission
                 </div>
                 <div style={{ margin: "2%" }}>
-                    <div className={"titleMission"}>Vous souhaitez préparer votre avenir, acquérir de nouvelles compétences, changer de voie professionnelle ? </div>
+                    <div className={"titleMission1"}>Vous souhaitez préparer votre avenir, acquérir de nouvelles compétences, changer de voie professionnelle ? </div>
                     <div className={"titleMission"}>La formation professionnelle est faite pour VOUS ! </div>
                     <div style={{ textAlign: "left", padding: "2%" }}>
                         <div>
@@ -21,7 +21,9 @@ class Mission extends React.Component {
                                 <li>De <span className={"bold"}>revaloriser</span> votre salaire.</li>
                             </ul>
                         </div>
-                        <div className={"titleMission"}>Ses atouts :</div>
+                    </div>
+                    <div className={"titleMission"}>Ses atouts :</div>
+                    <div style={{ textAlign: "left", padding: "2%" }}>
                         <div style={{ paddingTop: "10px" }}>
                             Elle vous aide :
                             <ul>
@@ -30,13 +32,17 @@ class Mission extends React.Component {
                                 <li>A améliorer votre <span className={"bold"}>développement professionnel</span> continu : la compétitivité, développement...</li>
                             </ul>
                         </div>
-                        <div className={"titleMission"}>Pourquoi le cabinet PLC ?</div>
+                    </div>
+                    <div className={"titleMission"}>Pourquoi le cabinet PLC ?</div>
+                    <div style={{ textAlign: "left", padding: "2%" }}>
                         <div style={{ paddingTop: "10px" }}>
                             Le <span className={"bold"}>cabinet PLC</span>, et plus particulièrement Sabine Cadic, vous accompagne dans vos démarches. Son sens de l’écoute
                             et sa pédagogie lui permettent de définir les <span className={"bold"}>objectifs précis</span> de la formation et de construire
                             un contenu <span className={"bold"}>adapté à votre besoin</span>.
                         </div>
-                        <span className={"bold"}>Ensemble</span> nous identifions vos besoins (contexte, public, objectifs…) et nous élaborons des programmes de formation adaptés.
+                    </div>
+                    <span className={"bold"}>Ensemble</span> nous identifions vos besoins (contexte, public, objectifs…) et nous élaborons des programmes de formation adaptés.
+                    <div style={{ textAlign: "left", padding: "2%" }}>
                         <ul>
                             <li>ETAPE 1: Prise de contact,</li>
                             <li>ETAPE 2: Rendez-vous à distance ou non pour définir vos attentes,</li>
@@ -63,7 +69,7 @@ class Mission extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         )
     }
 

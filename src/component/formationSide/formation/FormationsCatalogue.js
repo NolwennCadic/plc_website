@@ -41,10 +41,11 @@ class FormationsCatalogue extends React.Component {
 
     }
     setTypeFiltered(newType) {
+        console.log("newType =", newType);
         this.setState({
             typeFiltered: newType,
             itemsToShow: formationList.filter(formation => {
-                return (newType === "Tous" || formation.type === newType || formation.type === "Sur-Mesure");
+                return (newType === 5 || formation.type === newType || formation.type === 3);
             }),
         });
     }

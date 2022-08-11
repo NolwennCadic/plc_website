@@ -53,6 +53,13 @@ code {
   padding-top: 10px;
   /* color: #594011; */
 }
+.titleMission1 {
+  /* text-decoration: underline; */
+  text-align: left;
+  font-size: 23px;
+  padding-top: 10px;
+  /* color: #594011; */
+}
 
 .clickableItem {
   font: bold;
