@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-.titleSubPart {
+.title-part {
   text-align: left;
   /* color: #594011; */
   color: #004C38;
@@ -46,20 +46,14 @@ code {
   font-weight: bold;
 }
 
-.titleMission {
+.subtitle-mission {
   /* text-decoration: underline; */
   text-align: left;
   font-size: 20px;
   padding-top: 10px;
   /* color: #594011; */
 }
-.titleMission1 {
-  /* text-decoration: underline; */
-  text-align: left;
-  font-size: 23px;
-  padding-top: 10px;
-  /* color: #594011; */
-}
+
 
 .clickableItem {
   font: bold;

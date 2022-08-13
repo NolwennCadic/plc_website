@@ -5,7 +5,7 @@ class Histoire extends React.Component {
     render() {
         return (
             <div style={{ minHeight: "100vh", paddingTop: "100px" }} id={"Histoire"}>
-                <div className="titleSubPart">
+                <div className="title-part">
                     <BsFillCalendarWeekFill style={{ fontSize: "30px", paddingRight: "5px" }} />
                     Histoire
                 </div>

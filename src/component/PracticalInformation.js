@@ -43,7 +43,7 @@ class PracticalInformation extends React.Component {
                         </div>
                     </div>
                     <img src={loupe} style={{ width: "15vw", position: "relative", left: "40vw" }} alt={"loupe"} />{/**ça fait trop gamin */}
-                    <div className="titleSubPart">
+                    <div className="title-part">
                         <div >Nous</div>
                         <div style={{ marginLeft: "35px" }} >trouver:</div>
                     </div>
@@ -67,7 +67,7 @@ class PracticalInformation extends React.Component {
                         <BsFillTelephoneFill />
                         <div>03 22 35 37 20</div>
                     </div>
-                    <div className="titleSubPart">
+                    <div className="title-part">
                         <div >Nous</div>
                         <div style={{ marginLeft: "35px" }} >contacter:</div>
                     </div>
@@ -82,7 +82,7 @@ class PracticalInformation extends React.Component {
                             <Nav.Link href={"https://www.societe.com/societe/p-l-c-498965763.html"} className={"clickableItem"}>Renseignements juridiques</Nav.Link>
                         </div>
                     </div>
-                    <div className="titleSubPart">
+                    <div className="title-part">
                         <div >Nos</div>
                         <div style={{ marginLeft: "35px" }} >Réseaux::</div>
                     </div>
@@ -91,7 +91,7 @@ class PracticalInformation extends React.Component {
                     <div style={{ display: "flex", justifyContent: "center" }}>
                         <div style={{ paddingBottom: "12px" }}>Seule notre partie formation est accessible sur les réseaux, </div>
                     </div>
-                    <div className="titleSubPart">
+                    <div className="title-part">
                         <div >Plus</div>
                         <div style={{ marginLeft: "35px" }} >d'informations:</div>
                     </div>

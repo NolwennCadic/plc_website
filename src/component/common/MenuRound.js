@@ -11,7 +11,7 @@ class MenuRound extends React.Component {
                         <img src={this.props.image} style={{ width: "17vw", borderRadius: "100%", backgroundColor: "white" }} alt={this.props.title} />
                         {/* </Link> */}
                     </a>
-                    <div style={{ color: "white" }}>{this.props.title}</div>
+                    <div style={{ color: "#004C38" }}>{this.props.title}</div>
                 </div>
             </React.Fragment>
         )

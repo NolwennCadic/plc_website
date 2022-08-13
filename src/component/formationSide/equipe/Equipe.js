@@ -7,7 +7,7 @@ class Equipe extends React.Component {
         return (
             <>
                 <div style={{ minHeight: "100vh", paddingTop: "100px" }} id={"Equipe"}>
-                    <div className="titleSubPart">
+                    <div className="title-part">
                         <BsPeopleFill style={{fontSize: "30px", paddingRight: "5px"}}/>
                         Equipe
                     </div>

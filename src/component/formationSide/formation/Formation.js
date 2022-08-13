@@ -7,7 +7,7 @@ class Formation extends React.Component {
         return (
             <>
                 <div style={{ minHeight: "100vh", paddingTop: "100px" }} id={"Formations"} >
-                    <div className="titleSubPart">
+                    <div className="title-part">
                         <BsFillMapFill style={{ fontSize: "30px", paddingRight: "5px" }} />
                         Formations
                     </div>
