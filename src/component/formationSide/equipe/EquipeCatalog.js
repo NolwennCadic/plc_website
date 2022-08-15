@@ -14,6 +14,8 @@ class EquipeCatalog extends React.Component {
                         flexDirection: "column",
                         alignItems: "center",
                         gap: "20px",
+                        height: "calc(100vh - 200px)",
+                        justifyContent: "center",
                     }}
                     id={"Equipe"}
                 >

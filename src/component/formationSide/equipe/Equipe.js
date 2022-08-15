@@ -6,12 +6,12 @@ class Equipe extends React.Component {
     render() {
         return (
             <>
-                <div style={{ minHeight: "100vh", paddingTop: "100px" }} id={"Equipe"}>
+                <div style={{ minHeight: "calc(100vh - 100px)", paddingTop: "100px" }} id={"Equipe"}>
                     <div className="title-part">
                         <BsPeopleFill style={{fontSize: "30px", paddingRight: "5px"}}/>
                         Equipe
                     </div>
-                    <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", height:"90%" }}>
+                    <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", height:"100%" }}>
                         <EquipeCatalog />
                     </div>
                 </div>

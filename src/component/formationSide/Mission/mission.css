@@ -1,11 +1,25 @@
-.menu-mission {
+/* .menu-mission {
     background-color: rgb(231, 230, 230, 0.5);
     padding: 0 2% 0 2%;
     margin: 2% 0 2% 0;
+} */
+
+.subtitle-mission {
+    /* text-decoration: underline; */
+    text-align: left;
+    font-size: 20px;
+    padding: 20px 0 5px 0;
+    color: #594011;
+    margin-left: 2%;
 }
 
 .submenu-mission {
-    padding: 2%;
+    background-color: rgb(231, 230, 230, 0.5);
+    padding-left: 2%;
+}
+
+.list-submenu-mission {
+    padding: 10px 0 0 10px;
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -14,6 +28,7 @@
 
 .icon-menu-mission {
     font-size: 50px;
+    width: 50px;
     color: rgb(0, 76, 56, 0.5);
 }
 
@@ -22,5 +37,6 @@
     text-align: left;
     font-size: 23px;
     padding-top: 10px;
-    /* color: #594011; */
+    color: rgb(0, 76, 56);
+    margin-left: 2%;
 }
