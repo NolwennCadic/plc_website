@@ -9,3 +9,8 @@ export const sendEmail = (templateId, formData) => {
           console.log(error.text);
       });
   };
+
+export const isAddressEmailValid = (emailAddress) => {
+    let emailAddressRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i;
+    return emailAddressRegex.test(emailAddress);
+}
