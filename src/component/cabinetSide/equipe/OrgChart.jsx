@@ -229,7 +229,7 @@ const OrgChart = (OrgChartProps) => {
         return sel ? "Foreground" : "";
       }).ofObject(),
       // define the node's outer shape
-      $(go.Shape, "Rectangle", {
+      $(go.Shape, "RoundedRectangle", {
         //name: "SHAPE", fill: "white", stroke: null,
         name: "SHAPE",
         fill: "#333333",

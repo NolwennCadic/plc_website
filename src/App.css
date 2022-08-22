@@ -52,8 +52,10 @@
 
 /* goJs */
 .diagram-component {
-  width: 90%;
-  overflow: hidden;
+  position: relative;
+  max-width: calc(100vw - 30px);
+  margin: 0px;
+  /* overflow: hidden; */
   background-color: white;
   border: 0cm;
 }

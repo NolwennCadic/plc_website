@@ -9,7 +9,7 @@ import getData from "./getData";
 
 function SandBoxOrganigramme() {
   const [nodeDataArray, setData] = useState([]);
-  console.log("nodeDataArray =", nodeDataArray );
+  console.log("nodeDataArray =", nodeDataArray);
   const [bShow, showBackButton] = useState(false);
   const [arr, setBackNode] = useState([]);
 
@@ -46,7 +46,7 @@ function SandBoxOrganigramme() {
   };
 
   return (
-    <div className="App">
+    <div style={{ position: "relative", width: "100vw" }}>
       <div className="app-orgchart-container">
         {bShow && (
           <button className="app-backbutton" onClick={handleBackButtonClick}>
@@ -59,6 +59,21 @@ function SandBoxOrganigramme() {
           nodeDataArray={nodeDataArray}
           OnNodeClickEvent={onNodeClickHandler}
         />
+      </div>
+      <div style={{
+        backgroundColor: "white",
+        width: "200px",
+        height: "150px",
+        position: "absolute",
+        left: "0",
+        top: "0",
+        zIndex: 3,
+        boxShadow: "1px 1px #888888"
+      }}>
+        <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}><div style={{ width: "20px", height: "20px", backgroundColor: "#333333", border: "3px solid lightGray", position: "relative", left: "10px" }} /><span>Boss</span></div>
+        <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}><div style={{ width: "20px", height: "20px", backgroundColor: "#333333", border: "3px solid darkblue", position: "relative", left: "10px" }} /><span>Pole Comptabilité</span></div>
+        <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}><div style={{ width: "20px", height: "20px", backgroundColor: "#333333", border: "3px solid lightCoral", position: "relative", left: "10px" }} /><span>Pole Social</span></div>
+        <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}><div style={{ width: "20px", height: "20px", backgroundColor: "#333333", border: "3px solid black", position: "relative", left: "10px" }} /><span>Mi-temps comptabilité et social</span></div>
       </div>
     </div>
   );
