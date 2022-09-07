@@ -13,13 +13,17 @@
     margin-left: 2%;
 }
 
-.submenu-mission {
+.submenu-mission #slide {
+    transition: 1s;
+    left: 0;
     background-color: rgb(231, 230, 230, 0.5);
     padding-left: 2%;
+    padding: 10px 0 0 10px;
+    border-radius: 0.5em;
 }
 
 .list-submenu-mission {
-    padding: 10px 0 0 10px;
+    /* padding: 10px 0 0 10px; */
     display: flex;
     flex-direction: row;
     gap: 10px;

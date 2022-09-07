@@ -19,11 +19,11 @@ const mapMap = {
 class ComptableMenu extends React.Component {
     render() {
         return (
-            <>
+            <div>
                 <Menu mapMap={mapMap} menuList={menuList} />
                 <Histoire />
                 <SandBoxOrganigramme/>
-            </>
+            </div>
         )
     }
 

@@ -1,20 +1,28 @@
 .formation-title {
-    text-align: center;
-    margin: 1% 0 1% 0;
-  }
+  text-align: center;
+  margin: 1% 0 1% 0;
+}
 
-  input[type="text"].formation-body {
-    margin: 2%;
-    border-right: "10px solid" + text;
+input[type="text"].formation-body {
+  margin: 2%;
+  border-right: "10px solid" + text;
 
-  }
+}
 
 .formation-submenu {
-    margin: 2% 2% 5% 2%;
+  margin: 2% 2% 5% 2%;
 }
+
 .formation-submenu-title {
-    margin: 15px;
+  margin: 15px;
 }
+
+.formation-card :hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
 /* .formation-download{
 
 } */

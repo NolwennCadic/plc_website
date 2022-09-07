@@ -46,7 +46,7 @@ function SandBoxOrganigramme() {
   };
 
   return (
-    <div style={{ position: "relative", width: "100vw" }}>
+    <div style={{ position: "relative", width: "98%" }}>
       <div className="app-orgchart-container">
         {bShow && (
           <button className="app-backbutton" onClick={handleBackButtonClick}>

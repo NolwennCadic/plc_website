@@ -2,64 +2,72 @@
     {
       "key": 0,
       "name": "Yann CADIC",
-      "office": "Expert Comptable",
+      "role": "Expert Comptable",
       "color": "gray",
       "team":0
     },
     {
       "key": 1,
-      "name": "Comptabilité",
+      "role": "Comptabilité",
+      "name": "Equipe",
       "parent": 0,
       "color": "darkblue",
       "team": 1
     },
     {
       "key": 2,
-      "name": "V. Fardoux",
+      "name": "Véronique FARDOUX",
+      "role":"Responsable pôle comptable",
       "parent": 1,
       "color": "darkblue",
       "team": 1
     },
     {
       "key": 3,
-      "name": "S. Yvart",
+      "name": "Simon YVARD",
+      "role":"Alternant assistant comptable et juridique",
       "parent": 2,
       "color": "darkblue",
       "team": 1
     },
     {
       "key": 4,
-      "name": "Elsa Dieu",
+      "name": "Elsa DIEU",
+      "role":"Alternante assistante comptable et secrétaire",
       "parent": 2,
       "color": "darkblue",
       "team": 1
     },
     {
       "key": 5,
-      "name": "Rachel Alexandre",
+      "name": "Rachel ALEXANDRE",
+      "role":"Assistante comptable et social",
       "parent": 2,
       "color": "darkblue",
       "team": 3
     },
     {
       "key": 6,
-      "name": "Social",
+      "role": "Social",
+      "name": "Equipe",
       "parent": 0,
       "color": "lightcoral",
       "team": 2
     },
     {
       "key": 7,
-      "name": "I. Luz",
+      "name": "Isabel LUZ FERREIRA",
+      "role":"Responsable du pôle social et secrétariat",
       "parent": 6,
       "color": "lightcoral",
       "team": 2
     },
     {
       "key": 8,
-      "name": "Rachel Alexandre",
+      "name": "Rachel ALEXANDRE",
+      "role":"Assistante comptable et social",
       "parent": 7,
-      "color": "lightcoral",
+      "color": "darkblue",
       "team": 3
     }
   ]

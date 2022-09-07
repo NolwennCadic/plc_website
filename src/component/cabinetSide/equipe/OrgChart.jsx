@@ -221,7 +221,7 @@ const OrgChart = (OrgChartProps) => {
         // define a tooltip for each node that displays the office name
         toolTip: $(
           "ToolTip",
-          $(go.TextBlock, { margin: 4 }, new go.Binding("text", "office")) // tooltip shows full office name
+          $(go.TextBlock, { margin: 4 }, new go.Binding("text", "role")) // tooltip shows full office name
         ) // end of Adornment
       },
       // bind the Part.layerName to control the Node's layer depending on whether it isSelected
@@ -272,9 +272,10 @@ const OrgChart = (OrgChartProps) => {
               editable: false,
               isMultiline: false,
               alignment: go.Spot.Center,
-              minSize: new go.Size(14, 16)
+              minSize: new go.Size(14, 16),
+              margin: new go.Margin(1, 0, 3, 1)
             },
-            new go.Binding("text", "office").makeTwoWay()
+            new go.Binding("text", "role").makeTwoWay()
           ),
           // ****************************
           // *** lead person name - Row 3
@@ -294,14 +295,14 @@ const OrgChart = (OrgChartProps) => {
             },
             new go.Binding("text", "name").makeTwoWay()
           ),
-          $(
-            go.TextBlock,
-            textStyle(),
-            { row: 4, column: 6 },
-            new go.Binding("text", "teams", function (v) {
-              return "(" + v + ")";
-            })
-          ),
+          // $(
+          //   go.TextBlock,
+          //   textStyle(),
+          //   { row: 4, column: 6 },
+          //   new go.Binding("text", "teams", function (v) {
+          //     return "(" + v + ")";
+          //   })
+          // ),
           /*
                $(go.TextBlock, textStyle(),
                 { row: 4, column: 0 },
@@ -313,21 +314,21 @@ const OrgChart = (OrgChartProps) => {
           // ****************************
           // *** Comments - Row 4
           // ****************************
-          $(
-            go.TextBlock,
-            textStyle(), // the comments
-            {
-              row: 4,
-              column: 1,
-              columnSpan: 4,
-              font: "normal 9pt sans-serif",
-              wrap: go.TextBlock.WrapFit,
-              editable: false, // by default newlines are allowed
-              minSize: new go.Size(10, 14),
-              margin: new go.Margin(3, 0, 0, 3)
-            },
-            new go.Binding("text", "comments").makeTwoWay()
-          )
+          // $(
+          //   go.TextBlock,
+          //   textStyle(), // the comments
+          //   {
+          //     row: 4,
+          //     column: 1,
+          //     columnSpan: 4,
+          //     font: "normal 9pt sans-serif",
+          //     wrap: go.TextBlock.WrapFit,
+          //     editable: false, // by default newlines are allowed
+          //     minSize: new go.Size(10, 14),
+          //     margin: new go.Margin(3, 0, 0, 3)
+          //   },
+          //   new go.Binding("text", "comments").makeTwoWay()
+          // )
         ) // end Table Panel
       ) // end Horizontal Panel
     ); // end Node
@@ -402,7 +403,7 @@ const OrgChart = (OrgChartProps) => {
       go.Link,
       go.Link.Orthogonal,
       { corner: 5, relinkableFrom: true, relinkableTo: true },
-      $(go.Shape, { strokeWidth: 1.5, stroke: "#F5F5F5" })
+      $(go.Shape, { strokeWidth: 1.5, stroke: "gray" })
     ); // the link shape
 
     // read in the JSON-format data from the "mySavedModel" element

@@ -1,7 +1,7 @@
 import React from "react";
 import NewsletterSubscription from "./NewsletterSubscription";
 import { Modal, Button } from 'react-bootstrap';
-import { isAddressEmailValid, sendEmail } from "../utils/sendEmailUtils";
+import { isAddressEmailValid, sendEmail } from "../../../utils/sendEmailUtils";
 
 class DialogNewsletter extends React.Component {
     constructor() {

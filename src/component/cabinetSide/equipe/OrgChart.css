@@ -1,6 +1,6 @@
 /* OrgChart.css */
 .diagram-component {
-  width: 1550px;
+  width: 100%;
   height: 600px;
   border: none black;
   margin: 10px 10;

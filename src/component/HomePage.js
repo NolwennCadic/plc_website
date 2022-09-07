@@ -3,10 +3,10 @@ import React from "react";
 class HomePage extends React.Component {
 
     render() {
-        return(
-        <div>
-            <div>Page d'accueil </div>
-        </div>
+        return (
+            <div class="body">
+                <div>Page d'accueil </div>
+            </div>
 
         )
     }

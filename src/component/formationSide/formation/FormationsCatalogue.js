@@ -60,7 +60,7 @@ class FormationsCatalogue extends React.Component {
         const types = generateTypes(formationList, typeList).concat({ key: 5, type: "Tous", couleur1: "#e8eba9", couleur2: "##9e0e21" });
 
         return (
-            <div>
+            <div class="body">
                 {types.map((type, index) => {
                     return (
                         <ButtonFormation type={type} color={type.couleur1} setTypeFiltered={this.setTypeFiltered} key={`${index}Button`} />
