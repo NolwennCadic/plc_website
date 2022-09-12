@@ -6,6 +6,8 @@ import FormationCardBis from "./FormationCardBis";
 import typeList from "../../../data/formationTypes.json";
 import { Modal } from "react-bootstrap";
 import FormationPresentation from "./FormationPresentation";
+import Button from 'react-bootstrap/Button';
+import DialogContactForm from "../../common/Contact/DialogContactForm";
 
 const hasKey = (items, key) => {
     let elements = items.filter(item => item.key === key);
@@ -34,12 +36,20 @@ class FormationsCatalogue extends React.Component {
             typeFiltered: "tout",
             itemsToShow: formationList,
             formationClicked: undefined,
+            showDialog: false,
         };
         this.setTypeFiltered = this.setTypeFiltered.bind(this);
         this.setFormationClicked = this.setFormationClicked.bind(this);
-
-
+        this.setShowDialog = this.setShowDialog.bind(this);
     }
+
+
+    setShowDialog() {
+        this.setState({
+            showDialog: !this.state.showDialog,
+        });
+    }
+
     setTypeFiltered(newType) {
         console.log("newType =", newType);
         this.setState({
@@ -67,6 +77,8 @@ class FormationsCatalogue extends React.Component {
                     )
                 })
                 }
+                {/* <Button style={{ borderColor: this.props.color, color: this.props.color, backgroundColor: "white" }} onClick={() => this.props.setTypeFiltered(this.props.type.key)}>Nous contacter</Button> */}
+                <div onClick={() => { this.setShowDialog() }} style={{ cursor: "pointer" }}>Nous contacter</div>
                 {
                     this.state.itemsToShow.map((formation, index) => {
                         return (
@@ -78,6 +90,12 @@ class FormationsCatalogue extends React.Component {
                     <Modal size="lg" show={this.state.formationClicked !== undefined} onHide={() => { this.setFormationClicked(undefined) }}>
                         <FormationPresentation title={this.state.formationClicked.nom} content={this.state.formationClicked.content} type={typeList.filter(type => type.key === this.state.formationClicked.type)[0]} index={this.state.formationClicked.id} />
                     </Modal>
+                }
+                {this.state.showDialog &&
+                    <DialogContactForm
+                        setShowDialog={this.setShowDialog}
+                        showDialog={this.state.showDialog}
+                    />
                 }
             </div>
         )

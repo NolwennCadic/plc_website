@@ -21,13 +21,14 @@ class App extends React.Component {
       showDialog: false,
     };
     this.setShowDialog = this.setShowDialog.bind(this);
-
   }
+
   setShowDialog() {
     this.setState({
       showDialog: !this.state.showDialog,
     });
   }
+
   render() {
     console.log(this.state.showDialog);
     return (

@@ -13,13 +13,24 @@
     margin-left: 2%;
 }
 
-.submenu-mission #slide {
-    transition: 1s;
+.submenu-mission {
     left: 0;
     background-color: rgb(231, 230, 230, 0.5);
     padding-left: 2%;
     padding: 10px 0 0 10px;
     border-radius: 0.5em;
+    animation: mymove 5s;
+}
+
+/* The animation should be adapted to the scroll */
+@keyframes mymove {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .list-submenu-mission {

@@ -7,7 +7,7 @@ import { isAddressEmailValid, sendEmail } from '../utils/sendEmailUtils';
 
 class ContactForm extends React.Component {
 
-  //TODO change template ID
+  //TODO change template ID //SEE WITH NONO
   templateId = 'template_yb6wolh';
 
   constructor() {
@@ -15,7 +15,7 @@ class ContactForm extends React.Component {
     this.state = {
       formData: {
         firstName: "",
-        lastName: "", 
+        lastName: "",
         emailAddress: "",
         userMessage: ""
       },
@@ -93,33 +93,33 @@ resetFormErrors() {
       <Form onSubmit={this.handleSubmit}>
         <Row className="mb-3">
           <Form.Group as={Col} controlId="firstName">
-            <Form.Control 
-              type="text" 
-              placeholder="Prénom" 
+            <Form.Control
+              type="text"
+              placeholder="Prénom"
               onChange={this.handleChange}
               name="firstName" />
           </Form.Group>
 
           <Form.Group as={Col} controlId="lastName">
-            <Form.Control 
-              type="text" 
-              placeholder="Nom" 
+            <Form.Control
+              type="text"
+              placeholder="Nom"
               onChange={this.handleChange}
               name="lastName" />
           </Form.Group>
         </Row>
         <Form.Group className="mb-3" controlId="emailAddress">
-        <Form.Control 
-          type="email" 
-          placeholder="adresse email" 
+        <Form.Control
+          type="email"
+          placeholder="adresse email"
           onChange={this.handleChange}
           name="emailAddress" />
       </Form.Group>
       <Form.Group className="mb-3" controlId="userMessage">
-        <Form.Control 
-          as="textarea" 
-          rows={10} 
-          placeholder="Votre message..." 
+        <Form.Control
+          as="textarea"
+          rows={10}
+          placeholder="Votre message..."
           onChange={this.handleChange}
           name="userMessage" />
       </Form.Group>
