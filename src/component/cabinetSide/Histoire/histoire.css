@@ -1,8 +1,12 @@
-.submenu-histoire {
+.subMenu-histoire {
     background-color: rgb(231, 230, 230, 0.5);
     padding-left: 2%;
     padding: 10px 0 0 10px;
     margin: 2px 0 2px 0;
+    width: 90vw;
+    height: 70vh;
+    box-shadow: 5px 5px 10px #a4a4a4,
+        -5px -5px 10px #ffffff;
 }
 
 .icon-menu-histoire {
@@ -10,17 +14,28 @@
     width: 20px;
     color: rgb(0, 76, 56, 0.5);
     margin: 0 4px 7px 0;
-    /* flex-grow: 1; */
+
 }
 
 .list-title-histoire {
     color: rgb(0, 76, 56);
     font-weight: bold;
     width: calc(20vw - 24px);
+
     /* flex-grow: 1; */
 }
 
 .list-item-histoire {
     display: flex;
     justify-content: flex-start;
+}
+
+@keyframes fade-in {
+    0% {
+        transform: scale(0, .025);
+    }
+
+    50% {
+        transform: scale(1, .025);
+    }
 }

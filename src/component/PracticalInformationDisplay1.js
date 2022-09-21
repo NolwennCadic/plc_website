@@ -12,7 +12,7 @@ class PracticalInformationDisplay1 extends React.Component {//Should be Display1
                 <h3 style={{ marginTop: "20px", marginBottom: "40px" }}> Nous joindre: </h3>
                 <div className="InfoMenu">
                     <div className="subPartInfoLine">
-                        <div className="subPartInfoGray">
+                        <div className="subpart-info-gray">
                             <BsPinMapFill onClick={this.props.setHasMap} className="InfoIconGreen" />
                             <div className="InfoContent">
                                 <div >
@@ -24,26 +24,26 @@ class PracticalInformationDisplay1 extends React.Component {//Should be Display1
                             </div>
                         </div>
                         {/* <div className="SubPartColored2"> */}
-                        <div className="subPartInfoGreen">
+                        <div className="subpart-info-green">
                             {/* // 8h30-12h 13h30-17h */}
                             <BsFillTelephoneFill className="InfoIconGray" />
                             <div className="InfoContent">03 22 35 37 20</div>
                         </div>
                     </div>
                     <div className="subPartInfoLine">
-                        <div className="subPartInfoGreen">
+                        <div className="subpart-info-green">
                             <BsFillClockFill className="InfoIconGray" />
                             <div className="InfoContent">
                                 <div>8h30 - 12h</div>
                                 <div>13h30 - 17h</div>
                             </div>
                         </div>
-                        <div className="subPartInfoGray">
+                        <div className="subpart-info-gray">
                             <BsFillInfoCircleFill className="InfoIconGreen" />
                             <Nav.Link href={"https://www.societe.com/societe/p-l-c-498965763.html"} className="InfoContent">Renseignements juridiques</Nav.Link>
                         </div>
                     </div>
-                    <div className="subPartInfoGrayLine">
+                    <div className="subpart-info-gray-line">
                         <BsLinkedin className="InfoIcon" />
                         <div className="InfoContent">
                             <div>Seule notre partie formation est accessible sur les réseaux: </div>

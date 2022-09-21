@@ -33,13 +33,13 @@ class FormationPresentation extends React.Component {
             <div key={`main${this.props.title}`}>{
                 this.props.content &&
                 <div key={`content${this.props.title}`} style={{ margin: "2%" }}>
-                    <h1 style={{ color: this.props.type.couleur1 }} class={"formation-title"}>{this.props.title}</h1>
+                    <h1 style={{ color: this.props.type.couleur1 }} className={"formation-title"}>{this.props.title}</h1>
                     {this.props.content.map((submenu) => {
                         return (
                             <div key={`submenu${submenu.title}`} style={{ borderRight: `10px solid ${this.props.type.couleur2}`, borderLeft: `10px solid ${this.props.type.couleur2}` }}>
-                                <h2 style={{ color: this.props.couleur2 }} class={"formation-submenu-title"}>{submenu.title}</h2>
+                                <h2 style={{ color: this.props.couleur2 }} className={"formation-submenu-title"}>{submenu.title}</h2>
                                 {submenu.content.constructor === Array ?
-                                    <div key={`submenuContent${submenu.title}`} class={"formation-submenu"}>
+                                    <div key={`submenuContent${submenu.title}`} className={"formation-submenu"}>
                                         {submenu.content.map((subsubmenu) => {
                                             return (
                                                 <div>
@@ -66,7 +66,7 @@ class FormationPresentation extends React.Component {
                                         }
                                     </div>
                                     :
-                                    <div key={`submenuContent${submenu.title}`} class={"formation-submenu"}>
+                                    <div key={`submenuContent${submenu.title}`} className={"formation-submenu"}>
                                         {submenu.content}
                                     </div>
 
@@ -81,7 +81,7 @@ class FormationPresentation extends React.Component {
                 <div style={{ textAlign: "center", width: "100%", padding: "1% 0 1% 0", border: "1px solid lightGray" }}>
                     {/* <a href={pdfMap[this.props.index]} download style={{ font: "bold", color: this.props.type.couleur1, textDecoration: "none" }}> */}
                     <a href={pdfMap[this.props.index]} download>
-                        <button type="button" class="btn btn" style={{ backgroundColor: this.props.type.couleur1, color: "white" }}>
+                        <button type="button" className="btn btn" style={{ backgroundColor: this.props.type.couleur1, color: "white" }}>
                             <BsDownload style={{ fontSize: "30px"}} />
                             {/* <BsDownload style={{ fontSize: "30px", paddingRight: "5px" }} /> */}
                             {/* Telecharger la fiche */}

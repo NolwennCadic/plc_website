@@ -71,7 +71,7 @@ code {
   justify-content: center;
 }
 
-.subPartInfoGray {
+.subpart-info-gray {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,9 +82,11 @@ code {
   height: 20vh;
   color: #004C38;
   border-radius: 0.5em;
+  box-shadow: 5px 5px 10px #a4a4a4,
+    -5px -5px 10px #ffffff;
 }
 
-.subPartInfoGreen {
+.subpart-info-green {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -95,9 +97,11 @@ code {
   height: 20vh;
   color: #E7E6E6;
   border-radius: 0.5em;
+  box-shadow: 5px 5px 10px #a4a4a4,
+    -5px -5px 10px #ffffff;
 }
 
-.subPartInfoGrayLine {
+.subpart-info-gray-line {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -109,6 +113,8 @@ code {
   color: #004C38;
   border-radius: 0.5em;
   min-height: 20vh;
+  box-shadow: 5px 5px 10px #a4a4a4,
+    -5px -5px 10px #ffffff;
 }
 
 .InfoIconGreen {

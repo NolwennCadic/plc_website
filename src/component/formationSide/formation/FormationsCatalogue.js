@@ -1,12 +1,10 @@
 import React from "react";
-// import FormationCard from "./FormationCard";
-import formationList from "../../../data/formationDetails.json";
+import formationList from "../../../data/formation/formationDetails.json";
 import ButtonFormation from "./ButtonFormation";
 import FormationCardBis from "./FormationCardBis";
-import typeList from "../../../data/formationTypes.json";
+import typeList from "../../../data/formation/formationTypes.json";
 import { Modal } from "react-bootstrap";
 import FormationPresentation from "./FormationPresentation";
-import Button from 'react-bootstrap/Button';
 import DialogContactForm from "../../common/Contact/DialogContactForm";
 
 const hasKey = (items, key) => {
@@ -70,7 +68,7 @@ class FormationsCatalogue extends React.Component {
         const types = generateTypes(formationList, typeList).concat({ key: 5, type: "Tous", couleur1: "#e8eba9", couleur2: "##9e0e21" });
 
         return (
-            <div class="body">
+            <div className="body">
                 {types.map((type, index) => {
                     return (
                         <ButtonFormation type={type} color={type.couleur1} setTypeFiltered={this.setTypeFiltered} key={`${index}Button`} />

@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal, Button } from 'react-bootstrap';
-import { isAddressEmailValid, sendEmail } from "../../../utils/sendEmailUtils";
+import { isAddressEmailValid } from "../../../utils/sendEmailUtils";
 import ContactForm from "./ContactForm";
 
 class DialogContactForm extends React.Component {
@@ -74,9 +74,9 @@ class DialogContactForm extends React.Component {
 
     handleChange(event) {
         let formData = { ...this.state.formData }
-        formData[event.target.id ]= event.target.value
+        formData[event.target.id] = event.target.value
         this.setState({
-          formData: formData
+            formData: formData
         });
         console.log(this.state);
     }

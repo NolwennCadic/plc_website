@@ -9,7 +9,7 @@ import image6 from "../../../images/formations/formation6.jpg";
 import image7 from "../../../images/formations/formation7.jpg";
 import image8 from "../../../images/formations/formation8.jpg";
 import image9 from "../../../images/formations/formation9.jpg";
-import typeList from "../../../data/formationTypes.json";
+import typeList from "../../../data/formation/formationTypes.json";
 import "./formation.css";
 
 const imagesMap = {

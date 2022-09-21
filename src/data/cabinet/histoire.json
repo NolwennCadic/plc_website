@@ -1,0 +1,73 @@
+[
+    {
+        "id": "histoire1",
+        "title": "2008",
+        "content": [
+            "Création de PLC  par Mr Yann CADIC.",
+            "Activité de holding de moyen en étant actionnaire d’un cabinet comptable."
+        ]
+    },
+    {
+        "id": "histoire2",
+        "title": "2016",
+        "content": [
+            "Revente des actions du cabinet comptable par Mr Cadic.",
+            "La société PLC devient  un cabinet d’Expertise Comptable et de Commissariat aux comptes.",
+            "La nouvelle activité débute avec 2 collaborateurs."
+        ]
+    },
+    {
+        "id": "histoire3",
+        "title": "Aujourd’hui",
+        "content": [
+            "La  structure PLC, tout comme son offre s’est étoffée .",
+            "2 associés et 5  collaborateurs pour un portefeuille de 120 clients environ.",
+            "Développement du pôle formation",
+            "PLC est un cabinet d’expertise comptable généraliste se spécialisant dans les petites structures de taille humaine.",
+            "PLC intervient aussi bien auprès de l’agriculteur, que du médecin ou du restaurateur…"
+        ]
+    },
+    {
+        "id": "histoire4",
+        "content": {
+            "introduction": "Les domaines d’intervention sont divers et variés:",
+            "content": [
+                {
+                    "icon": "BsFillCalculatorFill",
+                    "title": "Domaine comptable:",
+                    "content": "de l’externalisation totale à la révision de la comptabilité tenue en interne."
+                },
+                {
+                    "icon": "BsCurrencyEuro",
+                    "title": "Domaine fiscal:",
+                    "content": "des déclarations fiscales de l’entreprise à celles de son dirigeant et de sa famille, PLC est présent partout."
+                },
+                {
+                    "icon": "BsFillFilePersonFill",
+                    "title": "Domaine social:",
+                    "content": "face à la complexité du droit social, un pôle social a été mis en place pour reprendre ou orienter le dirigeant."
+                },
+                {
+                    "icon": "BsFillBriefcaseFill",
+                    "title": "Domaine juridique:",
+                    "content": "le cabinet est là pour assister l’entreprise dans son secrétariat juridique."
+                },
+                {
+                    "icon": "BsFillLightbulbFill",
+                    "title": "Domaine création:",
+                    "content": "fvous souhaitez créer votre propre entreprise ? PLC est là pour vous orienter vers les possibilités répondant à vos attentes."
+                },
+                {
+                    "icon": "BsHouseFill",
+                    "title": "Domaine patrimonial:",
+                    "content": "les choix patrimoniaux du chef d’entreprise sont complexes. Nous sommes présents pour vous aider et vous orienter vers les meilleurs options."
+                },
+                {
+                    "icon": "BsBookFill",
+                    "title": "Domaine formation:",
+                    "content": "développée par Mme Cadic, cette activité vous permet ainsi que vos collaborateurs de maîtriser les subtilités des domaines financiers et organisationnels de votre entreprise."
+                }
+            ]
+        }
+    }
+]

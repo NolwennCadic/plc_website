@@ -4,7 +4,7 @@ import "./mission.css"
 class Mission extends React.Component {
     render() {
         return (
-            <div class="body">
+            <div className="body">
                 <div style={{ minHeight: "100vh", paddingTop: "100px" }} id={"Mission"}>
                     <div className="title-part">
                         <BsFillBookFill style={{ fontSize: "30px", paddingRight: "5px" }} />
@@ -13,9 +13,9 @@ class Mission extends React.Component {
                     <div>
                         <div className={"title-mission"}>Vous souhaitez préparer votre avenir, acquérir de nouvelles compétences, changer de voie professionnelle ? </div>
                         <div className={"subtitle-mission"}>La formation professionnelle est faite pour VOUS ! </div>
-                        <div class={"submenu-mission"}>
-                            <div class={"list-submenu-mission"}>
-                                <BsFillArrowUpRightCircleFill class={"icon-menu-mission"} />
+                        <div className={"submenu-mission"}>
+                            <div className={"list-submenu-mission"}>
+                                <BsFillArrowUpRightCircleFill className={"icon-menu-mission"} />
                                 <div style={{ textAlign: "left", paddingTop: "10px" }}>
                                     Cette dernière peut vous permettre :
                                     <ul>
@@ -28,9 +28,9 @@ class Mission extends React.Component {
                         </div>
                         <div>
                             <div className={"subtitle-mission"}>Ses atouts :</div>
-                            <div class={"submenu-mission"}>
-                                <div class={"list-submenu-mission"}>
-                                    <BsFillPlusCircleFill class={"icon-menu-mission"} />
+                            <div className={"submenu-mission"}>
+                                <div className={"list-submenu-mission"}>
+                                    <BsFillPlusCircleFill className={"icon-menu-mission"} />
                                     <div style={{ textAlign: "left", paddingTop: "10px" }}>
                                         Elle vous aide :
                                         <ul>
@@ -45,14 +45,14 @@ class Mission extends React.Component {
                     </div>
                     <div>
                         <div className={"subtitle-mission"}>Pourquoi le cabinet PLC ?</div>
-                        <div class={"submenu-mission"}>
+                        <div className={"submenu-mission"}>
                             <div style={{ textAlign: "left" }}>
                                 Le <span className={"bold"}>cabinet PLC</span>, et plus particulièrement Sabine Cadic, vous accompagne dans vos démarches. Son sens de l’écoute
                                 et sa pédagogie lui permettent de définir les <span className={"bold"}>objectifs précis</span> de la formation et de construire
                                 un contenu <span className={"bold"}>adapté à votre besoin</span>.
                             </div>
-                            <div class={"list-submenu-mission"}>
-                                <BsFillPeopleFill class={"icon-menu-mission"} />
+                            <div className={"list-submenu-mission"}>
+                                <BsFillPeopleFill className={"icon-menu-mission"} />
                                 <div style={{ textAlign: "left", paddingTop: "10px" }}>
                                     <span className={"bold"}>Ensemble</span> nous identifions vos besoins (contexte, public, objectifs…) et nous élaborons des programmes de formation adaptés.
                                     <ul>
@@ -68,13 +68,13 @@ class Mission extends React.Component {
                     </div>
                     <div>
                         <div className={"subtitle-mission"}>Envie de créer votre entreprise ? Besoin de conseil en création ? </div>
-                        <div class={"submenu-mission"}>
+                        <div className={"submenu-mission"}>
                             <div style={{ textAlign: "left" }}>
                                 Vous avez une <span className={"bold"}>idée</span>, un <span className={"bold"}>projet innovant</span>, mais encore des <span className={"bold"}>doutes</span> sur sa faisabilité ?
                                 Nous sommes là pour <span className={"bold"}>vous accompagner</span> dans les différentes étapes nécessaires à la réalisation de votre projet:
                             </div>
-                            <div class={"list-submenu-mission"}>
-                                <BsClipboardCheck class={"icon-menu-mission"} />
+                            <div className={"list-submenu-mission"}>
+                                <BsClipboardCheck className={"icon-menu-mission"} />
                                 <div style={{ textAlign: "left", paddingTop: "10px" }}>
                                     <ul>
                                         <li>Etudier sa faisabilité (vérification de l’étude de marché et du modèle économique…), prérequis indispensable à toute création de structure.</li>

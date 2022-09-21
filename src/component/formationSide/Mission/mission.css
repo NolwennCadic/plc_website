@@ -17,9 +17,12 @@
     left: 0;
     background-color: rgb(231, 230, 230, 0.5);
     padding-left: 2%;
+    margin: 2%;
     padding: 10px 0 0 10px;
     border-radius: 0.5em;
-    animation: mymove 5s;
+    animation: mymove 1s;
+    box-shadow: 5px 5px 10px #a4a4a4,
+        -5px -5px 10px #ffffff;
 }
 
 /* The animation should be adapted to the scroll */

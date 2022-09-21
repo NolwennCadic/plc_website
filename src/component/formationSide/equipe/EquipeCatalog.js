@@ -1,6 +1,6 @@
 import React from "react";
-// import team from "../../../data/formationEquipe.json";
-import team from "../../../data/formationEquipe.json";
+// import team from "../../../data/formation/formationEquipe.json";
+import team from "../../../data/formation/formationEquipe.json";
 // import EquipeCard from "./EquipeCard";
 import EquipeCardBis from "./EquipeCardBis";
 
