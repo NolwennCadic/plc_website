@@ -3,7 +3,8 @@
     padding-left: 2%;
     padding: 10px 0 0 10px;
     margin: 2px 0 2px 0;
-    width: 90vw;
+    width: 60vw;
+    max-width: 700px;
     height: 70vh;
     box-shadow: 5px 5px 10px #a4a4a4,
         -5px -5px 10px #ffffff;
@@ -21,6 +22,7 @@
     color: rgb(0, 76, 56);
     font-weight: bold;
     width: calc(20vw - 24px);
+    margin: 10px;
 
     /* flex-grow: 1; */
 }

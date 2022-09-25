@@ -57,13 +57,11 @@ export function IndexBar(props) {
         draw(context, circles, TOTALSIZE, RADIUSBUTTON, MARGIN, indexSelected);
 
         canvas.onmousemove = function (e) {
-            // Get the current mouse position
             var r = canvasRef.current.getBoundingClientRect(),
-                x = e.clientX - r.left, y = e.clientY - r.top;
+                x = e.clientX - r.left - 10, y = e.clientY - r.top;
             context.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
 
             for (let index in circles) {
-                //Know when the mouse hits a circle --> if x and y are in the circle...
                 let distanceToCenter = calculateDistanceToCenter(circles[index].centerX, circles[index].centerY, x, y);
                 if (distanceToCenter <= RADIUSBUTTON) {
                     circles[index].hover = true;
@@ -83,16 +81,11 @@ export function IndexBar(props) {
             height="50"
             ref={canvasRef}
             onClick={(e) => {
-                //Here we put the onclick and reloading?
                 const canvas = canvasRef.current;
                 const ctx = canvas.getContext('2d');
-                //Check the place for the onClick....
-                // I need to get the click's position
+
                 var r = canvasRef.current.getBoundingClientRect(),
-                    x = e.clientX - r.left, y = e.clientY - r.top;
-                // We should deduce the closest element --> x/spaceBetween --> with spaceBetween
-                // if y < 15 && > 35, aucun interet
-                // Math.round();
+                    x = e.clientX - r.left - 10, y = e.clientY - r.top;
                 let spaceBetween = TOTALSIZE / (amountButtons - 1);
                 if (y => 15 && y <= 35) {
                     let closestCircle = Math.round(x / spaceBetween);

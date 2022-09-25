@@ -22,26 +22,28 @@ let mapIcons = {
     BsHouseFill: <BsHouseFill className={"icon-menu-histoire"} />,
     BsFillBriefcaseFill: <BsFillBriefcaseFill className={"icon-menu-histoire"} />,
     BsBookFill: <BsBookFill className={"icon-menu-histoire"} />,
-
+    BsFillCalendarWeekFill: <BsFillCalendarWeekFill style={{ fontSize: "30px", paddingRight: "5px" }} />
 }
-function HistoireSubMenu() {
 
+//input: title
+// icon title
+function SubMenu() {
+    const {menuTitle, inputData, displayMenu} = this.props
     const [index, setIndex] = useState(0);
     function displayMenu(id) {
-        return histoireData[id];
+        return inputData[id];
     }
 
     let title = displayMenu(index).title;
     let content = displayMenu(index).content;
-    console.log("content =", content);
     return (
         <div className={"subMenu-histoire"} id={`${title}`} key={`div${title}`}>
             <div style={{ display: "flex", flexFlow: "row", justifyContent: "space-between" }}>
                 <div className="title-part">
-                    <BsFillCalendarWeekFill style={{ fontSize: "30px", paddingRight: "5px" }} />
-                    Histoire
+                    {this.props.titleIcon}
+                    {this.props.title}
                 </div>
-                <IndexBar indexSelected={index} amountButtons={histoireData.length} setIndex={setIndex} />
+                <IndexBar indexSelected={index} amountButtons={inputData.length} setIndex={setIndex} />
             </div>
             <div style={{ textAlign: "left", overflow: "scroll", height: "80%" }} key={`subDiv${title}`}>
                 <div className={"list-title-histoire"} key={`title${title}`}>{title}</div>

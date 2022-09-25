@@ -34,7 +34,7 @@ function Histoire() {
 
     return (
         <div className="body">
-            <div style={{ minHeight: "100vh", paddingTop: "100px" }} id={"Histoire"}>
+            <div style={{ minHeight: "100vh", paddingTop: "100px", display: "flex", justifyContent: "center" }} id={"Histoire"}>
                 <HistoireSubMenu />
             </div>
         </div>
