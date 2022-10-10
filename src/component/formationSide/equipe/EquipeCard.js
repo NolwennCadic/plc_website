@@ -1,48 +1,111 @@
 import React from "react";
 import member1 from "../../../images/sabine.jpg";
+import { BsAwardFill, BsFillBriefcaseFill, BsLinkedin, BsPatchPlusFill } from "react-icons/bs";
+import { Nav } from "react-bootstrap";
 
 const memberMap = {
     1: member1,
 }
 class EquipeCard extends React.Component {
-    render() {
 
+    constructor() {
+        super();
+        this.state = {
+            partShown: "diploma",
+        };
+        this.setPartShown = this.setPartShown.bind(this);
+    }
+
+    setPartShown(part) {
+        this.setState({
+            partShown: part,
+        });
+    }
+    render() {
         return (
-            // <div
-            //     id={"Equipe"}
-            // >{/**Page */}
-                // {/**One name */}
-                <div
-                    style={{
-                        color: "#efefefff",
-                        display: "flex",
-                        borderTop: "1px #004C38 solid",
-                        borderBottom: "1px #004C38 solid",
-                        padding: "5px",
-                        gap: "10px",
-                        alignItems: "center",
-                        flexDirection: "row",
-                        marginRight: "40px",
-                        marginLeft: "40px",
-                    }}
-                >
-                    {/**Left */}
-                    <div style={{
-                        color: "#efefefff",
-                        display: "flex",
-                        gap: "20px",
-                        flexDirection: "column"
-                    }}>
-                        <h3 style={{color: "#004C38"}}>{this.props.member.name}</h3> {/* Name at the top */}
-                        <div style={{ color: "black", padding: "10px" }}>
-                            {this.props.member.description}
+            <div>
+                <div className={"container-card-equipe"}>
+                    <div style={{ display: "flex", flexDirection: "column" }}>
+                        <div style={{ display: "flex", flexDirection: "row", height: "10vw" }}>
+                            <div className={"container-photo-equipe"}>
+                                <div className={"ext-photo-equipe"}>
+                                    <img src={memberMap[this.props.member.id]} className={"photo-equipe"} alt={this.props.member.nom} />
+                                </div>
+                            </div>
+                            <div style={{ display: "flex", flexDirection: "column" }}>
+                                <h3 style={{ textAlign: "center" }}>{this.props.member.nom}</h3>
+                                <div style={{ display: "flex", flexDirection: "row" }}>
+                                    <BsLinkedin style={{ fontsize: "35px", marginTop: "12px" }} />
+                                    <Nav.Link href={this.props.member.linkedIn} className="InfoContentEquipe">{this.props.member.nom}</Nav.Link>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    {/**Right */}
-                    {/* <Image src={sabineImage} style={{ width: "20%", borderRadius: "5em" }} /> */}
-                    <img src={memberMap[this.props.member.id]} style={{ width: "15vw", borderRadius: "100%" }} alt={this.props.member.name} />
-                </div>
-            // </div>
+                        <div style={{ display: "flex", flexDirection: "row", gap: "5px", marginBottom: "20px" }}>
+                            <BsAwardFill className={"button-equipe"} onClick={() => this.setPartShown("diploma")} />
+                            <BsFillBriefcaseFill className={"button-equipe"} onClick={() => this.setPartShown("experience")} />
+                            <BsPatchPlusFill className={"button-equipe"} onClick={() => this.setPartShown("skills")} />
+                        </div>
+                        <div>
+                            {this.state.partShown === "diploma"
+                                ? <div className="flexEquipe">
+                                    <ul>
+                                        {this.props.member.diplomes.map((diplome) => {
+                                            return (
+                                                <li key={`li1${diplome.nom}`} className="InfoContentEquipe">
+                                                    <span className="bold" key={`span1${diplome.nom}`}>
+                                                        {diplome.date}
+                                                    </span>
+                                                    , {diplome.nom}
+                                                </li>
+                                            )
+                                        })}
+                                    </ul>
+                                </div>
+                                : this.state.partShown === "experience"
+                                    ? <div className="flexEquipe">
+                                        <ul>
+                                            {this.props.member.experience.map((xp) => {
+                                                return (
+                                                    <li key={`li2${xp.nom}`} className="InfoContentEquipe">
+                                                        <span className="bold" key={`span2${xp.nom}`}>
+                                                            {xp.date}
+                                                        </span>
+                                                        , {xp.nom}
+                                                    </li>
+                                                )
+                                            })}
+                                        </ul>
+                                    </div>
+                                    : <div className="flexEquipe">
+                                        <div className="flexEquipe">
+                                            <ul>
+                                                {this.props.member.qualite.map((nom, index) => {
+                                                    if (index % 2 === 0)
+                                                        return (
+                                                            <li key={`li3${nom}`} className="InfoContentEquipe">
+                                                                {nom}
+                                                            </li>)
+                                                    else return null;
+                                                })}
+                                            </ul>
+                                            <ul>
+                                                {this.props.member.qualite.map((nom, index) => {
+                                                    if (index % 2 === 1)
+                                                        return (
+                                                            <li key={`li4${nom}`} className="InfoContentEquipe">
+                                                                {nom}
+                                                            </li>
+                                                        )
+                                                    else return null
+                                                })}
+                                            </ul>
+                                        </div>
+                                    </div>
+                            }
+                        </div>
+                    </div >
+                </div >
+            </div >
         )
     }
 

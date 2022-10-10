@@ -31,7 +31,7 @@
         "id": "histoire4",
         "content": {
             "introduction": "Les domaines d’intervention sont divers et variés:",
-            "content": [
+            "list": [
                 {
                     "icon": "BsFillCalculatorFill",
                     "title": "Domaine comptable:",

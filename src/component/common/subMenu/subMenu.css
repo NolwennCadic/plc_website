@@ -1,4 +1,4 @@
-.subMenu-histoire {
+.subMenu {
     background-color: rgb(248, 249, 250, 0.5);
     padding-left: 2%;
     padding: 10px 0 0 10px;
@@ -6,38 +6,34 @@
     width: 60vw;
     max-width: 700px;
     height: 70vh;
+    border-radius: 5%;
     box-shadow: 5px 5px 10px #a4a4a4,
         -5px -5px 10px #ffffff;
 }
 
-.icon-menu-histoire {
-    font-size: 20px;
-    width: 20px;
-    color: rgb(0, 76, 56, 0.5);
-    margin: 0 4px 7px 0;
-
+.subMenu-title {
+    color: rgb(0, 76, 56);
+    font-weight: bold;
+    margin: 10px;
+    font-size: 1.2em;
 }
 
-.list-title-histoire {
+.list-title {
     color: rgb(0, 76, 56);
     font-weight: bold;
     width: calc(20vw - 24px);
-    margin: 10px;
-
-    /* flex-grow: 1; */
+    margin: 0 10px 0 10px;
 }
 
-.list-item-histoire {
+.list-item {
     display: flex;
     justify-content: flex-start;
 }
 
-@keyframes fade-in {
-    0% {
-        transform: scale(0, .025);
-    }
+.icon-menu {
+    font-size: 40px;
+    width: 40px;
+    color: rgb(0, 76, 56, 0.5);
+    margin: 0 4px 0 0;
 
-    50% {
-        transform: scale(1, .025);
-    }
 }

@@ -1,13 +1,4 @@
 import React from "react";
-import {
-    BsFillCalculatorFill,
-    BsCurrencyEuro,
-    BsFillFilePersonFill,
-    BsFillLightbulbFill,
-    BsHouseFill,
-    BsFillBriefcaseFill,
-    BsBookFill,
-} from "react-icons/bs";
 import "./histoire.css"
 import HistoireSubMenu from "./HistoireSubMenu";
 

@@ -1,0 +1,57 @@
+[
+    {
+        "id": "mission1",
+        "title": "La formation professionnelle est faite pour VOUS !",
+        "content": {
+            "icon": "BsFillArrowUpRightCircleFill",
+            "title": "Cette dernière peut vous permettre :",
+            "content": [
+                "De gérer votre carrière professionnelle,",
+                "D'évoluer vers de nouvelles fonctions ou responsabilités hiérarchiques",
+                "De revaloriser votre salaire."
+            ]
+        }
+    },
+    {
+        "id": "mission2",
+        "title": "Ses atouts :",
+        "content": {
+            "icon": "BsFillPlusCircleFill",
+            "title": "Elle vous aide :",
+            "content": [
+                "A développer et approfondir vos compétences techniques (hard skills),",
+                "A développer et approfondir vos compétences comportementales (soft skills),",
+                "A améliorer votre développement professionnel continu : la compétitivité, développement..."
+            ]
+        }
+    },
+    {
+        "id": "mission3",
+        "title": "Pourquoi le cabinet PLC ?",
+        "content": {
+            "introduction": "Le cabinet PLC, et plus particulièrement Sabine Cadic, vous accompagne dans vos démarches. Son sens de l’écoute et sa pédagogie lui permettent de définir les objectifs précis de la formation et de construire un contenu adapté à votre besoin.\n",
+            "icon": "BsFillPeopleFill",
+            "title": "Ensemble nous identifions vos besoins (contexte, public, objectifs…) et nous élaborons des programmes de formation adaptés.",
+            "content": [
+                "ETAPE 1: Prise de contact,",
+                "ETAPE 2: Rendez-vous à distance ou non pour définir vos attentes,",
+                "ETAPE 3: Elaboration et validation ensemble du programme personnalisé,",
+                "ETAPE 4: Conclusion (choix de la date, lieu…)"
+            ],
+            "end": "Une prise en compte individuelle du stagiaire, son niveau de compétence et les attendus de la formation sont analysés pour l’élaboration d’un programme sur mesure."
+        }
+    },
+    {
+        "id": "mission4",
+        "title": "Envie de créer votre entreprise ? Besoin de conseil en création ?",
+        "content": {
+            "introduction": "Vous avez une idée, un projet innovant, mais encore des doutes sur sa faisabilité? Nous sommes là pour vous accompagner dans les différentes étapes nécessaires à la réalisation de votre projet:\n",
+            "icon": "BsClipboardCheck",
+            "content": [
+                "Etudier sa faisabilité (vérification de l’étude de marché et du modèle économique…), prérequis indispensable à toute création de structure.",
+                "Faire le choix juridique, en respectant vos contraintes (conjoint, responsabilité, nombre de participants…) ainsi qu'en élaborant, ensemble, le montage financier (bilan,BFR..) pour travailler la présentation aux banques.",
+                "Développer, ensemble, l’argumentaire pour lever des fonds (bancaires, partenaires…)."
+            ]
+        }
+    }
+]

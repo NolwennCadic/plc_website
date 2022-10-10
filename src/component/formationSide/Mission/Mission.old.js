@@ -1,45 +1,52 @@
-[
-    {
-        "title": "La formation professionnelle est faite pour VOUS !",
-        "content": {
-            "icon": "BsFillArrowUpRightCircleFill",
-            "introduction": "Cette dernière peut vous permettre :",
-            "list": [
-                "De gérer votre <span className={'bold'}>carrière professionnelle</span>,",
-                "D'évoluer vers de nouvelles fonctions ou <span className={'bold'}>responsabilités hiérarchiques</span>",
-                "De <span className={'bold'}>revaloriser</span> votre salaire."
-            ]
-        }
-    },
-    {
-        "title": "Ses atouts :",
-        "content": {
-            "icon": "BsFillPlusCircleFill",
-            "introduction": "Elle vous aide :",
-            "list": [
-                "A développer et approfondir vos compétences techniques <span className={'bold'}>(hard skills)</span>,",
-                "A développer et approfondir vos compétences comportementales <span className={'bold'}>(soft skills)</span>,",
-                "A améliorer votre <span className={'bold'}>développement professionnel</span> continu : la compétitivité, développement..."
-
-            ]
-        }
-    },
-    {
-        "title": "Pourquoi le cabinet PLC ?",
-        "content": {
-            "icon": "BsFillPlusCircleFill",
-            "introduction": "                                Le <span className={"bold"}>cabinet PLC</span>, et plus particulièrement Sabine Cadic, vous accompagne dans vos démarches. Son sens de l’écoute
-            et sa pédagogie lui permettent de définir les <span className={"bold"}>objectifs précis</span> de la formation et de construire
-            un contenu <span className={"bold"}>adapté à votre besoin</span>.",
-            "list": [
-                "A développer et approfondir vos compétences techniques <span className={'bold'}>(hard skills)</span>,",
-                "A développer et approfondir vos compétences comportementales <span className={'bold'}>(soft skills)</span>,",
-                "A améliorer votre <span className={'bold'}>développement professionnel</span> continu : la compétitivité, développement..."
-
-            ]
-        }
-    },
-]
+import React from "react";
+import { BsFillBookFill, BsFillArrowUpRightCircleFill, BsFillPlusCircleFill, BsFillPeopleFill, BsClipboardCheck } from "react-icons/bs";
+import "./mission.css"
+class Mission extends React.Component {
+    render() {
+        let test = "<div>test</div>"
+        return (
+            <div className="body">
+                <div style={{ minHeight: "100vh", paddingTop: "100px" }} id={"Mission"}>
+                    <div className="title-part">
+                        <BsFillBookFill style={{ fontSize: "30px", paddingRight: "5px" }} />
+                        Mission
+                    </div>
+                    {test}
+                    <div>
+                        <div className={"title-mission"}>Vous souhaitez préparer votre avenir, acquérir de nouvelles compétences, changer de voie professionnelle ? </div>
+                        <div className={"subtitle-mission"}>La formation professionnelle est faite pour VOUS ! </div>
+                        <div className={"submenu-mission"}>
+                            <div className={"list-submenu-mission"}>
+                                <BsFillArrowUpRightCircleFill className={"icon-menu-mission"} />
+                                <div style={{ textAlign: "left", paddingTop: "10px" }}>
+                                    Cette dernière peut vous permettre :
+                                    <ul>
+                                        <li>De gérer votre <span className={"bold"}>carrière professionnelle</span>,</li>
+                                        <li>D'évoluer vers de nouvelles fonctions ou <span className={"bold"}>responsabilités hiérarchiques</span></li>
+                                        <li>De <span className={"bold"}>revaloriser</span> votre salaire.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div className={"subtitle-mission"}>Ses atouts :</div>
+                            <div className={"submenu-mission"}>
+                                <div className={"list-submenu-mission"}>
+                                    <BsFillPlusCircleFill className={"icon-menu-mission"} />
+                                    <div style={{ textAlign: "left", paddingTop: "10px" }}>
+                                        Elle vous aide :
+                                        <ul>
+                                            <li>A développer et approfondir vos compétences techniques <span className={"bold"}>(hard skills)</span>,</li>
+                                            <li>A développer et approfondir vos compétences comportementales <span className={"bold"}>(soft skills)</span>,</li>
+                                            <li>A améliorer votre <span className={"bold"}>développement professionnel</span> continu : la compétitivité, développement...</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div className={"subtitle-mission"}>Pourquoi le cabinet PLC ?</div>
                         <div className={"submenu-mission"}>
                             <div style={{ textAlign: "left" }}>
                                 Le <span className={"bold"}>cabinet PLC</span>, et plus particulièrement Sabine Cadic, vous accompagne dans vos démarches. Son sens de l’écoute
@@ -84,3 +91,12 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
+}
+
+export default Mission;

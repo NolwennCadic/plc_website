@@ -2,7 +2,7 @@ import React from "react";
 // import team from "../../../data/formation/formationEquipe.json";
 import team from "../../../data/formation/formationEquipe.json";
 // import EquipeCard from "./EquipeCard";
-import EquipeCardBis from "./EquipeCardBis";
+import EquipeCard from "./EquipeCard";
 
 class EquipeCatalog extends React.Component {
     render() {
@@ -20,7 +20,7 @@ class EquipeCatalog extends React.Component {
                     id={"Equipe"}
                 >
                     {team.map((member, index) => {
-                        return (<EquipeCardBis member={member} key={`member${index}`} />)
+                        return (<EquipeCard member={member} key={`member${index}`} />)
                     })}
                 </div>
             </div>
