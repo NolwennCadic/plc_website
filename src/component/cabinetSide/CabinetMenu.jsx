@@ -2,8 +2,8 @@
 
 import React from "react";
 import Menu from "../common/Menu";
-import formationImage from "../../images/menuFormation/formations.svg";
-import equipeImage from "../../images/menuFormation/equipe.svg";
+import { ReactComponent as Booksvg } from "../../images/icons/book-open.svg";
+import { ReactComponent as Groupsvg } from "../../images/icons/group.svg";
 import Histoire from "./Histoire/Histoire";
 import SandBoxOrganigramme from "./equipe/SandBoxOrganigramme";
 
@@ -13,8 +13,8 @@ const menuList = [
 ]
 
 const mapMap = {
-    histoire: [formationImage],
-    equipe: [equipeImage],
+    histoire: [Booksvg],
+    equipe: [Groupsvg],
 }
 class ComptableMenu extends React.Component {
     render() {
@@ -22,7 +22,7 @@ class ComptableMenu extends React.Component {
             <div>
                 <Menu mapMap={mapMap} menuList={menuList} />
                 <Histoire />
-                <SandBoxOrganigramme/>
+                <SandBoxOrganigramme />
             </div>
         )
     }

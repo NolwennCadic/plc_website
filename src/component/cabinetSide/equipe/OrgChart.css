@@ -1,13 +1,32 @@
 /* OrgChart.css */
 .diagram-component {
-  width: 100%;
+  width: 60vw;
+  border: 1px solid gray;
+  border-radius: 5%;
   height: 600px;
   border: none black;
-  margin: 10px 10;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   left: 2px;
   /* background-color: #696969;  */
+  box-shadow: 5px 5px 10px #a4a4a4,
+    -5px -5px 10px #ffffff;
+  margin: 10px 20vw;
+  padding: 5vw;
+}
+
+.diagram-legend {
+  background-color: white;
+  width: 200px;
+  height: 150px;
+  position: absolute;
+  left: calc(20vw + 3px);
+  top: 0;
+  z-index: 3;
+  box-shadow: 1px 1px #888888;
+  border-radius: 5% 3% 3% 3%;
+  box-shadow: inset 2px 2px 5px #b8b9be,
+    inset -3px -3px 7px #fff !important;
 }

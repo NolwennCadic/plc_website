@@ -9,7 +9,8 @@ class
         return (
             <div className="body">
                 {/* <div style={{ minHeight: "calc(100vh - 100px)", paddingTop: "100px" }} id={"Equipe"}> */}
-                <div style={{ minHeight: "100vh", paddingTop: "100px" }} id={"Equipe"}>
+                {/*  */}
+                <div className={"subpart-bottom"} id={"Equipe"}>
                     <div className="title-part">
                         <BsPeopleFill style={{ fontSize: "30px", paddingRight: "5px" }} />
                         Equipe

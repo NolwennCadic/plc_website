@@ -1,0 +1,31 @@
+.icon-menu {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-test {
+    transform: scale(5);
+}
+
+@media (max-width: 1100px) {
+    .icon-test {
+        transform: scale(4);
+    }
+}
+
+@media (max-width: 900px) {
+    .icon-test {
+        transform: scale(3);
+    }
+}
+
+@media (max-width: 650px) {
+    .icon-test {
+        transform: scale(2);
+    }
+}

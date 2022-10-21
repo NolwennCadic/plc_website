@@ -38,8 +38,8 @@ class PracticalInformation extends React.Component {
                         <BsPinMapFill onClick={this.setHasMap} style={{ fontSize: "40px", position: "relative", right: "115px", top: '15px', cursor: "pointer" }} />
                         <div>
                             <div>7 rue de l’Ile Mystérieuse </div>
-                            <div>80440 BOVES CS 51006</div>
-                            <div> 80332 LONGUEAU CEDEX</div>
+                            <div>Bureau 40</div>
+                            <div>80440 BOVES</div>
                         </div>
                     </div>
                     <img src={loupe} style={{ width: "15vw", position: "relative", left: "40vw" }} alt={"loupe"} />{/**ça fait trop gamin */}

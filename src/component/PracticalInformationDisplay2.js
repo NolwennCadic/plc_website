@@ -31,8 +31,8 @@ class PracticalInformationDisplay2 extends React.Component {//Should be Display1
                             <div >
                                 <div style={{ paddingBottom: "7px" }}>Chambre de Métiers et de l'Artisanat Hauts-de-France :</div>
                                 <div>7 rue de l’Ile Mystérieuse </div>
-                                <div>80440 BOVES CS 51006</div>
-                                <div> 80332 LONGUEAU CEDEX</div>
+                                <div>Bureau 40</div>
+                                <div>80440 BOVES</div>
                             </div>
                             <div>
                                 <img src={map} style={{ width: "90%", padding: "2px 0 2px 0" }} alt={"emplacement de la Chambe des Métier sur une carte"} />

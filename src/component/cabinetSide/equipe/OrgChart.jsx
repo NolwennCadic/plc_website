@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 import * as go from "gojs";
 import { ReactDiagram } from "gojs-react";
 
-import "./OrgChart.css"; // contains .diagram-component CSS
+// import "./OrgChart.css"; // contains .diagram-component CSS
 import { SideTreeLayout } from "./SideTreeLayout";
 
 const OrgChartProps = { nodeDataArray: [], OnNodeClickEvent: null };
@@ -64,10 +64,12 @@ const OrgChart = (OrgChartProps) => {
         alternateAngle: 90,
         alternateLayerSpacing: 35,
         alternateAlignment: go.TreeLayout.AlignmentBus,
-        alternateNodeSpacing: 20
+        alternateNodeSpacing: 20,
       }),
       "undoManager.isEnabled": false // enable undo & redo
     });
+
+    var graygrad = $(go.Brush, "Linear", { 0: "rgb(248,249,250)", 0.7: "rgb(126, 130, 130)", 1: "rgb(30,30,30)" });
 
     // when the document is modified, add a "*" to the office abbr and enable the "Save" button
     diagram.addDiagramListener("Modified", function (e) {
@@ -171,7 +173,12 @@ const OrgChart = (OrgChartProps) => {
     diagram.nodeTemplate = $(
       go.Node,
       "Auto",
-      { doubleClick: nodeDoubleClick },
+      {
+        doubleClick: nodeDoubleClick,
+        isShadowed: true,
+        shadowOffset: new go.Point(3, 3),
+        shadowColor: "#C5C1AA"
+      },
       /*          {
             selectionChanged: node => handleNodeChange(node.key)
           },
@@ -232,7 +239,7 @@ const OrgChart = (OrgChartProps) => {
       $(go.Shape, "RoundedRectangle", {
         //name: "SHAPE", fill: "white", stroke: null,
         name: "SHAPE",
-        fill: "#333333",
+        fill: graygrad,
         stroke: "white",
         strokeWidth: 3.5,
         // set the port properties:
@@ -241,7 +248,7 @@ const OrgChart = (OrgChartProps) => {
         toLinkable: true,
         cursor: "pointer",
       },
-        new go.Binding("stroke", "team",findColor)),//There we bind --> We want one color by team --> and a diff color for half
+        new go.Binding("stroke", "team", findColor)),//There we bind --> We want one color by team --> and a diff color for half
       $(
         go.Panel,
         "Horizontal",

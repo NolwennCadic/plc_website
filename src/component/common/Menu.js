@@ -2,6 +2,7 @@
 
 import React from "react";
 import MenuRound from "./MenuRound";
+import "./menu.css";
 
 class Menu extends React.Component {
 
@@ -22,7 +23,6 @@ class Menu extends React.Component {
                 >
                     {
                         this.props.menuList.map((item, index) => {
-                            console.log(item, index)
                             return (
                                 <div key={index + "div"}>
                                     <MenuRound key={index + "Card"} title={item} image={this.props.mapMap[item.toLocaleLowerCase()][0]} />

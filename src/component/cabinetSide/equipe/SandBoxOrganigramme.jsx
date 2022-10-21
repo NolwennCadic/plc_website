@@ -2,10 +2,10 @@
 // App.jsx
 // ...............................
 import React, { useEffect, useState } from "react";
-
-// import "../../App.css";
 import OrgChart from "./OrgChart";
 import getData from "./getData";
+import { BsPeopleFill } from "react-icons/bs";
+import "./OrgChart.css";
 
 function SandBoxOrganigramme() {
   const [nodeDataArray, setData] = useState([]);
@@ -46,6 +46,7 @@ function SandBoxOrganigramme() {
   };
 
   return (
+    //Need to add a title!
     <div style={{ position: "relative", width: "98%" }}>
       <div className="app-orgchart-container">
         {bShow && (
@@ -60,16 +61,11 @@ function SandBoxOrganigramme() {
           OnNodeClickEvent={onNodeClickHandler}
         />
       </div>
-      <div style={{
-        backgroundColor: "white",
-        width: "200px",
-        height: "150px",
-        position: "absolute",
-        left: "0",
-        top: "0",
-        zIndex: 3,
-        boxShadow: "1px 1px #888888"
-      }}>
+      <div className={"diagram-legend"}>
+        <div className="title-part">
+          <BsPeopleFill style={{ fontSize: "30px", paddingRight: "5px" }} />
+          Equipe
+        </div>
         <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}><div style={{ width: "20px", height: "20px", backgroundColor: "#333333", border: "3px solid lightGray", position: "relative", left: "10px" }} /><span>Boss</span></div>
         <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}><div style={{ width: "20px", height: "20px", backgroundColor: "#333333", border: "3px solid darkblue", position: "relative", left: "10px" }} /><span>Pole Comptabilité</span></div>
         <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}><div style={{ width: "20px", height: "20px", backgroundColor: "#333333", border: "3px solid lightCoral", position: "relative", left: "10px" }} /><span>Pole Social</span></div>

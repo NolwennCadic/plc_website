@@ -49,6 +49,18 @@
   background-size: cover;
 }
 
+.bg-homepage {
+  /* background-image: url("images/backgroundDark.svg"); */
+  background-image: url("images/homepage/calculator-g0308dc4e4_1920.jpg");
+  margin-top: calc(20vh - 93px);
+  margin-bottom: calc(20vh - 93px);
+  height: 60vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+}
 
 /* goJs */
 .diagram-component {
@@ -63,4 +75,17 @@
 
 .body {
   margin: 0 4% 0 4%;
+}
+
+.subpart {
+  height: 100vh;
+  min-height: 100vh;
+  padding-top: 100px;
+  overflow: auto;
+}
+
+.subpart-bottom {
+  height: calc(100vh - 200px);
+  min-height: calc(100vh - 200px);
+  margin-top: 100px;
 }
