@@ -6,7 +6,7 @@ import SubMenu from "../../common/subMenu/SubMenu";
 function HistoireSubMenu() {
     return (
         <SubMenu
-            iconTitle={"BsFillCalendarWeekFill"}
+            iconTitle={"BsFillCalendarWeekFill1"}
             menuTitle={"Histoire"}
             inputData={histoireData}
         />

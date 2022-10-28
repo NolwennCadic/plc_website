@@ -41,9 +41,12 @@ class EquipeCard extends React.Component {
                             </div>
                         </div>
                         <div style={{ display: "flex", flexDirection: "row", gap: "5px", marginBottom: "20px" }}>
-                            <BsAwardFill className={"button-equipe"} onClick={() => this.setPartShown("diploma")} />
-                            <BsFillBriefcaseFill className={"button-equipe"} onClick={() => this.setPartShown("experience")} />
-                            <BsPatchPlusFill className={"button-equipe"} onClick={() => this.setPartShown("skills")} />
+                            <button className={"button-equipe"} onClick={() => this.setPartShown("diploma")}><BsAwardFill className={"button-equipe-content"}/></button >
+                            <button className={"button-equipe"} onClick={() => this.setPartShown("experience")}><BsFillBriefcaseFill className={"button-equipe-content"}/></button >
+                            <button className={"button-equipe"} onClick={() => this.setPartShown("skills")}><BsPatchPlusFill className={"button-equipe-content"}/></button >
+                            {/* <button><BsAwardFill className={"button-equipe"} onClick={() => this.setPartShown("diploma")} /></button> */}
+                            {/* <BsFillBriefcaseFill className={"button-equipe"} onClick={() => this.setPartShown("experience")} /> */}
+                            {/* <BsPatchPlusFill className={"button-equipe"} onClick={() => this.setPartShown("skills")} /> */}
                         </div>
                         <div>
                             {this.state.partShown === "diploma"

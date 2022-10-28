@@ -411,6 +411,47 @@
         "type": 3,
         "time": "Variable",
         "level": "Tout niveaux",
-        "id": 8
+        "id": 8,
+        "content": [
+            {
+                "title": "Programme",
+                "content": [
+                    {
+                        "content": [
+                            "Ensemble nous identifions vos besoins (contexte, public, objectifs…) et nous élaborons des programmes de formation adaptés:"
+                        ]
+                    },
+                    {
+                        "title": "ETAPE 1",
+                        "content": [
+                            "Prise de contact"
+                        ]
+                    },
+                    {
+                        "title": "ETAPE 2",
+                        "content": [
+                            "Rendez vous à (distance ou non) pour définir vos attentes"
+                        ]
+                    },
+                    {
+                        "title": "ETAPE 3",
+                        "content": [
+                            "Elaboration et validation, ensemble, du programme personnalisé"
+                        ]
+                    },
+                    {
+                        "title": "ETAPE 4",
+                        "content": [
+                            "Conclusion (choix de la date, lieu…)"
+                        ]
+                    },
+                    {
+                        "content": [
+                            "Une prise en compte individuelle du stagiaire: son niveau de compétence et les attendus de la formation sont analysés pour l’élaboration d’un programme sur mesure."
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 ]

@@ -86,6 +86,7 @@ class FormationsCatalogue extends React.Component {
                 }
                 {this.state.formationClicked !== undefined &&
                     <Modal size="lg" show={this.state.formationClicked !== undefined} onHide={() => { this.setFormationClicked(undefined) }}>
+                        <Modal.Header closeButton />
                         <FormationPresentation title={this.state.formationClicked.nom} content={this.state.formationClicked.content} type={typeList.filter(type => type.key === this.state.formationClicked.type)[0]} index={this.state.formationClicked.id} />
                     </Modal>
                 }

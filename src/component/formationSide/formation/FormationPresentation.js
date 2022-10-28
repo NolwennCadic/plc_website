@@ -41,27 +41,31 @@ class FormationPresentation extends React.Component {
                                 {submenu.content.constructor === Array ?
                                     <div key={`submenuContent${submenu.title}`} className={"formation-submenu"}>
                                         {submenu.content.map((subsubmenu) => {
-                                            return (
-                                                <div>
-                                                    <div className="bold">{subsubmenu.title}</div>
-                                                    <ul>
-                                                        {subsubmenu.content && subsubmenu.content.map((list) => {
-                                                            console.log("list =", list);
-                                                            if (list.constructor === Array) {
-                                                                return (
-                                                                    <ul>
-                                                                        {list.map((item) => {
-                                                                            return <li>{item}</li>
-                                                                        })}
-                                                                    </ul>
-                                                                )
-                                                            } else {
-                                                                return <li>{list}</li>
-                                                            }
-                                                        })}
-                                                    </ul>
-                                                </div>
-                                            )
+                                            if (subsubmenu.title) {
+                                                console.log("title =", subsubmenu.title);
+                                                return (
+                                                    <div>
+                                                        <div className="bold">{subsubmenu.title}</div>
+                                                        <ul>
+                                                            {subsubmenu.content && subsubmenu.content.map((list) => {
+                                                                console.log("list =", list);
+                                                                if (list.constructor === Array) {
+                                                                    return (
+                                                                        <ul>
+                                                                            {list.map((item) => {
+                                                                                return <li>{item}</li>
+                                                                            })}
+                                                                        </ul>
+                                                                    )
+                                                                } else {
+                                                                    return <li>{list}</li>
+                                                                }
+                                                            })}
+                                                        </ul>
+                                                    </div>
+                                                )
+                                            } else
+                                                return <div style={{ margin: "5px 0 10px 0" }}>{subsubmenu.content}</div>
                                         })
                                         }
                                     </div>
@@ -74,6 +78,7 @@ class FormationPresentation extends React.Component {
 
                             </div>
                         )
+
                     })
                     }
                 </div>
@@ -82,7 +87,7 @@ class FormationPresentation extends React.Component {
                     {/* <a href={pdfMap[this.props.index]} download style={{ font: "bold", color: this.props.type.couleur1, textDecoration: "none" }}> */}
                     <a href={pdfMap[this.props.index]} download>
                         <button type="button" className="btn btn" style={{ backgroundColor: this.props.type.couleur1, color: "white" }}>
-                            <BsDownload style={{ fontSize: "30px"}} />
+                            <BsDownload style={{ fontSize: "30px" }} />
                             {/* <BsDownload style={{ fontSize: "30px", paddingRight: "5px" }} /> */}
                             {/* Telecharger la fiche */}
                         </button>

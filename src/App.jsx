@@ -34,7 +34,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavbarCustom />
-        <div style={{ minHeight: "80vh" }}>
+        {/* <div style={{ minHeight: "calc(100vh - 100px)" }}> */}
+        <div>
           {this.state.showDialog &&
             <DialogNewsletter
               setShowDialog={this.setShowDialog}

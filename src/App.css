@@ -53,7 +53,7 @@
   /* background-image: url("images/backgroundDark.svg"); */
   background-image: url("images/homepage/calculator-g0308dc4e4_1920.jpg");
   margin-top: calc(20vh - 93px);
-  margin-bottom: calc(20vh - 93px);
+  margin-bottom: calc(20vh - 64px);
   height: 60vh;
   background-position: center;
   background-repeat: no-repeat;
