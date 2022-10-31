@@ -78,7 +78,6 @@ class DialogContactForm extends React.Component {
         this.setState({
             formData: formData
         });
-        console.log(this.state);
     }
 
     handleChangeCheck(event) {
@@ -87,7 +86,6 @@ class DialogContactForm extends React.Component {
         this.setState({
             emailData: emailData
         });
-        console.log(this.state);
     }
 
     //Ce composant devrait contenir les state pour le fermer --> Dialog est fait comme ça...

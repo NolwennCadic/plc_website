@@ -58,65 +58,31 @@ function SubMenu(props) {
 
                 <div className="slider">
 
-                    {
-                        inputData.map((_, index) => {
-                            return (
-                                <a href={`#slide-${index}`}>{index}</a>
-                            )
-                        })
-                    }
+                    <a href="#slide-1">1</a>
+                    <a href="#slide-2">2</a>
+                    <a href="#slide-3">3</a>
+                    <a href="#slide-4">4</a>
+                    <a href="#slide-5">5</a>
+
                     <div className="slides">
-                        {
-                            inputData.map((item, index) => {
-                                let content = item.content;
-                                if (content.list) {
-                                    return (
-                                        <div style={{ textAlign: "left", overflow: "auto" }} key={`subDiv${item.title}`} id={`slide-${index}`}>
-                                            <div className={"subMenu-title"} key={`title`}>{item.title}</div>
-                                            {content.introduction &&
-                                                <span key={`spanIntroduction${item.title}`}>{content.introduction}</span>}
-                                            <ul>
-                                                {content.list.map((subMenu, index) => {
-                                                    return (<div className={"list-item"} key={`div${subMenu.title}${index}`}>
-                                                        {mapIcons[subMenu.icon]}
-                                                        <div className={"list-title"} key={`title${subMenu.title}${index}`}>{subMenu.title}</div>
-                                                        <div style={{ width: "80vw" }} key={`content${subMenu.title}${index}`}>{subMenu.content}</div>
-                                                    </div>)
-                                                })}
-                                            </ul>
-                                        </div>
-                                    )
-                                }
-                                else if (content.content) {
-                                    return (
-                                        <div style={{ textAlign: "left", overflow: "auto" }} key={`subDiv${item.title}`} id={`slide-${index}`}>
-                                            <div className={"subMenu-title"} key={`title`}>{item.title}</div>
-                                            <ul style={{ margin: "10px" }}>
-                                                {content.content.map((line, index) => {
-
-                                                    return (<li key={`line${item.title}${index}`}>{line}</li>)
-
-                                                })}
-                                            </ul>
-                                        </div>
-                                    )
-                                }
-                                else {
-                                    return (
-                                        <div style={{ textAlign: "left", overflow: "auto" }} key={`subDiv${item.title}`} id={`slide-${index}`}>
-                                            <div className={"subMenu-title"} key={`title`}>{item.title}</div>
-                                            <ul style={{ margin: "10px" }}>
-                                                {content.map((line, index) => {
-
-                                                    return (<li key={`line${item.title}${index}`}>{line}</li>)
-
-                                                })}
-                                            </ul>
-                                        </div>
-                                    )
-                                }
-                            })
-                        }
+                        <div style={{ heigth: "80%" }}>
+                            <div id="slide-1">
+                                1
+                            </div>
+                            <p>paragraphe</p>
+                        </div>
+                        <div id="slide-2">
+                            2
+                        </div>
+                        <div id="slide-3">
+                            3
+                        </div>
+                        <div id="slide-4">
+                            4
+                        </div>
+                        <div id="slide-5">
+                            5
+                        </div>
                     </div>
                 </div>
             </div>

@@ -57,7 +57,7 @@ class NewsletterSubscription extends React.Component {
                         onChange={this.props.handleChangeCheck}
                         type="checkbox"
                         column="sm"
-                        label="En indiquant votre adresse mail,
+                        label="En indiquant votre adresse email,
                     vous acceptez de recevoir la newsletter du cabinet PLC.
                     Vous pourrez vous désinscrire à tout moment par simple email."
                         style={{ fontSize: "13px" }}

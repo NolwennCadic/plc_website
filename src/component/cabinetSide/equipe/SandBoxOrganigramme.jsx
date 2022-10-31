@@ -9,7 +9,6 @@ import "./OrgChart.css";
 
 function SandBoxOrganigramme() {
   const [nodeDataArray, setData] = useState([]);
-  console.log("nodeDataArray =", nodeDataArray);
   const [bShow, showBackButton] = useState(false);
   const [arr, setBackNode] = useState([]);
 
@@ -19,7 +18,6 @@ function SandBoxOrganigramme() {
 
   function loadNodes(parentNode) {
     arr.push(parentNode);
-    console.log("loadNodes() -> arr:", arr);
     getData(parentNode) // <== ALL nodes in the database
       .then((nodes) => {
         setData(nodes); // replaces the nodeDataArray and re-trigger OrgChart's re-rendering.
@@ -28,7 +26,6 @@ function SandBoxOrganigramme() {
 
   function handleBackButtonClick(e) {
     e.preventDefault();
-    console.log("handleBackButtonClick()");
     arr.pop();
     var parentKey = arr.pop();
     loadNodes(parentKey); // restore view to parent node
@@ -40,7 +37,6 @@ function SandBoxOrganigramme() {
   // here and re-trigger the OrgChart display to show those sub-branches.
   const onNodeClickHandler = (nodeKey) => {
     // get sub-tree for this parent nodeKey
-    console.log("onNodeClickHandler()");
     showBackButton(true);
     loadNodes(nodeKey);
   };

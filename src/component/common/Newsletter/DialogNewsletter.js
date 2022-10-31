@@ -73,7 +73,6 @@ class DialogNewsletter extends React.Component {
         this.setState({
             emailData: emailData
         });
-        console.log(this.state);
     }
 
     handleChangeCheck(event) {
@@ -82,7 +81,6 @@ class DialogNewsletter extends React.Component {
         this.setState({
             emailData: emailData
         });
-        console.log(this.state);
     }
 
     //Ce composant devrait contenir les state pour le fermer --> Dialog est fait comme ça...

@@ -59,7 +59,6 @@ handleChange(event) {
   this.setState({
     formData: formData
   });
-  console.log(this.state);
 }
 
 

@@ -36,17 +36,6 @@ class HomePage extends React.Component {
                             alt={"logo PLC"}
                         />
                     </div>
-                    {/* We are lacking some text!!! */}
-                    <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", width: "100%", alignItems: "center" }}>
-                        {
-                            menuList.map((item, index) => {
-                                return (
-                                    <div key={index + "div"}>
-                                        <MenuRound key={index + "Card"} title={item} image={mapMap[item.toLocaleLowerCase()][0]} homepage={true} />
-                                    </div>
-                                )
-                            })}
-                    </div>
                 </div>
             </div>
 

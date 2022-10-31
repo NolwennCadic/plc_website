@@ -15,7 +15,6 @@ class PracticalInformation extends React.Component {//Should be Display1 with th
 
     }
     setHasMap() {
-        console.log("setHasMap");
         this.setState({
             hasMap: !this.state.hasMap,
         });

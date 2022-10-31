@@ -73,12 +73,13 @@ class FormationCardBis extends React.Component {
                                 boxShadow: "0px 3px 5px -1px rgb(0,0,0,20%), 0px 6px 10px 0px rgb(0,0,0,14%),0px 1px 18px 0px rgb(0,0,0,12%)",
                                 cursor: "pointer",
                                 margin: "0 1% 0 1%",
+                                height: "100px",
                             } : {
                                 backgroundColor: "white",
                                 border: "1px solid lightgray ",
                                 borderRight: "none",
                                 borderLeft: "none",
-                                margin: "0 2% 0 2%",
+                                margin: "1px 10vw 1px 10vw",
                             }
                     }
                     onMouseEnter={this.toggleIsHovered}

@@ -65,7 +65,6 @@ export function IndexBar(props) {
                 let distanceToCenter = calculateDistanceToCenter(circles[index].centerX, circles[index].centerY, x, y);
                 if (distanceToCenter <= RADIUSBUTTON) {
                     circles[index].hover = true;
-                    console.log("index =", index);
                 } else {
                     circles[index].hover = false;
                 }

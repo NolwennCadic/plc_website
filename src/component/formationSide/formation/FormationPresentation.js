@@ -42,13 +42,11 @@ class FormationPresentation extends React.Component {
                                     <div key={`submenuContent${submenu.title}`} className={"formation-submenu"}>
                                         {submenu.content.map((subsubmenu) => {
                                             if (subsubmenu.title) {
-                                                console.log("title =", subsubmenu.title);
                                                 return (
                                                     <div>
                                                         <div className="bold">{subsubmenu.title}</div>
                                                         <ul>
                                                             {subsubmenu.content && subsubmenu.content.map((list) => {
-                                                                console.log("list =", list);
                                                                 if (list.constructor === Array) {
                                                                     return (
                                                                         <ul>

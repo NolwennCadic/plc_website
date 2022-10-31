@@ -12,12 +12,8 @@ const OrgChartProps = { nodeDataArray: [], OnNodeClickEvent: null };
 
 const OrgChart = (OrgChartProps) => {
   useEffect(() => {
-    console.log(
-      `OrgChart() -> useEffect()  count of: ${OrgChartProps.nodeDataArray.length}`
-    );
     return () => initDiagram;
   });
-  console.log("OrgChartProps.nodeDataArray =", OrgChartProps.nodeDataArray)
   // call the parent page's event handler passed through the props and indicate which node was selected.
   function handleNodeChange(nodeKey) {
     OrgChartProps.OnNodeClickEvent(nodeKey);
@@ -121,7 +117,6 @@ const OrgChart = (OrgChartProps) => {
     diagram.layout.commitNodes = function () {
       go.TreeLayout.prototype.commitNodes.call(diagram.layout); // do the standard behavior
       // then go through all of the vertexes and set their corresponding node's Shape.fill
-      console.log("diagram.layout.network =", diagram.layout.network);
       // to a brush dependent on the TreeVertex.level value
       //   diagram.layout.network.vertexes.each(function (v) {
       //     if (v.node) {

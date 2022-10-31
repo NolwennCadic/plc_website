@@ -33,7 +33,6 @@ function HistoireSubMenu() {
 
     let title = displayMenu(index).title;
     let content = displayMenu(index).content;
-    console.log("content =", content);
     return (
         <div className={"subMenu-histoire"} id={`${title}`} key={`div${title}`}>
             <div style={{ display: "flex", flexFlow: "row", justifyContent: "space-between" }}>
