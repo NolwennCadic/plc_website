@@ -7,6 +7,7 @@ class NewsletterSubscription extends React.Component {
 
 
     render() {
+        console.log("this.props.type =", this.props.type);
         return (
             <Form onSubmit={this.props.handleSubmit}>
                 {/* <Form onSubmit={this.props.handleSubmit}> */}
@@ -51,15 +52,27 @@ class NewsletterSubscription extends React.Component {
                         {this.props.formErrors.emailAddressError}
                     </Form.Control.Feedback>
                 </Form.Group>
+                {this.props.type === "unsubscribe" &&
+                    <Form.Group className="mb-3" controlId="emailAddress">
+                        <div>Nous sommes triste d'apprendre votre départ. Si vous avez quelques secondes à nous accorder, pouvez-vous nous aider à nous améliorer et nous dire pourquoi?</div>
+                        <Form.Control
+                            type="text"
+                            placeholder="Raison"
+                            value={this.props.emailData.reason}
+                            // isInvalid={!!this.props.formErrors.emailAddressError}
+                            onChange={this.props.handleChange}
+                            name="reasons" />
+                    </Form.Group>
+                }
                 <Form.Group className="mb-3" controlId="formCheck">
                     <Form.Check
                         value={this.props.emailData.formCheck}
                         onChange={this.props.handleChangeCheck}
                         type="checkbox"
                         column="sm"
-                        label="En indiquant votre adresse email,
-                    vous acceptez de recevoir la newsletter du cabinet PLC.
-                    Vous pourrez vous désinscrire à tout moment par simple email."
+                        label={this.props.type === "subscribe"
+                            ? "En indiquant votre adresse email, vous acceptez de recevoir la newsletter du cabinet PLC. Vous pourrez vous désinscrire à tout moment par simple email."
+                            : "Nous n'utiliserons votre adresse email que pour la supprimer de notre mailing lisie manuellement"}
                         style={{ fontSize: "13px" }}
                     />
                 </Form.Group>
