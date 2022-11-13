@@ -13,6 +13,7 @@ import CabinetMenu from './component/cabinetSide/CabinetMenu';
 import React from 'react';
 import Footer from './component/Footer';
 import DialogNewsletter from './component/common/Newsletter/DialogNewsletter';
+import { Unsubscribe } from './component/common/Newsletter/Unsubscribe';
 
 class App extends React.Component {
   constructor() {
@@ -34,7 +35,7 @@ class App extends React.Component {
       <div className="App">
         <NavbarCustom />
         {/* <div style={{ minHeight: "calc(100vh - 100px)" }}> */}
-        <div>
+        <div className='wraper'>
           {this.state.showDialog &&
             <DialogNewsletter
               setShowDialog={this.setShowDialog}
@@ -49,6 +50,7 @@ class App extends React.Component {
             <Route path='/formationMenu' element={<FormationMenu />} />
             <Route exact path='/' element={<HomePage />} />
             <Route path='/infosPratiques' element={<PracticalInformation />} />
+            <Route path='/desinscription' element={<Unsubscribe />} />
           </Routes>
           {/* <BottomMessage /> */}
         </div>

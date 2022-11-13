@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IndexBar } from "./IndexBar";
+import { IndexBar } from "../IndexBar";
 import {
     BsFillCalendarWeekFill,
     BsFillCalculatorFill,
@@ -33,8 +33,6 @@ let mapIcons = {
 function SubMenu(props) {
     const { iconTitle, menuTitle, inputData } = props
     const [index, setIndex] = useState(0);
-
-
     //Should pass on the entierty of the content
     return (
         <div className={"subMenu"} key={`divSubMenu`}>
@@ -65,7 +63,9 @@ function SubMenu(props) {
                             )
                         })
                     }
-                    <div className="slides">
+                    <div
+                        className="slides"
+                    >
                         {
                             inputData.map((item, index) => {
                                 let content = item.content;

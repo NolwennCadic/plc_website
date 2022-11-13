@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IndexBar } from "./IndexBar";
+import { IndexBar } from "../IndexBar";
 import {
     BsFillCalendarWeekFill,
     BsFillCalculatorFill,

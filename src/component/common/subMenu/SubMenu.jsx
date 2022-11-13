@@ -13,6 +13,9 @@ import {
     BsClipboardCheck,
 } from "react-icons/bs";
 import "./subMenu.css";
+import { ReactComponent as ChevronLeft } from "../../../images/icons/chevron-left.svg";
+import { ReactComponent as ChevronRight } from "../../../images/icons/chevron-right.svg";
+
 
 let mapIcons = {
     BsFillCalendarWeekFill1: <BsFillCalendarWeekFill className={"submenu-icon"} />,
@@ -32,7 +35,30 @@ let mapIcons = {
 // icon title
 function SubMenu(props) {
     const { iconTitle, menuTitle, inputData } = props
+    const length = inputData.length;
+    console.log("inputData =", inputData);
     const [index, setIndex] = useState(0);
+    console.log("index = ", index);
+
+    const nextSlide = () => {
+        setIndex((current) => {
+            if (current === length - 1) {
+                return (0);
+            } else {
+                return (current + 1);
+            }
+        })
+    };
+
+    const prevSlide = () => {
+        setIndex((current) => {
+            if (current === 0) {
+                return (length - 1);
+            } else {
+                return (current - 1);
+            }
+        })
+    }
 
 
     //Should pass on the entierty of the content
@@ -46,54 +72,81 @@ function SubMenu(props) {
                 <IndexBar indexSelected={index} amountButtons={inputData.length} setIndex={setIndex} />
             </div>
             {/* <div style={{ display: "flex", flexDirection: "row", alignItems: "center", height: "80%" }}> */}
+            {/* Let's test the translate --> use the index */}
             <div style={{ height: "80%" }}>
-                {/* <div style={{ width: "100px" }}>
-                    {index > 0 &&
+                <div
+                    className="slider"
+                >
+                    <div style={{ width: "100px" }}>
                         <ChevronLeft
-                            onClick={() => setIndex(index - 1)}
+                            onClick={prevSlide}
                             style={{ transform: "scale(2)", cursor: "pointer" }}
                         />
-                    }
-                </div> */}
+                    </div>
 
-                <div className="slider">
+                    <div style={{
+                        width: "100%",
+                        overflow: "hidden",
+                        height: "100%",
+                    }}>
+                        <div style={{
+                            transform: `translateX(calc(${-index * 60}vw))`,
+                            display: "inline-flex",
+                        }}>
+                            {inputData.map((slide, id) => {
+                                let title = slide.title;
+                                let content = slide.content;
+                                return (
+                                    <div key={`contentSlide${id}`} className={"submenu-content"}>
+                                        <div style={{ textAlign: "left", overflow: "auto" }} key={`subDiv${title}`}>
+                                            <div className={"subMenu-title"} key={`title`}>{title}</div>
+                                            {content.list ?
+                                                //What changed?
+                                                <div>
+                                                    {content.introduction &&
+                                                        <span key={`spanIntroduction${title}`}>{content.introduction}</span>}
+                                                    <ul>
+                                                        {content.list.map((subMenu, index) => {
+                                                            return (<div className={"list-item"} key={`div${subMenu.title}${index}`}>
+                                                                {mapIcons[subMenu.icon]}
+                                                                <div className={"list-title"} key={`title${subMenu.title}${index}`}>{subMenu.title}</div>
+                                                                <div style={{ width: "80vw" }} key={`content${subMenu.title}${index}`}>{subMenu.content}</div>
+                                                            </div>)
+                                                        })}
+                                                    </ul>
+                                                </div>
+                                                : content.content
+                                                    ?
+                                                    <ul style={{ margin: "10px" }}>
+                                                        {content.content.map((line, index) => {
 
-                    <a href="#slide-1">1</a>
-                    <a href="#slide-2">2</a>
-                    <a href="#slide-3">3</a>
-                    <a href="#slide-4">4</a>
-                    <a href="#slide-5">5</a>
+                                                            return (<li key={`line${title}${index}`}>{line}</li>)
 
-                    <div className="slides">
-                        <div style={{ heigth: "80%" }}>
-                            <div id="slide-1">
-                                1
-                            </div>
-                            <p>paragraphe</p>
-                        </div>
-                        <div id="slide-2">
-                            2
-                        </div>
-                        <div id="slide-3">
-                            3
-                        </div>
-                        <div id="slide-4">
-                            4
-                        </div>
-                        <div id="slide-5">
-                            5
+                                                        })}
+                                                    </ul>
+                                                    : <ul style={{ margin: "10px" }}>
+                                                        {content.map((line, index) => {
+
+                                                            return (<li key={`line${title}${index}`}>{line}</li>)
+
+                                                        })}
+                                                    </ul>
+                                            }
+                                        </div>
+
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
-                </div>
-            </div>
-            {/* <div style={{ width: "100px" }}>
-                    {index < inputData.length - 1 &&
+                    <div style={{ width: "100px" }}>
                         <ChevronRight
-                            onClick={() => setIndex(index + 1)}
+                            onClick={nextSlide}
                             style={{ transform: "scale(2)", cursor: "pointer" }}
                         />
-                    }
-                </div> */}
+                    </div>
+                </div>
+            </div >
         </div >
     )
 }
