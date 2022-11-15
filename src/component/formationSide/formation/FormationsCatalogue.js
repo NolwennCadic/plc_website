@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import formationList from "../../../data/formation/formationDetails.json";
 import ButtonFormation from "./ButtonFormation";
 import FormationCardBis from "./FormationCardBis";
@@ -62,8 +62,7 @@ function FormationsCatalogue() {
                     return (
                         <ButtonFormation type={type} color={type.couleur1} setTypeFiltered={changeTypeFilteredOn} key={`${index}Button`} />
                     )
-                })
-                }
+                })}
 
                 <div onClick={toggleShowDialog} style={{ cursor: "pointer" }}><BsFillPencilFill /></div>
             </header>

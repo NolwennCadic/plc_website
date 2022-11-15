@@ -64,7 +64,7 @@ function SubMenu(props) {
     //Should pass on the entierty of the content
     return (
         <div className={"subMenu"} key={`divSubMenu`}>
-            <div style={{ display: "flex", flexFlow: "row", justifyContent: "space-between" }}>
+            <div style={{ display: "flex", flexFlow: "row", justifyContent: "space-between", alignItems: "center" }}>
                 <div className="title-part">
                     {mapIcons[iconTitle]}
                     {menuTitle}
@@ -77,7 +77,7 @@ function SubMenu(props) {
                 <div
                     className="slider"
                 >
-                    <div style={{ width: "100px" }}>
+                    <div style={{ width: "5vw" }}>
                         <ChevronLeft
                             onClick={prevSlide}
                             style={{ transform: "scale(2)", cursor: "pointer" }}
@@ -90,8 +90,9 @@ function SubMenu(props) {
                         height: "100%",
                     }}>
                         <div style={{
-                            transform: `translateX(calc(${-index * 60}vw))`,
+                            transform: `translateX(${-index * 50}vw)`,
                             display: "inline-flex",
+                            transition: "transform 1s"
                         }}>
                             {inputData.map((slide, id) => {
                                 let title = slide.title;
@@ -139,7 +140,7 @@ function SubMenu(props) {
                             })}
                         </div>
                     </div>
-                    <div style={{ width: "100px" }}>
+                    <div style={{ width: "5vw" }}>
                         <ChevronRight
                             onClick={nextSlide}
                             style={{ transform: "scale(2)", cursor: "pointer" }}

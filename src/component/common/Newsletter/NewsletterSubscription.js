@@ -10,6 +10,9 @@ class NewsletterSubscription extends React.Component {
         console.log("this.props.type =", this.props.type);
         return (
             <Form onSubmit={this.props.handleSubmit}>
+                <div>
+                    
+                </div>
                 {/* <Form onSubmit={this.props.handleSubmit}> */}
                 <Form.Group className="mb-3" controlId="firstName">
                     <Form.Control
