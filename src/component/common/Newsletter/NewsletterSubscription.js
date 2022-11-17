@@ -1,5 +1,6 @@
 import React from "react";
 import Form from 'react-bootstrap/Form';
+import "./newsletter.css";
 
 class NewsletterSubscription extends React.Component {
 
@@ -10,8 +11,9 @@ class NewsletterSubscription extends React.Component {
         console.log("this.props.type =", this.props.type);
         return (
             <Form onSubmit={this.props.handleSubmit}>
-                <div>
-                    
+                <div className={"newsletter-description"}>
+                    La newsletter sort deux fois par mois, généralement le mardi.
+                    En une page simple, elle traite de sujets de l’actualité que ce soit dans les domaines fiscaux, sociaux ou juridiques
                 </div>
                 {/* <Form onSubmit={this.props.handleSubmit}> */}
                 <Form.Group className="mb-3" controlId="firstName">
