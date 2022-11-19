@@ -3,13 +3,10 @@ import Form from 'react-bootstrap/Form';
 
 class NewsletterSubscription extends React.Component {
 
-    templateId = 'template_ba8z2m9';
-
-
     render() {
         console.log("this.props.type =", this.props.type);
         return (
-            <Form onSubmit={this.props.handleSubmit}>
+            <Form id="subscriptionorm" onSubmit={this.props.handleSubmit}>
                 {/* <Form onSubmit={this.props.handleSubmit}> */}
                 <Form.Group className="mb-3" controlId="firstName">
                     <Form.Control
@@ -54,7 +51,7 @@ class NewsletterSubscription extends React.Component {
                 </Form.Group>
                 {this.props.type === "unsubscribe" &&
                     <Form.Group className="mb-3" controlId="emailAddress">
-                        <div>Nous sommes triste d'apprendre votre départ. Si vous avez quelques secondes à nous accorder, pouvez-vous nous aider à nous améliorer et nous dire pourquoi?</div>
+                        <div>Nous sommes triste d'apprendre votre départ. Si vous avez quelques secondes à nous accorder, pouvez-vous nous aider à nous améliorer et nous dire pourquoi ?</div>
                         <Form.Control
                             type="text"
                             placeholder="Raison"

@@ -4,6 +4,9 @@ import { Modal, Button } from 'react-bootstrap';
 import { isAddressEmailValid, sendEmail } from "../../../utils/sendEmailUtils";
 
 class DialogNewsletter extends React.Component {
+
+    templateId = 'template_ba8z2m9';
+    
     constructor() {
         super();
         this.state = {
@@ -33,8 +36,9 @@ class DialogNewsletter extends React.Component {
             this.setState({ formErrors: newErrors });
         } else {
             this.resetFormErrors();
+            let formData = document.getElementById("subscription-form");
             // TODO: uncomment line, for now commented to prevent sending emails and using monthly email quota
-            // sendEmail(this.templateId, event.target); see with Nolwenn how to change that?
+            sendEmail(this.templateId, formData, true);
             console.log("Email sent!");
             alert("Vous venez de vous inscrire à la newsletter du cabinet PLC.");
         }

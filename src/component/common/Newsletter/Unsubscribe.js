@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import NewsletterSubscription from "./NewsletterSubscription";
-import { isAddressEmailValid } from "../../../utils/sendEmailUtils";
+import { isAddressEmailValid, sendEmail } from "../../../utils/sendEmailUtils";
 
 export function Unsubscribe() {
+
+    const templateId = 'template_ba8z2m9';
     // How to provoke the unsubscription
     const [emailData, setEmailData] = useState({
         firstName: "",
@@ -24,8 +26,9 @@ export function Unsubscribe() {
             setFormErrors(newErrors);
         } else {
             resetFormErrors();
+            let formData = document.getElementById("subscription-form");
             // TODO: uncomment line, for now commented to prevent sending emails and using monthly email quota
-            // sendEmail(this.templateId, event.target);
+            sendEmail(this.templateId, formData, false);
             console.log("Email sent!");
             alert("Vous venez de vous désinscrire de la newsletter du cabinet PLC.");
         }
