@@ -71,7 +71,7 @@ export function IndexBar(props) {
             }
             draw(context, circles, TOTALSIZE, RADIUSBUTTON, MARGIN, indexSelected);
         }
-    }, []);
+    }, [indexSelected]);
 
     return (
         <canvas
