@@ -7,7 +7,7 @@ import getData from "./getData";
 import { BsPeopleFill } from "react-icons/bs";
 import pouleImg from "../../../images/poule.jpg";
 import "./OrgChart.css";
-
+import chartImage from "../../../images/orgChart.png";
 function SandBoxOrganigramme() {
   const [nodeDataArray, setData] = useState([]);
   const [bShow, showBackButton] = useState(false);
@@ -46,19 +46,7 @@ function SandBoxOrganigramme() {
   // La poule pour papa
   const [isControlPressed, setIsControlPressed] = useState(false);
   const [showPoule, setShowPoule] = useState(false);
-
-  document.addEventListener('keydown', (event) => {
-    var name = event.key;
-    setIsControlPressed(name === "Control");
-  }, false);
-
-  // Add event listener on keyup
-  document.addEventListener('keyup', (event) => {
-    if (isControlPressed) {
-      setIsControlPressed(false);
-      setShowPoule(false);
-    }
-  }, false);
+  const [hasSmallWindow, setHasSmallWindow] = useState(window.innerWidth < 890);
 
   const handleMouseEnter = (e) => {
     setShowPoule(isControlPressed);
@@ -67,6 +55,30 @@ function SandBoxOrganigramme() {
   const handleMouseLeave = () => {
     setShowPoule(false);
   }
+
+  const updatePredicate = () => {
+    setHasSmallWindow(window.innerWidth < 890);
+  }
+
+  // check size of window
+  useEffect(() => {
+    document.addEventListener('keydown', (event) => {
+      var name = event.key;
+      setIsControlPressed(name === "Control");
+    }, false);
+
+    // Add event listener on keyup
+    document.addEventListener('keyup', (event) => {
+      if (isControlPressed) {
+        setIsControlPressed(false);
+        setShowPoule(false);
+      }
+    }, false);
+
+    window.addEventListener("resize", updatePredicate);
+  })
+
+
 
   return (
     //Need to add a title!
@@ -104,20 +116,28 @@ function SandBoxOrganigramme() {
             </div>
           </div>
         </div>
-        <div className="app-orgchart-container">
-          <div style={{ backgroundColor: "white", width: "180px", height: "84px", position: "absolute", zIndex: 5 }}></div>
-          {bShow && (
-            <button className="app-backbutton" onClick={handleBackButtonClick}>
-              {bShow && <span>BaxkIcon</span>}
-              {/* {bShow && <BackIcon className="app-backbutton" />} */}
-            </button>
-          )}
-          <p />
-          <OrgChart
-            nodeDataArray={nodeDataArray}
-            OnNodeClickEvent={onNodeClickHandler}
+        {hasSmallWindow ?
+          <img
+            src={chartImage}
+            style={{ width: "60vw", height: "auto", backgroundColor: "white", marginTop: "10px" }}
+            alt={"organigramme de l'entreprise"}
           />
-        </div>
+          :
+          <div className="app-orgchart-container">
+            <div style={{ backgroundColor: "white", width: "180px", height: "84px", position: "absolute", zIndex: 5 }}></div>
+            {bShow && (
+              <button className="app-backbutton" onClick={handleBackButtonClick}>
+                {bShow && <span>BaxkIcon</span>}
+                {/* {bShow && <BackIcon className="app-backbutton" />} */}
+              </button>
+            )}
+            <p />
+            <OrgChart
+              nodeDataArray={nodeDataArray}
+              OnNodeClickEvent={onNodeClickHandler}
+            />
+          </div>
+        }
       </div>
     </div>
   );
