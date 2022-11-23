@@ -1,4 +1,19 @@
-.newsletter-description{
+.newsletter-description {
     font-size: 14px;
     margin: 5px 3px 15px 3px;
+}
+
+.newsletter-unsuscribe {
+    background-color: rgb(248, 249, 250, 0.5);
+    padding-left: 2%;
+    padding: 10px 0 0 10px;
+    margin-top: calc(15vh - 93px);
+    margin-bottom: calc(15vh - 64px);
+    margin-left: 20vw;
+    width: 60vw;
+    max-width: 700px;
+    height: 70vh;
+    box-shadow: 5px 5px 10px #a4a4a4,
+        -5px -5px 10px #ffffff;
+    overflow: auto;
 }

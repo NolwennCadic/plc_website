@@ -77,7 +77,7 @@ class NewsletterSubscription extends React.Component {
                         column="sm"
                         label={this.props.type === "subscribe"
                             ? "En indiquant votre adresse email, vous acceptez de recevoir la newsletter du cabinet PLC. Vous pourrez vous désinscrire à tout moment par simple email."
-                            : "Nous n'utiliserons votre adresse email que pour la supprimer de notre mailing lisie manuellement"}
+                            : "Nous n'utiliserons votre adresse email que pour la supprimer de notre mailing liste manuellement"}
                         style={{ fontSize: "13px" }}
                     />
                 </Form.Group>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NewsletterSubscription from "./NewsletterSubscription";
 import { isAddressEmailValid } from "../../../utils/sendEmailUtils";
+import "./newsletter.css";
 
 export function Unsubscribe() {
     // How to provoke the unsubscription
@@ -72,19 +73,21 @@ export function Unsubscribe() {
 
     //Ce composant devrait contenir les state pour le fermer --> Dialog est fait comme ça...
     return (
-        <div className="subpart-bottom">
-            <h4 style={{ color: "#004C38" }}>Se désinscrire à la newsletter</h4>
-            {/* Add a field to ask a reason? */}
-            <div style={{ margin: "10px" }}>
-                <NewsletterSubscription
-                    type={"unsubscribe"}
-                    handleSubmit={handleSubmit}
-                    emailData={emailData}
-                    formErrors={formErrors}
-                    handleChange={handleChange}
-                    handleChangeCheck={handleChangeCheck}
-                />
-                <div>Se désinscrire</div>
+        <div style={{display: "flex", alignItems: "center"}}>
+                <div className="newsletter-unsuscribe">
+                    <h4 style={{ color: "#004C38" }}>Se désinscrire de la newsletter</h4>
+                    {/* Add a field to ask a reason? */}
+                    <div style={{ margin: "10px" }}>
+                        <NewsletterSubscription
+                            type={"unsubscribe"}
+                            handleSubmit={handleSubmit}
+                            emailData={emailData}
+                            formErrors={formErrors}
+                            handleChange={handleChange}
+                            handleChangeCheck={handleChangeCheck}
+                        />
+                        <div>Se désinscrire</div>
+                    </div>
             </div>
         </div>
     )
