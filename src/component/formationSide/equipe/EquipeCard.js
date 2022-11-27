@@ -2,6 +2,7 @@ import React from "react";
 import member1 from "../../../images/sabine.jpg";
 import { BsAwardFill, BsFillBriefcaseFill, BsLinkedin, BsPatchPlusFill } from "react-icons/bs";
 import { Nav } from "react-bootstrap";
+import { ButtonEquipeCard } from "./ButtonEquipeCard";
 
 const memberMap = {
     1: member1,
@@ -12,15 +13,21 @@ class EquipeCard extends React.Component {
         super();
         this.state = {
             partShown: "diploma",
+            indexSelected: 0,
         };
         this.setPartShown = this.setPartShown.bind(this);
     }
 
-    setPartShown(part) {
+    setPartShown(part, index) {
+        console.log(" setPartShown index =", index);
         this.setState({
             partShown: part,
         });
+        this.setState({
+            indexSelected: index,
+        });
     }
+
     render() {
         return (
             <div>
@@ -41,14 +48,32 @@ class EquipeCard extends React.Component {
                             </div>
                         </div>
                         <div style={{ display: "flex", flexDirection: "row", gap: "5px", marginBottom: "20px" }}>
-                            <button className={"button-equipe"} onClick={() => this.setPartShown("diploma")}><BsAwardFill className={"button-equipe-content"}/></button >
+                            <ButtonEquipeCard
+                                indexSelected={this.state.indexSelected}
+                                indexButton={0}
+                                Icon={BsAwardFill}
+                                setPartShown={() => this.setPartShown("diploma", 0)}
+                            />
+                            <ButtonEquipeCard
+                                indexSelected={this.state.indexSelected}
+                                indexButton={1}
+                                Icon={BsFillBriefcaseFill}
+                                setPartShown={() => this.setPartShown("experience", 1)}
+                            />
+                            <ButtonEquipeCard
+                                indexSelected={this.state.indexSelected}
+                                indexButton={2}
+                                Icon={BsPatchPlusFill}
+                                setPartShown={() => this.setPartShown("skills", 2)}
+                            />
+                            {/* <button className={"button-equipe"} onClick={() => this.setPartShown("diploma")}><BsAwardFill className={"button-equipe-content"}/></button >
                             <button className={"button-equipe"} onClick={() => this.setPartShown("experience")}><BsFillBriefcaseFill className={"button-equipe-content"}/></button >
-                            <button className={"button-equipe"} onClick={() => this.setPartShown("skills")}><BsPatchPlusFill className={"button-equipe-content"}/></button >
+                            <button className={"button-equipe"} onClick={() => this.setPartShown("skills")}><BsPatchPlusFill className={"button-equipe-content"}/></button > */}
                             {/* <button><BsAwardFill className={"button-equipe"} onClick={() => this.setPartShown("diploma")} /></button> */}
                             {/* <BsFillBriefcaseFill className={"button-equipe"} onClick={() => this.setPartShown("experience")} /> */}
                             {/* <BsPatchPlusFill className={"button-equipe"} onClick={() => this.setPartShown("skills")} /> */}
                         </div>
-                        <div>
+                        <div style={{height: "100px", display: "flex", alignItems: "center"}}>
                             {this.state.partShown === "diploma"
                                 ? <div className="flexEquipe">
                                     <ul>
