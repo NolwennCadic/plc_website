@@ -13,9 +13,9 @@ import { ReactComponent as Listulsvg } from "../../images/icons/list-ul.svg";
 import { ReactComponent as Groupsvg } from "../../images/icons/group.svg";
 
 const menuList = [
-    "Equipe",
-    "Formations",
     "Mission",
+    "Formations",
+    "Equipe",
 ]
 
 //Should I be creating a mapping of my boxicons usable from anywhere? Would the local url be called correctly? Seems like it already does!

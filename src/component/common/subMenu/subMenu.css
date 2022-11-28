@@ -28,6 +28,7 @@
 .list-item {
     display: flex;
     justify-content: flex-start;
+    margin-bottom: 5px;
 }
 
 .submenu-icon {
@@ -39,12 +40,23 @@
 }
 
 .submenu-content {
-    width: 45vw;
-    margin-right: 5vw;
+    width: 50vw;
     height: 50vh;
-    overflow: scroll;
+    margin-right: 3px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
+
+/* @media(min-width: 1000px) {
+    .submenu-content {
+        width: "1000px";
+        margin-right: 5vw;
+        height: 50vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+} */
 
 /* test */
 .slider {

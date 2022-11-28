@@ -36,9 +36,7 @@ let mapIcons = {
 function SubMenu(props) {
     const { iconTitle, menuTitle, inputData } = props
     const length = inputData.length;
-    console.log("inputData =", inputData);
     const [index, setIndex] = useState(0);
-    console.log("index = ", index);
 
     const nextSlide = () => {
         setIndex((current) => {
