@@ -35,25 +35,23 @@ class App extends React.Component {
       <div className="App">
         <NavbarCustom />
         {/* <div style={{ minHeight: "calc(100vh - 100px)" }}> */}
-        <div className='wraper'>
-          {this.state.showDialog &&
-            <DialogNewsletter
-              setShowDialog={this.setShowDialog}
-              showDialog={this.state.showDialog}
-            />
-          }
-          <Routes>
-            <Route path='/cabinetMenu' element={<CabinetMenu />} />
-            <Route path='/customFormation' element={<CustomFormation />} />
-            <Route path='/formationsCatalogue' element={<FormationsCatalog />} />
-            <Route path='/formationDescription' element={<FormationDescription />} />
-            <Route path='/formationMenu' element={<FormationMenu />} />
-            <Route exact path='/' element={<HomePage />} />
-            <Route path='/infosPratiques' element={<PracticalInformation />} />
-            <Route path='/desinscription' element={<Unsubscribe />} />
-          </Routes>
-          {/* <BottomMessage /> */}
-        </div>
+        {this.state.showDialog &&
+          <DialogNewsletter
+            setShowDialog={this.setShowDialog}
+            showDialog={this.state.showDialog}
+          />
+        }
+        <Routes>
+          <Route path='/cabinetMenu' element={<CabinetMenu />} />
+          <Route path='/customFormation' element={<CustomFormation />} />
+          <Route path='/formationsCatalogue' element={<FormationsCatalog />} />
+          <Route path='/formationDescription' element={<FormationDescription />} />
+          <Route path='/formationMenu' element={<FormationMenu />} />
+          <Route exact path='/' element={<HomePage />} />
+          <Route path='/infosPratiques' element={<PracticalInformation />} />
+          <Route path='/desinscription' element={<Unsubscribe />} />
+        </Routes>
+        {/* <BottomMessage /> */}
 
         <Footer setShowDialog={this.setShowDialog} />
       </div>

@@ -61,5 +61,5 @@ input[type="text"].formation-body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 3px;
+  gap: 5px;
 }

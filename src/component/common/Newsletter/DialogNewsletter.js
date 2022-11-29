@@ -1,7 +1,7 @@
 import React from "react";
-import NewsletterSubscription from "./NewsletterSubscription";
-import { Modal, Button } from 'react-bootstrap';
-import { isAddressEmailValid, sendEmail } from "../../../utils/sendEmailUtils";
+import { Modal } from 'react-bootstrap';
+import { isAddressEmailValid } from "../../../utils/sendEmailUtils";
+import { SuccessUI } from "./SuccessUI";
 
 class DialogNewsletter extends React.Component {
 
@@ -20,13 +20,19 @@ class DialogNewsletter extends React.Component {
                 firstNameError: "",
                 lastNameError: "",
                 emailAddressError: ""
-            }
+            },
+            showValidation: false
 
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleChangeCheck = this.handleChangeCheck.bind(this);
         this.checkFormErrors = this.checkFormErrors.bind(this);
+        this.toggleShowValidation = this.toggleShowValidation.bind(this);
+    }
+
+    toggleShowValidation() {
+        this.setState({ showValidation: !this.state.showValidation });
     }
 
     handleSubmit(event) {
@@ -90,7 +96,7 @@ class DialogNewsletter extends React.Component {
     //Ce composant devrait contenir les state pour le fermer --> Dialog est fait comme ça...
     render() {
         return (
-            <Modal show={this.props.showDialog} onHide={() => { this.props.setShowDialog() }}>
+            <Modal show={this.props.showDialog} onHide={() => { this.props.setShowDialog() }} style={{width: "100%"}}>
                 <Modal.Header closeButton>
                     <Modal.Title style={{ color: "#004C38" }}>S'inscrire à la newsletter</Modal.Title>
                 </Modal.Header>

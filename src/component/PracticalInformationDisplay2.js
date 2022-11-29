@@ -20,7 +20,12 @@ class PracticalInformationDisplay2 extends React.Component {//Should be Display1
             hasMap: !this.state.hasMap,
         });
     }
+
+
     render() {
+        function openInNewTab(url) {
+            window.open(url);
+        };
         return (
             <div>
                 <h3 style={{ marginTop: "20px", marginBottom: "40px" }}> Nous joindre: </h3>
@@ -59,13 +64,13 @@ class PracticalInformationDisplay2 extends React.Component {//Should be Display1
                     <div className="subPartInfoLine">
                         <div className="subpart-info-gray">
                             <BsFillInfoCircleFill className="InfoIconGreen" />
-                            <Nav.Link href={"https://www.societe.com/societe/p-l-c-498965763.html"} className="InfoContent">Renseignements juridiques</Nav.Link>
+                            <Nav.Link onClick={() => openInNewTab("https://www.societe.com/societe/p-l-c-498965763.html")} className="InfoContent">Renseignements juridiques</Nav.Link>
                         </div>
                         <div className="subpart-info-green">
                             <BsLinkedin className="InfoIconGray" />
                             <div className="InfoContent">
                                 <div>Seule notre partie formation est accessible sur les réseaux: </div>
-                                <Nav.Link href={"https://www.linkedin.com/in/sabine-cadic"}>Sabine Cadic</Nav.Link>
+                                <Nav.Link onClick={() => openInNewTab("https://www.linkedin.com/in/sabine-cadic")}>Sabine Cadic</Nav.Link>
                             </div>
                         </div>
                     </div>

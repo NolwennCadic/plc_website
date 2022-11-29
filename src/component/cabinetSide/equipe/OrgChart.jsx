@@ -65,7 +65,7 @@ const OrgChart = (OrgChartProps) => {
       "undoManager.isEnabled": false // enable undo & redo
     });
 
-    var graygrad = $(go.Brush, "Linear", { 0: "rgb(248,249,250)", 0.7: "rgb(126, 130, 130)", 1: "rgb(30,30,30)" });
+    // var graygrad = $(go.Brush, "Linear", { 0: "rgb(248,249,250)", 0.7: "rgb(126, 130, 130)", 1: "rgb(30,30,30)" });
 
     // when the document is modified, add a "*" to the office abbr and enable the "Save" button
     diagram.addDiagramListener("Modified", function (e) {
@@ -234,7 +234,8 @@ const OrgChart = (OrgChartProps) => {
       $(go.Shape, "RoundedRectangle", {
         //name: "SHAPE", fill: "white", stroke: null,
         name: "SHAPE",
-        fill: graygrad,
+        fill: "#333333",
+        // fill: graygrad,
         stroke: "white",
         strokeWidth: 3.5,
         // set the port properties:
