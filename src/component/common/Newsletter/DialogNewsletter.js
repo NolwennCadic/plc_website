@@ -6,7 +6,7 @@ import { isAddressEmailValid, sendEmail } from "../../../utils/sendEmailUtils";
 class DialogNewsletter extends React.Component {
 
     templateId = 'template_ba8z2m9';
-    
+
     constructor() {
         super();
         this.state = {
@@ -97,7 +97,6 @@ class DialogNewsletter extends React.Component {
                 <div style={{ margin: "10px" }}>
                     <NewsletterSubscription
                         type={"subscribe"}
-                        handleSubmit={this.handleSubmit}
                         emailData={this.state.emailData}
                         formErrors={this.state.formErrors}
                         handleChange={this.handleChange}
