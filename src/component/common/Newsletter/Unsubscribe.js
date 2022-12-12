@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import NewsletterSubscription from "./NewsletterSubscription";
-import { isAddressEmailValid } from "../../../utils/sendEmailUtils";
+import { Modal, Button } from 'react-bootstrap';
+import { isAddressEmailValid, sendEmail } from "../../../utils/sendEmailUtils";
 import "./newsletter.css";
 
 export function Unsubscribe() {
+
+    const templateId = 'template_ba8z2m9';
+
     // How to provoke the unsubscription
     const [emailData, setEmailData] = useState({
         firstName: "",
         lastName: "",
         emailAddress: "",
-        reason: "",
+        unsubscriptionReason: "",
         formCheck: false,
     });
     const [formErrors, setFormErrors] = useState({
@@ -18,17 +22,19 @@ export function Unsubscribe() {
         emailAddressError: "",
     });
 
-    function handleSubmit(event) {
+    const [unsubscritionCompleted, setUnsubscritionCompleted] = useState(false)
+
+    const handleSubmit = function handleSubmit(event) {
         const newErrors = checkFormErrors();
         if (Object.keys(newErrors).length > 0) {
             event.preventDefault();
             setFormErrors(newErrors);
         } else {
             resetFormErrors();
+            setUnsubscritionCompleted(true);
+            let formData = document.getElementById("subscription-form");
             // TODO: uncomment line, for now commented to prevent sending emails and using monthly email quota
-            // sendEmail(this.templateId, event.target);
-            console.log("Email sent!");
-            alert("Vous venez de vous désinscrire de la newsletter du cabinet PLC.");
+            //sendEmail(templateId, formData, false);
         }
 
     }
@@ -73,21 +79,36 @@ export function Unsubscribe() {
 
     //Ce composant devrait contenir les state pour le fermer --> Dialog est fait comme ça...
     return (
+        
         <div style={{display: "flex", alignItems: "center"}}>
-                <div className="newsletter-unsuscribe">
-                    <h4 style={{ color: "#004C38" }}>Se désinscrire de la newsletter</h4>
-                    {/* Add a field to ask a reason? */}
-                    <div style={{ margin: "10px" }}>
-                        <NewsletterSubscription
-                            type={"unsubscribe"}
-                            handleSubmit={handleSubmit}
-                            emailData={emailData}
-                            formErrors={formErrors}
-                            handleChange={handleChange}
-                            handleChangeCheck={handleChangeCheck}
-                        />
-                        <div>Se désinscrire</div>
+            <div className="newsletter-unsuscribe">
+                {
+                    !unsubscritionCompleted &&
+                    <div>
+                        <h4 style={{ color: "#004C38" }}>Se désinscrire à la newsletter</h4>
+                        <div style={{ margin: "10px" }}>
+                            <NewsletterSubscription
+                                type={"unsubscribe"}
+                                emailData={emailData}
+                                formErrors={formErrors}
+                                handleChange={handleChange}
+                                handleChangeCheck={handleChangeCheck}
+                            />
+                            <Button onClick={handleSubmit} variant="primary" type="submit" style={{ backgroundColor: "#004C38", borderColor: "#004C38" }}>
+                                Se désinscrire
+                            </Button>
+                        </div>  
                     </div>
+
+                }
+                {
+                    unsubscritionCompleted &&
+                    <div>
+                        Désinscription enregistrée, vous ne recevrez plus d'email de notre part.
+                    </div>
+
+                }
+                
             </div>
         </div>
     )

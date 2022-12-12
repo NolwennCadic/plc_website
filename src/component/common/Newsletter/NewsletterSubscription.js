@@ -4,18 +4,22 @@ import "./newsletter.css";
 
 class NewsletterSubscription extends React.Component {
 
-    templateId = 'template_ba8z2m9';
+    constructor() {
+        super();
+        this.isSubscription = this.isSubscription.bind(this);
+    }
 
-
+    isSubscription() {
+        return this.props.type === "subscribe";
+    }
     render() {
         console.log("this.props.type =", this.props.type);
         return (
-            <Form onSubmit={this.props.handleSubmit}>
+            <Form id="subscription-form" >
                 <div className={"newsletter-description"}>
                     La newsletter sort deux fois par mois, généralement le mardi.
                     En une page simple, elle traite de sujets de l’actualité que ce soit dans les domaines fiscaux, sociaux ou juridiques
                 </div>
-                {/* <Form onSubmit={this.props.handleSubmit}> */}
                 <Form.Group className="mb-3" controlId="firstName">
                     <Form.Control
                         type="text"
@@ -51,37 +55,42 @@ class NewsletterSubscription extends React.Component {
                         onChange={this.props.handleChange}
                         name="emailAddress" />
                     <Form.Text className="text-muted">
-                        Nous ne partagerons pas votre adresse email avec des tiers
+                        {
+                            this.isSubscription() ? 
+                            "Nous ne partagerons pas votre adresse email avec des tiers"
+                            : "Nous n'utiliserons votre adresse email que pour la supprimer de notre mailing liste"
+                        }
                     </Form.Text>
                     <Form.Control.Feedback type='invalid'>
                         {this.props.formErrors.emailAddressError}
                     </Form.Control.Feedback>
                 </Form.Group>
-                {this.props.type === "unsubscribe" &&
-                    <Form.Group className="mb-3" controlId="emailAddress">
-                        <div>Nous sommes triste d'apprendre votre départ. Si vous avez quelques secondes à nous accorder, pouvez-vous nous aider à nous améliorer et nous dire pourquoi?</div>
+                {!this.isSubscription() &&
+                    <Form.Group className="mb-3" controlId="unsubscriptionReason">
+                        <div>Nous sommes triste d'apprendre votre départ. Si vous avez quelques secondes à nous accorder, pouvez-vous nous aider à nous améliorer et nous dire pourquoi ?</div>
                         <Form.Control
                             type="text"
                             placeholder="Raison"
                             value={this.props.emailData.reason}
-                            // isInvalid={!!this.props.formErrors.emailAddressError}
                             onChange={this.props.handleChange}
                             name="reasons" />
                     </Form.Group>
                 }
+                {this.isSubscription() &&
                 <Form.Group className="mb-3" controlId="formCheck">
                     <Form.Check
                         value={this.props.emailData.formCheck}
                         onChange={this.props.handleChangeCheck}
                         type="checkbox"
                         column="sm"
-                        label={this.props.type === "subscribe"
-                            ? "En indiquant votre adresse email, vous acceptez de recevoir la newsletter du cabinet PLC. Vous pourrez vous désinscrire à tout moment par simple email."
-                            : "Nous n'utiliserons votre adresse email que pour la supprimer de notre mailing liste manuellement"}
+                        label= "En indiquant votre adresse email, vous acceptez de recevoir la newsletter du cabinet PLC. Vous pourrez vous désinscrire à tout moment par simple email."
                         style={{ fontSize: "13px" }}
-                    />
+                        />
                 </Form.Group>
 
+
+                }
+                
             </Form>
         )
     }

@@ -69,11 +69,7 @@ handleSubmit(event) {
       this.setState({ formErrors: newErrors });
   } else {
       this.resetFormErrors();
-      // TODO: uncomment line, for now commented to prevent sending emails and using monthly email quota
-      // sendEmail(this.templateId, event.target);
-      console.log("Email sent!");
-      //TODO. améliorer le message
-      alert("Merci d'avoir pris contact avec nous.");
+      sendEmail(this.templateId, event.target);
   }
 }
 
