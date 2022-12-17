@@ -13,20 +13,29 @@ import CabinetMenu from './component/cabinetSide/CabinetMenu';
 import React from 'react';
 import Footer from './component/Footer';
 import DialogNewsletter from './component/common/Newsletter/DialogNewsletter';
+import DialogContactForm from "./component/common/Contact/DialogContactForm";
 import { Unsubscribe } from './component/common/Newsletter/Unsubscribe';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      showDialog: false,
+      showNewsletterDialog: false,
+      showContactDialog: false,
     };
-    this.setShowDialog = this.setShowDialog.bind(this);
+    this.toggleShowNewsletterDialog = this.toggleShowNewsletterDialog.bind(this);
+    this.toggleShowContactDialog = this.toggleShowContactDialog.bind(this);
   }
 
-  setShowDialog() {
+  toggleShowNewsletterDialog() {
     this.setState({
-      showDialog: !this.state.showDialog,
+      showNewsletterDialog: !this.state.showNewsletterDialog,
+    });
+  }
+
+  toggleShowContactDialog() {
+    this.setState({
+      showContactDialog: !this.state.showContactDialog,
     });
   }
 
@@ -35,10 +44,16 @@ class App extends React.Component {
       <div className="App">
         <NavbarCustom />
         {/* <div style={{ minHeight: "calc(100vh - 100px)" }}> */}
-        {this.state.showDialog &&
+        {this.state.showNewsletterDialog &&
           <DialogNewsletter
-            setShowDialog={this.setShowDialog}
-            showDialog={this.state.showDialog}
+            setShowDialog={this.toggleShowNewsletterDialog}
+            showDialog={this.state.showNewsletterDialog}
+          />
+        }
+        {this.state.showContactDialog &&
+          <DialogContactForm
+            setShowDialog={this.toggleShowContactDialog}
+            showDialog={this.state.showContactDialog}
           />
         }
         <Routes>
@@ -53,7 +68,7 @@ class App extends React.Component {
         </Routes>
         {/* <BottomMessage /> */}
 
-        <Footer setShowDialog={this.setShowDialog} />
+        <Footer toggleShowNewsletterDialog={this.toggleShowNewsletterDialog} toggleShowContactDialog={this.toggleShowContactDialog} />
       </div>
     );
   }

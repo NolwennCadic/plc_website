@@ -6,7 +6,6 @@ import typeList from "../../../data/formation/formationTypes.json";
 import { Modal } from "react-bootstrap";
 import FormationPresentation from "./FormationPresentation";
 import DialogContactForm from "../../common/Contact/DialogContactForm";
-import { BsFillPencilFill } from "react-icons/bs";
 
 const hasKey = (items, key) => {
     let elements = items.filter(item => item.key === key);
@@ -64,7 +63,7 @@ function FormationsCatalogue() {
                     )
                 })}
 
-                <div onClick={toggleShowDialog} style={{ cursor: "pointer" }}><BsFillPencilFill /></div>
+                <div onClick={toggleShowDialog} style={{ cursor: "pointer" }}>Nous contacter</div>
             </header>
             {
                 itemsToShow.map((formation, index) => {
