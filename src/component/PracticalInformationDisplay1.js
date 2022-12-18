@@ -1,7 +1,6 @@
 
 
 import React from "react";
-// import { Map } from "./Map";
 import { BsPinMapFill, BsFillClockFill, BsFillTelephoneFill, BsFillInfoCircleFill, BsLinkedin } from "react-icons/bs";
 import { Nav } from "react-bootstrap";
 
@@ -9,7 +8,7 @@ class PracticalInformationDisplay1 extends React.Component {//Should be Display1
     render() {
         return (
             <div>
-                <h3 style={{ marginTop: "20px", marginBottom: "40px" }}> Nous joindre: </h3>
+                <h3 style={{ marginTop: "20px", marginBottom: "40px" }}> Nous contacter: </h3>
                 <div className="InfoMenu">
                     <div className="subPartInfoLine">
                         <div className="subpart-info-gray">
