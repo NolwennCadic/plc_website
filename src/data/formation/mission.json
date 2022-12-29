@@ -45,7 +45,7 @@
         "id": "mission4",
         "title": "Envie de créer votre entreprise ? Besoin de conseil en création ?",
         "content": {
-            "introduction": "Vous avez une idée, un projet innovant, mais encore des doutes sur sa faisabilité? Nous sommes là pour vous accompagner dans les différentes étapes nécessaires à la réalisation de votre projet:\n",
+            "title": "Vous avez une idée, un projet innovant, mais encore des doutes sur sa faisabilité? Nous sommes là pour vous accompagner dans les différentes étapes nécessaires à la réalisation de votre projet:\n",
             "icon": "BsClipboardCheck",
             "content": [
                 "Etudier sa faisabilité (vérification de l’étude de marché et du modèle économique…), prérequis indispensable à toute création de structure.",

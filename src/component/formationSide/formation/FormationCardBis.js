@@ -50,6 +50,8 @@ class FormationCardBis extends React.Component {
             isHovered: !this.state.isHovered,
         });
     }
+
+    // Use media and change style
     render() {
         const colorMap = generateColorMap(typeList)
         return (
@@ -64,34 +66,39 @@ class FormationCardBis extends React.Component {
                     }
                 > */}
                 {/* <a href={pdfMap[this.props.formation.id]} download style={{ font: "bold", color: "black", textDecoration: "none"}}> */}
+                
                 <Stack
                     direction="horizontal"
                     style={
                         this.state.isHovered
-                            ? {
+                            ?
+                            {
                                 backgroundColor: `${colorMap[this.props.formation.type][1]}`,
                                 boxShadow: "0px 3px 5px -1px rgb(0,0,0,20%), 0px 6px 10px 0px rgb(0,0,0,14%),0px 1px 18px 0px rgb(0,0,0,12%)",
                                 cursor: "pointer",
                                 margin: "0 1% 0 1%",
-                                height: "100px",
-                            } : {
+                                // height: "120px",
+                            }
+                            :
+                            {
                                 backgroundColor: "white",
                                 border: "1px solid lightgray ",
                                 borderRight: "none",
                                 borderLeft: "none",
                                 margin: "1px 10vw 1px 10vw",
+                                // height: "110px"
                             }
                     }
                     onMouseEnter={this.toggleIsHovered}
                     onMouseLeave={this.toggleIsHovered}
                     onClick={() => { this.props.setFormationClicked(this.props.formation) }}
                 >
-                    <Stack style={{ maxWidth: "200px", borderRight: `2px solid ${colorMap[this.props.formation.type][0]}`, borderBottom: `2px solid ${colorMap[this.props.formation.type][0]}` }}>
-                        <img src={imagesMap[this.props.formation.id]} style={{ width: "80%" }} alt={this.props.formation.nom} />
+                    <Stack style={{ width: "20vw", borderRight: `2px solid ${colorMap[this.props.formation.type][0]}`, borderBottom: `2px solid ${colorMap[this.props.formation.type][0]}` }}>
+                        <img src={imagesMap[this.props.formation.id]} style={{ width: "80%", height: "100%", objectFit: "cover" }} alt={this.props.formation.nom} />
                     </Stack>
-                    <Stack>
+                    <Stack style={{ justifyContent: "center", width: "80vw" }}>
                         <h5>{this.props.formation.nom}</h5>
-                        <Stack direction="horizontal" gap={3} style={{ justifyContent: "center" }}>
+                        <Stack direction="horizontal" gap={3} style={{ justifyContent: "center", alignItems: "center" }}>
                             <i className="bi bi-clock"> {this.props.formation.time}</i>
                             <i className="bi bi-bar-chart-fill"> {this.props.formation.level}</i>
                         </Stack>

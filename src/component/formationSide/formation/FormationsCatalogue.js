@@ -54,16 +54,14 @@ function FormationsCatalogue() {
 
     return (
         <div className="body">
-            <header className="is-sticky">
-                {/* <header ref={refHeader} className="test-sticky"> */}
-                {/* <header ref={refHeader} className="header-section d-none d-xl-block"> */}
+            <header className="buttons-sticky">
                 {types.map((type, index) => {
                     return (
                         <ButtonFormation type={type} color={type.couleur1} setTypeFiltered={changeTypeFilteredOn} key={`${index}Button`} />
                     )
                 })}
 
-                <div onClick={toggleShowDialog} style={{ cursor: "pointer" }}>Nous contacter</div>
+                <div onClick={toggleShowDialog} style={{ cursor: "pointer", margin: "1px 0px 0px 10px" }}>Nous contacter</div>
             </header>
             {
                 itemsToShow.map((formation, index) => {

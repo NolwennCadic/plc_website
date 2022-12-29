@@ -8,7 +8,7 @@ class PracticalInformationDisplay1 extends React.Component {//Should be Display1
     render() {
         return (
             <div>
-                <h3 style={{ marginTop: "20px", marginBottom: "40px" }}> Nous contacter: </h3>
+                <h3 style={{ marginTop: "20px", marginBottom: "40px" }}> Informations pratiques: </h3>
                 <div className="InfoMenu">
                     <div className="subPartInfoLine">
                         <div className="subpart-info-gray">

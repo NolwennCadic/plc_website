@@ -27,7 +27,7 @@ class PracticalInformationDisplay2 extends React.Component {//Should be Display1
         };
         return (
             <div>
-                <h3 style={{ marginTop: "20px", marginBottom: "40px" }}> Nous contacter: </h3>
+                <h3 style={{ marginTop: "20px", marginBottom: "40px" }}> Informations pratiques: </h3>
                 <div className="InfoMenu">
                     <div className="subpart-info-gray-line">
                         <BsPinMapFill onClick={this.props.setHasMap} className="InfoIconGreen" />

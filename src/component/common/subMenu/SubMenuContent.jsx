@@ -41,44 +41,53 @@ function SubMenuContent(props) {
             overflow: "hidden",
             height: "100%",
         }}>
-                    <div key={`contentSlide${index}`} className={"submenu-content"}>
-                        <div style={{ textAlign: "left", overflow: "auto" }} key={`subDiv${title}`}>
-                            <div className={"subMenu-title"} key={`title`}>{title}</div>
-                            {content.list ?
-                                //What changed?
-                                <div>
-                                    {content.introduction &&
-                                        <span key={`spanIntroduction${title}`}>{content.introduction}</span>}
-                                    <ul>
-                                        {content.list.map((subMenu, index) => {
-                                            return (<div className={"list-item"} key={`div${subMenu.title}${index}`}>
+            <div key={`contentSlide${index}`} className={"submenu-content"}>
+                <div style={{ textAlign: "left", overflow: "auto" }} key={`subDiv${title}`}>
+                    <div className={"subMenu-title"} key={`title`}>{title}</div>
+                    {content.list ?
+                        //What changed?
+                        <div>
+                            {content.introduction &&
+                                <span key={`spanIntroduction${title}`}>{content.introduction}</span>}
+                            <ul>
+                                {content.list.map((subMenu, index) => {
+                                    return (
+                                        <div style={{ marginTop: "5px" }} key={`div${subMenu.title}${index}`}>
+                                            <div style={{ marginTop: "5px", display: "inline-flex" }} >
                                                 {mapIcons[subMenu.icon]}
                                                 <div className={"list-title"} key={`title${subMenu.title}${index}`}>{subMenu.title}</div>
-                                                <div style={{ width: "80vw" }} key={`content${subMenu.title}${index}`}>{subMenu.content}</div>
-                                            </div>)
-                                        })}
-                                    </ul>
-                                </div>
-                                : content.content
-                                    ?
-                                    <ul style={{ margin: "10px" }}>
-                                        {content.content.map((line, index) => {
-
-                                            return (<li key={`line${title}${index}`}>{line}</li>)
-
-                                        })}
-                                    </ul>
-                                    : <ul style={{ margin: "10px" }}>
-                                        {content.map((line, index) => {
-
-                                            return (<li key={`line${title}${index}`}>{line}</li>)
-
-                                        })}
-                                    </ul>
-                            }
+                                            </div>
+                                            <div key={`content${subMenu.title}${index}`}>{subMenu.content}</div>
+                                        </div>)
+                                })}
+                            </ul>
                         </div>
+                        : content.content
+                            ?
+                            <div>
+                                {content.title && <div>{content.title}</div>}
+                                <ul style={{ margin: "10px" }}>
+                                    {content.content.map((line, index) => {
 
-                    </div>
+                                        return (<li key={`line${title}${index}`}>{line}</li>)
+
+                                    })}
+                                </ul>
+                            </div>
+                            : <div>
+                                {content.title && <div>{content.title}</div>}
+                                <ul style={{ margin: "10px" }}>
+                                    {content.map((line, index) => {
+
+                                        return (<li key={`line${title}${index}`}>{line}</li>)
+
+                                    })}
+                                </ul>
+                            </div>
+                    }
+                </div>
+
+            </div>
         </div>
     )
 }
