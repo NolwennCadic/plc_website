@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import formationList from "../../../data/formation/formationDetails.json";
 import ButtonFormation from "./ButtonFormation";
-import FormationCardBis from "./FormationCardBis";
+import FormationCard from "./FormationCard";
 import typeList from "../../../data/formation/formationTypes.json";
 import { Modal } from "react-bootstrap";
 import FormationPresentation from "./FormationPresentation";
@@ -66,7 +66,7 @@ function FormationsCatalogue() {
             {
                 itemsToShow.map((formation, index) => {
                     return (
-                        <FormationCardBis formation={formation} key={`formation${index}`} setFormationClicked={clickFormation} />
+                        <FormationCard formation={formation} key={`formation${index}`} setFormationClicked={clickFormation} />
                     )
                 })
             }

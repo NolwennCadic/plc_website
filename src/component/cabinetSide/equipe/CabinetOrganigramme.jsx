@@ -6,7 +6,7 @@ import { BsPeopleFill } from "react-icons/bs";
 import pouleImg from "../../../images/poule.jpg";
 import "./OrgChart.css";
 import chartImage from "../../../images/orgChart.svg";
-function SandBoxOrganigramme() {
+function CabinetOrganigramme() {
   // La poule pour papa
   const [isControlPressed, setIsControlPressed] = useState(false);
   const [showPoule, setShowPoule] = useState(false);
@@ -90,4 +90,4 @@ function SandBoxOrganigramme() {
   );
 }
 
-export default SandBoxOrganigramme;
+export default CabinetOrganigramme;
