@@ -23,7 +23,7 @@ class NavbarCustom extends React.Component {
                                 <Nav.Link href={"/formationMenu"}>Formations</Nav.Link>
                             </Nav>
                             <Nav>
-                                <Nav.Link href="/infosPratiques">Infos pratiques</Nav.Link>
+                                <Nav.Link href="/infosPratiques">Informations pratiques</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
