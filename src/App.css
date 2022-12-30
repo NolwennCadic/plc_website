@@ -44,8 +44,8 @@
 .bg {
   /* background-image: url("images/backgroundDark.svg"); */
   background-image: url("images/background_gray.svg");
-  margin-top: calc(20vh - 93px);
-  margin-bottom: calc(20vh - 93px);
+  margin-top: calc(20vh - 85px);
+  margin-bottom: calc(20vh - 85px);
   height: 60vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -55,8 +55,8 @@
 .bg-homepage {
   /* background-image: url("images/backgroundDark.svg"); */
   background-image: url("images/homepage/calculator-g0308dc4e4_1920.jpg");
-  margin-top: calc(20vh - 93px);
-  margin-bottom: calc(20vh - 64px);
+  margin-top: calc(20vh - 85px);
+  margin-bottom: calc(20vh - 60px);
   height: 60vh;
   background-position: center;
   background-repeat: no-repeat;

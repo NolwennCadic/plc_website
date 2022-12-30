@@ -2,6 +2,7 @@ import React from "react";
 import { Modal, Button } from 'react-bootstrap';
 import { isAddressEmailValid } from "../../../utils/sendEmailUtils";
 import ContactForm from "./ContactForm";
+import { SuccessContact } from "../Newsletter/successUI/SuccessContact";
 
 class DialogContactForm extends React.Component {
     constructor() {
@@ -18,12 +19,17 @@ class DialogContactForm extends React.Component {
                 lastNameError: "",
                 emailAddressError: "",
                 userMessageError: ""
-            }
+            },
+            showValidation: true,
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.checkFormErrors = this.checkFormErrors.bind(this);
         this.resetFormErrors = this.resetFormErrors.bind(this);
+    }
+
+    toggleShowValidation() {
+        this.setState({ showValidation: !this.state.showValidation });
     }
 
     handleSubmit(event) {
@@ -95,21 +101,27 @@ class DialogContactForm extends React.Component {
                 <Modal.Header closeButton>
                     <Modal.Title style={{ color: "#004C38" }}>Nous partager vos interrogations</Modal.Title>
                 </Modal.Header>
-                <div style={{ margin: "10px" }}>
-                    <ContactForm
-                        handleSubmit={this.handleSubmit}
-                        emailData={this.state.emailData}
-                        formErrors={this.state.formErrors}
-                        handleChange={this.handleChange}
-                        handleChangeCheck={this.handleChangeCheck}
-                    />
-                </div>
-                <Modal.Footer>
-                    {/* Do we need a "disabled" */}
-                    <Button onClick={this.handleSubmit} variant="primary" type="submit" style={{ backgroundColor: "#004C38", borderColor: "#004C38" }}>
-                        Envoyer
-                    </Button>
-                </Modal.Footer>
+                {this.state.showValidation
+                    ?
+                    <SuccessContact />
+                    : <>
+                        <div style={{ margin: "10px" }}>
+                            <ContactForm
+                                handleSubmit={this.handleSubmit}
+                                emailData={this.state.emailData}
+                                formErrors={this.state.formErrors}
+                                handleChange={this.handleChange}
+                                handleChangeCheck={this.handleChangeCheck}
+                            />
+                        </div>
+                        <Modal.Footer>
+                            {/* Do we need a "disabled" */}
+                            <Button onClick={this.handleSubmit} variant="primary" type="submit" style={{ backgroundColor: "#004C38", borderColor: "#004C38" }}>
+                                Envoyer
+                            </Button>
+                        </Modal.Footer>
+                    </>
+                }
             </Modal>
         )
     }
