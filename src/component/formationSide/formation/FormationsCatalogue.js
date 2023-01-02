@@ -73,7 +73,7 @@ function FormationsCatalogue() {
             {formationClicked !== undefined &&
                 <Modal size="lg" show={formationClicked !== undefined} onHide={() => { clickFormation(undefined) }}>
                     <Modal.Header closeButton />
-                    <FormationPresentation title={formationClicked.nom} content={formationClicked.content} type={typeList.filter(type => type.key === formationClicked.type)[0]} index={formationClicked.id} />
+                    <FormationPresentation title={formationClicked.name} content={formationClicked.content} type={typeList.filter(type => type.key === formationClicked.type)[0]} index={formationClicked.id} />
                 </Modal>
             }
             {showDialog &&
