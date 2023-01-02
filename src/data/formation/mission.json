@@ -53,5 +53,16 @@
                 "Développer, ensemble, l’argumentaire pour lever des fonds (bancaires, partenaires…)."
             ]
         }
+    },
+    {
+        "id": "mission5",
+        "title": "PLC vu par ses stagiaires",
+        "content": {
+            "title": "Informations recueillies auprès de nos stagiaires prouvant un service de qualité:",
+            "content": [
+                "Indice de satisfaction de la qualité globale de la formation dispensée: 100% en 2022",
+                "Indice de recommandation de l'organisme de formation PLC: 100% en 2022"
+            ]
+        }
     }
 ]
