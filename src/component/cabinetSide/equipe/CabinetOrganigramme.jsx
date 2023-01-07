@@ -63,7 +63,7 @@ function CabinetOrganigramme() {
           <div className={"diagram-legend-list"}>
             <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
               <div style={{ width: "20px", height: "20px", backgroundColor: "#333333", border: "3px solid lightGray", position: "relative", left: "10px" }} />
-              <span>Boss</span>
+              <span>Expert-comptable</span>
             </div>
             <div
               style={{ display: "flex", flexDirection: "row", gap: "10px" }}
