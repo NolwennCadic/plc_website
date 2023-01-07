@@ -24,8 +24,6 @@ const generateTemplateParams = (formData, isSubscription) => {
 export const sendEmail = (templateId, formData, isSubscription) => {
 
     const templateParams = generateTemplateParams(formData, isSubscription);
-
-    debugger
     emailjs.send('service_fytcwuj', templateId, templateParams, 'NemyqjKhTrRpF5wyx')
       .then((result) => {
           console.log(result.text);
@@ -33,6 +31,18 @@ export const sendEmail = (templateId, formData, isSubscription) => {
           console.log(error.text);
       });
   };
+
+  export const sendEmailContactForm = (templateId, formData) => {
+
+    debugger
+    emailjs.sendForm('service_fytcwuj', templateId, formData, 'NemyqjKhTrRpF5wyx')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
 
 export const isAddressEmailValid = (emailAddress) => {
     let emailAddressRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i;

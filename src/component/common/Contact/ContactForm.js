@@ -4,12 +4,9 @@ import { Row, Col } from "react-bootstrap";
 
 class ContactForm extends React.Component {
 
-    //TODO change template ID //SEE WITH NONO
-    templateId = 'template_yb6wolh';
-
     render() {
         return (
-            <Form onSubmit={this.props.handleSubmit}>
+            <Form id="contact-form">
             <Row className="mb-3">
               <Form.Group as={Col} controlId="firstName">
                 <Form.Control

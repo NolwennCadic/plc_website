@@ -34,7 +34,7 @@ export function Unsubscribe() {
             setUnsubscritionCompleted(true);
             let formData = document.getElementById("subscription-form");
             // TODO: uncomment line, for now commented to prevent sending emails and using monthly email quota
-            //sendEmail(templateId, formData, false);
+            sendEmail(templateId, formData, false);
         }
 
     }

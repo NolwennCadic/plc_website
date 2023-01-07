@@ -1,9 +1,11 @@
 import React from "react";
 import { Modal, Button } from 'react-bootstrap';
-import { isAddressEmailValid } from "../../../utils/sendEmailUtils";
+import { isAddressEmailValid, sendEmailContactForm } from "../../../utils/sendEmailUtils";
 import ContactForm from "./ContactForm";
 
 class DialogContactForm extends React.Component {
+
+    templateId = 'template_yb6wolh';
     constructor() {
         super();
         this.state = {
@@ -32,12 +34,12 @@ class DialogContactForm extends React.Component {
             event.preventDefault();
             this.setState({ formErrors: newErrors });
         } else {
+            debugger
+            let formData = document.getElementById("contact-form");
             this.resetFormErrors();
             // TODO: uncomment line, for now commented to prevent sending emails and using monthly email quota
-            // sendEmail(this.templateId, event.target);
-            console.log("Email sent!");
+            sendEmailContactForm(this.templateId, formData);
             //TODO. améliorer le message
-            alert("Merci d'avoir pris contact avec nous.");
         }
 
     }
