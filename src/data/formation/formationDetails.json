@@ -1,6 +1,6 @@
 [
     {
-        "nom": "Introduction à la comptabilité",
+        "name": "Introduction à la comptabilité",
         "shortDescription": "Formation ne nécessitant pas de notions de comptabilité",
         "type": 0,
         "time": "1 jour",
@@ -45,22 +45,22 @@
         ]
     },
     {
-        "nom": "Techniques comptables approfondies",
-        "shortDescription": "Cette formation s’adresse à toute personne ayant quelques notions de comptabilité.",
+        "name": "Techniques comptables approfondies",
+        "shortDescription": "Cette formation s’adresse à toute personne ayant quelques notions de comptabilité ou ayand suivi le module 1: \"initiation à la comptabilité\".",
         "type": 0,
         "time": "1 jour",
-        "level": "Débutant",
+        "level": "Intermédiaire",
         "id": 1,
         "content": [
             {
                 "title": "Introduction",
-                "content": "Cette formation a pour objectif d’expliquer le traitement de points particuliers. Voici une liste des possibilité. Elle n’est pas exhaustive et peut être personnalisée"
+                "content": "Cette formation a pour objectif d’expliquer le traitement de points particuliers. Voici une liste des possibilités. Elle n’est pas exhaustive et peut être personnalisée"
             },
             {
                 "title": "Programmes",
                 "content": [
                     {
-                        "title": "1) Créances et dettes en monnaies étrangères",
+                        "title": "1) Monnaies étrangères",
                         "content": [
                             "Principes généraux",
                             "Ecart de conversion à la clôture",
@@ -105,8 +105,8 @@
         ]
     },
     {
-        "nom": "Vérifier l'équilibre du bilan",
-        "shortDescription": "Formation nécessitant des notions de comptabilité",
+        "name": "Vérifier l'équilibre du bilan",
+        "shortDescription": "Cette formation s'adresse à toute personne",
         "type": 0,
         "time": "1 jour",
         "level": "Débutant",
@@ -154,11 +154,11 @@
         ]
     },
     {
-        "nom": "Analyser et exploiter le compte de résultat",
-        "shortDescription": "Formation nécessitant des notions de comptabilité",
+        "name": "Analyser et exploiter le compte de résultat",
+        "shortDescription": "Cette formation s'adresse à toute personne",
         "type": 0,
         "time": "1 jour",
-        "level": "Intermédiaire",
+        "level": "Débutant",
         "id": 3,
         "content": [
             {
@@ -217,11 +217,11 @@
         ]
     },
     {
-        "nom": "Analyse des coûts/démarche des coûts complets",
-        "shortDescription": "Formation nécessitant des connaissance du compte de résultat et de la notion de charges",
+        "name": "Calculs des coûts partiels",
+        "shortDescription": "Cette formation s'adresse à toute personne. Connaitre le compte de résultat et la notion de charges serait un plus",
         "type": 1,
         "time": "2 jours",
-        "level": "Tout niveaux",
+        "level": "Débutant ou intermédiaire",
         "id": 4,
         "content": [
             {
@@ -249,10 +249,7 @@
                         ]
                     },
                     {
-                        "title": "Notions de marge de sécurité, indice de sécurité",
-                        "content": [
-                            "Notions de coût d’achat, de coût de production, de coût hors production, de coût de revient des produits vendus"
-                        ]
+                        "title": "Notions de marge de sécurité, indice de sécurité"
                     },
                     {
                         "title": "Cas Pratiques"
@@ -262,11 +259,11 @@
         ]
     },
     {
-        "nom": "Analyse des coûts/démarche des coûts partiels",
-        "shortDescription": "Formation nécessitant des connaissance du compte de résultat et de la notion de charges",
+        "name": "Calculs des coûts complets",
+        "shortDescription": "Cette formation s'adresse à toute personne. Connaitre le compte de résultat et la notion de charges serait un plus",
         "type": 1,
         "time": "2 jours",
-        "level": "ASK",
+        "level": "Débutant ou intermédiaire",
         "id": 5,
         "content": [
             {
@@ -276,10 +273,17 @@
                         "title": "Le passage des charges aux coûts"
                     },
                     {
-                        "title": "Les charges fixes et les charges indirectes"
+                        "title": "Les charges directes et les charges indirectes"
                     },
                     {
                         "title": "Le rôle du processus de fabrication dans le calcul du coût de revient d’un produit",
+                        "content": [
+                            "Un calcul qui dépend du processus de fabrication",
+                            "La prise en compte des charges indirectes et directes"
+                        ]
+                    },
+                    {
+                        "title": "La démarche de calcul d'un coût de revient complet",
                         "content": [
                             "La répartition des charges indirectes sur les services",
                             "La répartition du coût des services sur les produits"
@@ -299,11 +303,11 @@
         ]
     },
     {
-        "nom": "Du résultat comptable au résultat fiscal/BIC",
-        "shortDescription": "Cette formation s’adresse à toute personne souhaitant maîtriser le passage du résultat comptable au résultat fiscal dans le cadre du régime BIC/IS.",
+        "name": "TVA intracommunautaire initiation",
+        "shortDescription": "Cette formation s’adresse à toute personne ayant des connaissances du principe générale de la TVA ",
         "type": 2,
         "time": "2 jours",
-        "level": "ASK",
+        "level": "Débutant",
         "id": 6,
         "content": [
             {
@@ -360,11 +364,11 @@
         ]
     },
     {
-        "nom": "TVA intracommunautaire initiation",
-        "shortDescription": "Cette formation s’adresse à toute personne ayant des connaissances du principe générale de la TVA ",
+        "name": "Du résultat comptable au résultat fiscal/BIC",
+        "shortDescription": "Cette formation s’adresse à toute personne souhaitant maîtriser le passage du résultat comptable au résultat fiscal dans le cadre du régime BIC/IS.",
         "type": 2,
         "time": "2 jours",
-        "level": "ASK",
+        "level": "Débutant ou intermédiaire",
         "id": 7,
         "content": [
             {
@@ -406,7 +410,7 @@
         ]
     },
     {
-        "nom": "Formation sur-mesure",
+        "name": "Formation sur-mesure",
         "shortDescription": "Formation adaptée à tous",
         "type": 3,
         "time": "Variable",

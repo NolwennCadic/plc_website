@@ -51,7 +51,7 @@ class FormationPresentation extends React.Component {
                                                                     return (
                                                                         <ul>
                                                                             {list.map((item) => {
-                                                                                return <li>{item}</li>
+                                                                                return <li key={`list${item}`}>{item}</li>
                                                                             })}
                                                                         </ul>
                                                                     )

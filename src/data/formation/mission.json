@@ -45,12 +45,23 @@
         "id": "mission4",
         "title": "Envie de créer votre entreprise ? Besoin de conseil en création ?",
         "content": {
-            "introduction": "Vous avez une idée, un projet innovant, mais encore des doutes sur sa faisabilité? Nous sommes là pour vous accompagner dans les différentes étapes nécessaires à la réalisation de votre projet:\n",
+            "title": "Vous avez une idée, un projet innovant, mais encore des doutes sur sa faisabilité? Nous sommes là pour vous accompagner dans les différentes étapes nécessaires à la réalisation de votre projet:\n",
             "icon": "BsClipboardCheck",
             "content": [
                 "Etudier sa faisabilité (vérification de l’étude de marché et du modèle économique…), prérequis indispensable à toute création de structure.",
                 "Faire le choix juridique, en respectant vos contraintes (conjoint, responsabilité, nombre de participants…) ainsi qu'en élaborant, ensemble, le montage financier (bilan,BFR..) pour travailler la présentation aux banques.",
                 "Développer, ensemble, l’argumentaire pour lever des fonds (bancaires, partenaires…)."
+            ]
+        }
+    },
+    {
+        "id": "mission5",
+        "title": "PLC vu par ses stagiaires",
+        "content": {
+            "title": "Informations recueillies auprès de nos stagiaires prouvant un service de qualité:",
+            "content": [
+                "Indice de satisfaction de la qualité globale de la formation dispensée: 100% en 2022",
+                "Indice de recommandation de l'organisme de formation PLC: 100% en 2022"
             ]
         }
     }

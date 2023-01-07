@@ -33,19 +33,18 @@ class EquipeCard extends React.Component {
             <div>
                 <div className={"container-card-equipe"}>
                     <div style={{ display: "flex", flexDirection: "column" }}>
-                        <div style={{ display: "flex", flexDirection: "row", height: "10vw" }}>
+                        <div className="card-container-top">
                             <div className={"container-photo-equipe"}>
                                 <div className={"ext-photo-equipe"}>
                                     <img src={memberMap[this.props.member.id]} className={"photo-equipe"} alt={this.props.member.nom} />
                                 </div>
                             </div>
-                            <div style={{ display: "flex", flexDirection: "column" }}>
-                                <h3 style={{ textAlign: "center" }}>{this.props.member.nom}</h3>
-                                <div style={{ display: "flex", flexDirection: "row" }}>
-                                    <BsLinkedin style={{ fontsize: "35px", marginTop: "12px" }} />
-                                    <Nav.Link href={this.props.member.linkedIn} className="InfoContentEquipe">{this.props.member.nom}</Nav.Link>
-                                </div>
-                            </div>
+                            {/* <div style={{ display: "flex", flexDirection: "column" }}> */}
+                                <h3 style={{ textAlign: "center", display: "flex", flexDirection: "row", alignItems: "center" }}>
+                                    {this.props.member.nom}
+                                    <Nav.Link href={this.props.member.linkedIn} className="InfoContentEquipe"><BsLinkedin style={{ fontsize: "30px", color: "black" }} /></Nav.Link>
+                                </h3>
+                            {/* </div> */}
                         </div>
                         <div style={{ display: "flex", flexDirection: "row", gap: "5px", marginBottom: "20px" }}>
                             <ButtonEquipeCard
@@ -66,14 +65,8 @@ class EquipeCard extends React.Component {
                                 Icon={BsPatchPlusFill}
                                 setPartShown={() => this.setPartShown("skills", 2)}
                             />
-                            {/* <button className={"button-equipe"} onClick={() => this.setPartShown("diploma")}><BsAwardFill className={"button-equipe-content"}/></button >
-                            <button className={"button-equipe"} onClick={() => this.setPartShown("experience")}><BsFillBriefcaseFill className={"button-equipe-content"}/></button >
-                            <button className={"button-equipe"} onClick={() => this.setPartShown("skills")}><BsPatchPlusFill className={"button-equipe-content"}/></button > */}
-                            {/* <button><BsAwardFill className={"button-equipe"} onClick={() => this.setPartShown("diploma")} /></button> */}
-                            {/* <BsFillBriefcaseFill className={"button-equipe"} onClick={() => this.setPartShown("experience")} /> */}
-                            {/* <BsPatchPlusFill className={"button-equipe"} onClick={() => this.setPartShown("skills")} /> */}
                         </div>
-                        <div style={{height: "100px", display: "flex", alignItems: "center"}}>
+                        <div style={{ height: "100px", display: "flex", alignItems: "center" }}>
                             {this.state.partShown === "diploma"
                                 ? <div className="flexEquipe">
                                     <ul>

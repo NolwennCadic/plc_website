@@ -5,7 +5,7 @@ import Menu from "../common/Menu";
 import { ReactComponent as Booksvg } from "../../images/icons/book-open.svg";
 import { ReactComponent as Groupsvg } from "../../images/icons/group.svg";
 import Histoire from "./Histoire/Histoire";
-import SandBoxOrganigramme from "./equipe/SandBoxOrganigramme";
+import CabinetOrganigramme from "./equipe/CabinetOrganigramme";
 
 const menuList = [
     "Histoire",
@@ -22,7 +22,7 @@ class ComptableMenu extends React.Component {
             <div>
                 <Menu mapMap={mapMap} menuList={menuList} />
                 <Histoire />
-                <SandBoxOrganigramme />
+                <CabinetOrganigramme />
             </div>
         )
     }

@@ -2,6 +2,7 @@ import React from "react";
 import { Modal, Button } from 'react-bootstrap';
 import { isAddressEmailValid, sendEmail } from "../../../utils/sendEmailUtils";
 import NewsletterSubscription from "./NewsletterSubscription";
+import { SuccessNewsletterSubscription } from "./successUI/SuccessNewsletterSubscription";
 
 class DialogNewsletter extends React.Component {
 
@@ -43,9 +44,9 @@ class DialogNewsletter extends React.Component {
         } else {
             this.resetFormErrors();
             let formData = document.getElementById("subscription-form");
+            // TODO: uncomment line, for now commented to prevent sending emails and using monthly email quota
             sendEmail(this.templateId, formData, true);
-            console.log("Email sent!");
-            alert("Vous venez de vous inscrire à la newsletter du cabinet PLC.");
+            this.toggleShowValidation();
         }
 
     }
@@ -95,27 +96,32 @@ class DialogNewsletter extends React.Component {
     //Ce composant devrait contenir les state pour le fermer --> Dialog est fait comme ça...
     render() {
         return (
-            <Modal show={this.props.showDialog} onHide={() => { this.props.setShowDialog() }} style={{width: "100%"}}>
+            <Modal show={this.props.showDialog} onHide={() => { this.props.setShowDialog() }} style={{ width: "100%" }}>
                 <Modal.Header closeButton>
                     <Modal.Title style={{ color: "#004C38" }}>S'inscrire à la newsletter</Modal.Title>
                 </Modal.Header>
-                <div style={{ margin: "10px" }}>
-                    <NewsletterSubscription
-                        type={"subscribe"}
-                        handleSubmit={this.handleSubmit}
-                        emailData={this.state.emailData}
-                        formErrors={this.state.formErrors}
-                        handleChange={this.handleChange}
-                        handleChangeCheck={this.handleChangeCheck}
-                    />
-                </div>
-                <Modal.Footer>
-                    <Button onClick={() => { this.props.setShowDialog() }} variant="secondary">Quitter</Button>
-                    {/* Devrait être sorti du composant --> Only need the formCheck --> Mais n'a pas de onClick pour le moment */}
-                    <Button onClick={this.handleSubmit} disabled={!this.state.emailData.formCheck} variant="primary" type="submit" style={{ backgroundColor: "#004C38", borderColor: "#004C38" }}>
-                        Envoyer
-                    </Button>
-                </Modal.Footer>
+                {this.state.showValidation ?
+                    <>
+                        <div style={{ margin: "10px" }}>
+                            <NewsletterSubscription
+                                type={"subscribe"}
+                                handleSubmit={this.handleSubmit}
+                                emailData={this.state.emailData}
+                                formErrors={this.state.formErrors}
+                                handleChange={this.handleChange}
+                                handleChangeCheck={this.handleChangeCheck}
+                            />
+                        </div>
+                        <Modal.Footer>
+                            <Button onClick={() => { this.props.setShowDialog() }} variant="secondary">Quitter</Button>
+                            {/* Devrait être sorti du composant --> Only need the formCheck --> Mais n'a pas de onClick pour le moment */}
+                            <Button onClick={this.handleSubmit} disabled={!this.state.emailData.formCheck} variant="primary" type="submit" style={{ backgroundColor: "#004C38", borderColor: "#004C38" }}>
+                                Envoyer
+                            </Button>
+                        </Modal.Footer>
+                    </>
+                  :  <SuccessNewsletterSubscription />
+                }
             </Modal>
         )
     }

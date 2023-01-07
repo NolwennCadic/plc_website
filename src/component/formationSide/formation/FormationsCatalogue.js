@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import formationList from "../../../data/formation/formationDetails.json";
 import ButtonFormation from "./ButtonFormation";
-import FormationCardBis from "./FormationCardBis";
+import FormationCard from "./FormationCard";
 import typeList from "../../../data/formation/formationTypes.json";
 import { Modal } from "react-bootstrap";
 import FormationPresentation from "./FormationPresentation";
 import DialogContactForm from "../../common/Contact/DialogContactForm";
-import { BsFillPencilFill } from "react-icons/bs";
 
 const hasKey = (items, key) => {
     let elements = items.filter(item => item.key === key);
@@ -55,28 +54,26 @@ function FormationsCatalogue() {
 
     return (
         <div className="body">
-            <header className="is-sticky">
-                {/* <header ref={refHeader} className="test-sticky"> */}
-                {/* <header ref={refHeader} className="header-section d-none d-xl-block"> */}
+            <header className="buttons-sticky">
                 {types.map((type, index) => {
                     return (
                         <ButtonFormation type={type} color={type.couleur1} setTypeFiltered={changeTypeFilteredOn} key={`${index}Button`} />
                     )
                 })}
 
-                <div onClick={toggleShowDialog} style={{ cursor: "pointer" }}><BsFillPencilFill /></div>
+                <div onClick={toggleShowDialog} style={{ cursor: "pointer", margin: "1px 0px 0px 10px" }}>Nous contacter</div>
             </header>
             {
                 itemsToShow.map((formation, index) => {
                     return (
-                        <FormationCardBis formation={formation} key={`formation${index}`} setFormationClicked={clickFormation} />
+                        <FormationCard formation={formation} key={`formation${index}`} setFormationClicked={clickFormation} />
                     )
                 })
             }
             {formationClicked !== undefined &&
                 <Modal size="lg" show={formationClicked !== undefined} onHide={() => { clickFormation(undefined) }}>
                     <Modal.Header closeButton />
-                    <FormationPresentation title={formationClicked.nom} content={formationClicked.content} type={typeList.filter(type => type.key === formationClicked.type)[0]} index={formationClicked.id} />
+                    <FormationPresentation title={formationClicked.name} content={formationClicked.content} type={typeList.filter(type => type.key === formationClicked.type)[0]} index={formationClicked.id} />
                 </Modal>
             }
             {showDialog &&

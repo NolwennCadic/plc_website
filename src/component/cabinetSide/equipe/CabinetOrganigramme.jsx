@@ -2,51 +2,15 @@
 // App.jsx
 // ...............................
 import React, { useEffect, useState } from "react";
-import OrgChart from "./OrgChart";
-import getData from "./getData";
 import { BsPeopleFill } from "react-icons/bs";
 import pouleImg from "../../../images/poule.jpg";
 import "./OrgChart.css";
-import chartImage from "../../../images/orgChart.png";
-function SandBoxOrganigramme() {
-  const [nodeDataArray, setData] = useState([]);
-  const [bShow, showBackButton] = useState(false);
-  const [arr, setBackNode] = useState([]);
-
-  useEffect(() => {
-    loadNodes(0); // load & show top nodes.
-  }, []);
-
-  function loadNodes(parentNode) {
-    arr.push(parentNode);
-    getData(parentNode) // <== ALL nodes in the database
-      .then((nodes) => {
-        setData(nodes); // replaces the nodeDataArray and re-trigger OrgChart's re-rendering.
-      });
-  }
-
-  function handleBackButtonClick(e) {
-    e.preventDefault();
-    arr.pop();
-    var parentKey = arr.pop();
-    loadNodes(parentKey); // restore view to parent node
-    if (arr.length < 2) showBackButton(false);
-  }
-
-  // This event is called by the child component OrgChart when the user
-  // double-clicked on a node.  We will find sub-branches for that node
-  // here and re-trigger the OrgChart display to show those sub-branches.
-  const onNodeClickHandler = (nodeKey) => {
-    // get sub-tree for this parent nodeKey
-    showBackButton(true);
-    loadNodes(nodeKey);
-  };
-
-
+import chartImage from "../../../images/orgChart.svg";
+function CabinetOrganigramme() {
   // La poule pour papa
   const [isControlPressed, setIsControlPressed] = useState(false);
   const [showPoule, setShowPoule] = useState(false);
-  const [hasSmallWindow, setHasSmallWindow] = useState(window.innerWidth < 890);
+  // const [hasSmallWindow, setHasSmallWindow] = useState(window.innerWidth < 890);
 
   const handleMouseEnter = (e) => {
     setShowPoule(isControlPressed);
@@ -56,9 +20,9 @@ function SandBoxOrganigramme() {
     setShowPoule(false);
   }
 
-  const updatePredicate = () => {
-    setHasSmallWindow(window.innerWidth < 890);
-  }
+  // const updatePredicate = () => {
+  //   setHasSmallWindow(window.innerWidth < 890);
+  // }
 
   // check size of window
   useEffect(() => {
@@ -75,7 +39,7 @@ function SandBoxOrganigramme() {
       }
     }, false);
 
-    window.addEventListener("resize", updatePredicate);
+    // window.addEventListener("resize", updatePredicate);
   })
 
 
@@ -116,31 +80,14 @@ function SandBoxOrganigramme() {
             </div>
           </div>
         </div>
-        {hasSmallWindow ?
           <img
             src={chartImage}
-            style={{ width: "60vw", height: "auto", backgroundColor: "white", marginTop: "10px" }}
+            className={"diagram-component"}
             alt={"organigramme de l'entreprise"}
           />
-          :
-          <div className="app-orgchart-container">
-            <div style={{ backgroundColor: "white", width: "180px", height: "84px", position: "absolute", zIndex: 5 }}></div>
-            {bShow && (
-              <button className="app-backbutton" onClick={handleBackButtonClick}>
-                {bShow && <span>BaxkIcon</span>}
-                {/* {bShow && <BackIcon className="app-backbutton" />} */}
-              </button>
-            )}
-            <p />
-            <OrgChart
-              nodeDataArray={nodeDataArray}
-              OnNodeClickEvent={onNodeClickHandler}
-            />
-          </div>
-        }
       </div>
     </div>
   );
 }
 
-export default SandBoxOrganigramme;
+export default CabinetOrganigramme;

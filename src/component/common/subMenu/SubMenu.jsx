@@ -15,6 +15,7 @@ import {
 import "./subMenu.css";
 import { ReactComponent as ChevronLeft } from "../../../images/icons/chevron-left.svg";
 import { ReactComponent as ChevronRight } from "../../../images/icons/chevron-right.svg";
+import SubMenuContent from "./SubMenuContent";
 
 
 let mapIcons = {
@@ -81,63 +82,10 @@ function SubMenu(props) {
                             style={{ transform: "scale(2)", cursor: "pointer" }}
                         />
                     </div>
-
-                    <div style={{
-                        width: "100%",
-                        overflow: "hidden",
-                        height: "100%",
-                    }}>
-                        <div style={{
-                            transform: `translateX(${-index * 50}vw)`,
-                            display: "inline-flex",
-                            transition: "transform 1s"
-                        }}>
-                            {inputData.map((slide, id) => {
-                                let title = slide.title;
-                                let content = slide.content;
-                                return (
-                                    <div key={`contentSlide${id}`} className={"submenu-content"}>
-                                        <div style={{ textAlign: "left", overflow: "auto" }} key={`subDiv${title}`}>
-                                            <div className={"subMenu-title"} key={`title`}>{title}</div>
-                                            {content.list ?
-                                                //What changed?
-                                                <div>
-                                                    {content.introduction &&
-                                                        <span key={`spanIntroduction${title}`}>{content.introduction}</span>}
-                                                    <ul>
-                                                        {content.list.map((subMenu, index) => {
-                                                            return (<div className={"list-item"} key={`div${subMenu.title}${index}`}>
-                                                                {mapIcons[subMenu.icon]}
-                                                                <div className={"list-title"} key={`title${subMenu.title}${index}`}>{subMenu.title}</div>
-                                                                <div style={{ width: "80vw" }} key={`content${subMenu.title}${index}`}>{subMenu.content}</div>
-                                                            </div>)
-                                                        })}
-                                                    </ul>
-                                                </div>
-                                                : content.content
-                                                    ?
-                                                    <ul style={{ margin: "10px" }}>
-                                                        {content.content.map((line, index) => {
-
-                                                            return (<li key={`line${title}${index}`}>{line}</li>)
-
-                                                        })}
-                                                    </ul>
-                                                    : <ul style={{ margin: "10px" }}>
-                                                        {content.map((line, index) => {
-
-                                                            return (<li key={`line${title}${index}`}>{line}</li>)
-
-                                                        })}
-                                                    </ul>
-                                            }
-                                        </div>
-
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
+                    <SubMenuContent
+                        inputData={inputData}
+                        index={index}
+                    />
                     <div style={{ width: "5vw" }}>
                         <ChevronRight
                             onClick={nextSlide}
