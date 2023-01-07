@@ -22,7 +22,7 @@ class DialogContactForm extends React.Component {
                 emailAddressError: "",
                 userMessageError: ""
             },
-            showValidation: true,
+            showValidation: false,
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);

@@ -101,6 +101,7 @@ class DialogNewsletter extends React.Component {
                     <Modal.Title style={{ color: "#004C38" }}>S'inscrire à la newsletter</Modal.Title>
                 </Modal.Header>
                 {this.state.showValidation ?
+                    <SuccessNewsletterSubscription /> :
                     <>
                         <div style={{ margin: "10px" }}>
                             <NewsletterSubscription
@@ -120,7 +121,6 @@ class DialogNewsletter extends React.Component {
                             </Button>
                         </Modal.Footer>
                     </>
-                  :  <SuccessNewsletterSubscription />
                 }
             </Modal>
         )
