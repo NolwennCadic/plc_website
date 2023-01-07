@@ -45,7 +45,7 @@ class DialogNewsletter extends React.Component {
             this.resetFormErrors();
             let formData = document.getElementById("subscription-form");
             // TODO: uncomment line, for now commented to prevent sending emails and using monthly email quota
-            // sendEmail(this.templateId, event.target); see with Nolwenn how to change that?
+            sendEmail(this.templateId, formData, true);
             this.toggleShowValidation();
         }
 
@@ -101,6 +101,7 @@ class DialogNewsletter extends React.Component {
                     <Modal.Title style={{ color: "#004C38" }}>S'inscrire à la newsletter</Modal.Title>
                 </Modal.Header>
                 {this.state.showValidation ?
+                    <SuccessNewsletterSubscription /> :
                     <>
                         <div style={{ margin: "10px" }}>
                             <NewsletterSubscription
@@ -120,7 +121,6 @@ class DialogNewsletter extends React.Component {
                             </Button>
                         </Modal.Footer>
                     </>
-                  :  <SuccessNewsletterSubscription />
                 }
             </Modal>
         )
