@@ -57,13 +57,13 @@ class App extends React.Component {
           />
         }
         <Routes>
-          <Route path='/cabinetMenu' element={<CabinetMenu />} />
-          <Route path='/customFormation' element={<CustomFormation />} />
-          <Route path='/formationsCatalogue' element={<FormationsCatalog />} />
-          <Route path='/formationDescription' element={<FormationDescription />} />
-          <Route path='/formationMenu' element={<FormationMenu />} />
+          <Route path='/menu-cabinet' element={<CabinetMenu />} />
+          <Route path='/formation-personnalisee' element={<CustomFormation />} />
+          <Route path='/catalogue-formations' element={<FormationsCatalog />} />
+          <Route path='/description-formation' element={<FormationDescription />} />
+          <Route path='/menu-formation' element={<FormationMenu />} />
           <Route exact path='/' element={<HomePage />} />
-          <Route path='/infosPratiques' element={<PracticalInformation />} />
+          <Route path='/infos-pratiques' element={<PracticalInformation />} />
           <Route path='/desinscription' element={<Unsubscribe />} />
         </Routes>
         {/* <BottomMessage /> */}

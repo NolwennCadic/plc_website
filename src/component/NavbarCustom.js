@@ -19,11 +19,11 @@ class NavbarCustom extends React.Component {
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
                                 {/* <Nav.Link onClick={() => this.setSubMenu("cabinet")}>Cabinet</Nav.Link> */}
-                                <Nav.Link href={"/cabinetMenu"}>Cabinet</Nav.Link>
-                                <Nav.Link href={"/formationMenu"}>Formations</Nav.Link>
+                                <Nav.Link href={"/menu-cabinet"}>Cabinet</Nav.Link>
+                                <Nav.Link href={"/menu-formation"}>Formations</Nav.Link>
                             </Nav>
                             <Nav>
-                                <Nav.Link href="/infosPratiques">Informations pratiques</Nav.Link>
+                                <Nav.Link href="/infos-pratiques">Informations pratiques</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
