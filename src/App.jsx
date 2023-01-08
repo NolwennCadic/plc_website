@@ -62,9 +62,9 @@ class App extends React.Component {
           <Route path='/catalogue-formations' element={<FormationsCatalog />} />
           <Route path='/description-formation' element={<FormationDescription />} />
           <Route path='/menu-formation' element={<FormationMenu />} />
+          <Route path='/desinscription' element={<Unsubscribe />} />
           <Route exact path='/' element={<HomePage />} />
           <Route path='/infos-pratiques' element={<PracticalInformation />} />
-          <Route path='/desinscription' element={<Unsubscribe />} />
         </Routes>
         {/* <BottomMessage /> */}
 

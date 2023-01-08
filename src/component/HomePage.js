@@ -6,7 +6,8 @@ class HomePage extends React.Component {
         return (
             <div className="body">
                 <div className="bg-homepage">
-                    <div style={{ position: "relative", left: "calc(100% - 30vw)" }}>
+                <div className={"txt-homepage"}>Votre expert-comptable à proximité d'Amiens</div>
+                    <div style={{ position: "absolute", right: 0 }}>
                         <img
                             src={logoQualiopi}
                             style={{ width: "30vw", height: "auto", backgroundColor: "white", border: "1px solid black" }}

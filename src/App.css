@@ -63,6 +63,38 @@
   background-size: cover;
   display: flex;
   flex-direction: row;
+  position: relative;
+}
+
+.txt-homepage {
+  font-size: 25px;
+  position: absolute;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: white;
+  width: 60vw;
+  left: 3px;
+}
+
+@media (max-width: 850px) {
+  .txt-homepage {
+    font-size: 20px;
+    position: absolute;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
+    width: 60vw;
+    left: 3px;
+  }
+}
+
+@media (max-width: 650px) {
+  .txt-homepage {
+    font-size: 15px;
+    position: absolute;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
+    width: 60vw;
+    left: 3px;
+  }
 }
 
 /* goJs */
