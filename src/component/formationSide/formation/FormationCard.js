@@ -94,10 +94,10 @@ class FormationCard extends React.Component {
                     onClick={() => { this.props.setFormationClicked(this.props.formation) }}
                 >
                     <Stack style={{ width: "20vw", borderRight: `2px solid ${colorMap[this.props.formation.type][0]}`, borderBottom: `2px solid ${colorMap[this.props.formation.type][0]}` }}>
-                        <img src={imagesMap[this.props.formation.id]} style={{ width: "80%", height: "100%", objectFit: "cover" }} alt={this.props.formation.nom} />
+                        <img src={imagesMap[this.props.formation.id]} style={{ width: "80%", height: "100%", objectFit: "cover" }} alt={this.props.formation.name} />
                     </Stack>
                     <Stack style={{ justifyContent: "center", width: "80vw" }}>
-                        <h5>{this.props.formation.nom}</h5>
+                        <h5>{this.props.formation.name}</h5>
                         <Stack direction="horizontal" gap={3} style={{ justifyContent: "center", alignItems: "center" }}>
                             <i className="bi bi-clock"> {this.props.formation.time}</i>
                             <i className="bi bi-bar-chart-fill"> {this.props.formation.level}</i>

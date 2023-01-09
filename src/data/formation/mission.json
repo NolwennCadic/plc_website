@@ -56,12 +56,12 @@
     },
     {
         "id": "mission5",
-        "title": "PLC vu par ses stagiaires",
+        "title": "Evaluation de la relation  avec nos entreprises/clients",
         "content": {
-            "title": "Informations recueillies auprès de nos stagiaires, prouvant un service de qualité:",
+            "title": "Voici quelques informations, recueillies auprès de nos clients, qui prouvent notre service de qualité:",
             "content": [
-                "Indice de satisfaction de la qualité globale de la formation dispensée: 100% en 2022",
-                "Indice de recommandation de l'organisme de formation PLC: 100% en 2022"
+                "Indice de satisfaction (satisfait ou très satisfait) de la qualité globale de la formation dispensée: 100 % en 2022",
+                "Indice de recommandation de l’organisme de formation PLC: 100% en 2022"
             ]
         }
     }
