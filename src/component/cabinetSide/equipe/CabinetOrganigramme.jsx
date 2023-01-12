@@ -74,10 +74,6 @@ function CabinetOrganigramme() {
               <div style={{ width: "20px", height: "20px", backgroundColor: "#333333", border: "3px solid lightCoral", position: "relative", left: "10px" }} />
               <span><span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Pole</span> Social</span>
             </div>
-            <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
-              <div style={{ width: "20px", height: "20px", backgroundColor: "#333333", border: "3px solid black", position: "relative", left: "10px" }} />
-              <span>Mi-temps comptabilité et social</span>
-            </div>
           </div>
         </div>
           <img
