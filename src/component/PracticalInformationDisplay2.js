@@ -62,7 +62,7 @@ class PracticalInformationDisplay2 extends React.Component {//Should be Display1
                     <div className="subPartInfoLine">
                         <div className="subpart-info-gray">
                             <BsFillInfoCircleFill className="InfoIconGreen" />
-                            <Nav.Link onClick={() => openInNewTab("https://www.societe.com/societe/p-l-c-498965763.html")} className="InfoContent">Renseignements juridiques</Nav.Link>
+                            <Nav.Link onClick={() => openInNewTab("https://www.societe.com/societe/plc-509593984.html")} className="InfoContent">Renseignements juridiques</Nav.Link>
                         </div>
                         <div className="subpart-info-green">
                             <BsLinkedin className="InfoIconGray" />

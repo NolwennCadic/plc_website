@@ -64,5 +64,14 @@
                 "Indice de recommandation de l’organisme de formation PLC: 100% en 2022"
             ]
         }
+    },
+    {
+        "id": "mission6",
+        "title": "Accessibilité",
+        "content": {
+            "content": [
+                "Notre structure s’est dotée d’une capacité à étudier au cas par cas les besoins spécifiques des candidats qui voudront postuler à une formation; elle est en mesure de  mobiliser les moyens nécessaires pour compenser les conséquences d’un handicap éventuel."
+            ]
+        }
     }
 ]

@@ -82,11 +82,13 @@ function SubMenu(props) {
                             style={{ transform: "scale(2)", cursor: "pointer" }}
                         />
                     </div>
-                    <SubMenuContent
-                        inputData={inputData}
-                        index={index}
-                    />
-                    <div style={{ width: "5vw" }}>
+                    <div style={{ width: "calc(70vw - 20px)", height: "100%"}}>
+                        <SubMenuContent
+                            inputData={inputData}
+                            index={index}
+                        />
+                    </div>
+                    <div style={{ width: "5vw", paddingRight: "10px" }}>
                         <ChevronRight
                             onClick={nextSlide}
                             style={{ transform: "scale(2)", cursor: "pointer" }}
