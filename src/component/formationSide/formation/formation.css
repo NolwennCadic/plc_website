@@ -30,3 +30,56 @@ input[type="text"].formation-body {
   gap: 5px;
   flex-wrap: wrap;
 }
+
+.formation-pres-card {
+  background-color: white;
+  box-shadow: 1px 1px #888888;
+  border-radius: 5% 3% 3% 3%;
+  box-shadow: inset 2px 2px 5px #b8b9be,
+    inset -3px -3px 7px #fff !important;
+  display: flex;
+  flex-direction: column;
+  width: 62vw;
+  height: 80%;
+  margin: 0 0 5vw 0;
+  padding: 5px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+
+  list-style-type: none;
+  margin: 5px 0;
+  padding: 0;
+
+  border: 1px solid grey;
+  width: 150px;
+}
+
+.menu > li {
+  margin: 0;
+
+  background-color: white;
+}
+
+.menu > li:hover {
+  background-color: lightgray;
+}
+
+.menu > li > button {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 5px;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+}

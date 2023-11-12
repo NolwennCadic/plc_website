@@ -58,7 +58,7 @@ class App extends React.Component {
         }
         <Routes>
           <Route path='/menu-cabinet' element={<CabinetMenu />} />
-          <Route path='/formation-personnalisee' element={<CustomFormation />} />
+          <Route path='/formation-personnalisee/:id' element={<CustomFormation index={0}/>} />
           <Route path='/catalogue-formations' element={<FormationsCatalog />} />
           <Route path='/description-formation' element={<FormationDescription />} />
           <Route path='/menu-formation' element={<FormationMenu />} />
