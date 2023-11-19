@@ -3,7 +3,7 @@
         "name": "Introduction à la comptabilité",
         "shortDescription": "Formation ne nécessitant pas de notions de comptabilité",
         "type": 0,
-        "time": "1 jour",
+        "time": "4 jours",
         "level": "Débutant",
         "id": 0,
         "content": [
@@ -46,9 +46,9 @@
     },
     {
         "name": "Techniques comptables approfondies",
-        "shortDescription": "Cette formation s’adresse à toute personne ayant quelques notions de comptabilité ou ayand suivi le module 1: \"initiation à la comptabilité\".",
+        "shortDescription": "Cette formation s’adresse à toute personne ayant des notions de comptabilité.",
         "type": 0,
-        "time": "1 jour",
+        "time": "2 jours",
         "level": "Intermédiaire",
         "id": 1,
         "content": [

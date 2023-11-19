@@ -3,7 +3,7 @@
         "nom": "Sabine Cadic",
         "diplomes": [
             {
-                "nom": "Expertise comptable",
+                "nom": "Diplôme d’expertise Comptable",
                 "date": "1997"
             }
         ],
@@ -34,6 +34,34 @@
         },
         "pathToImage": "../images/sabine.png",
         "linkedIn": "https://www.linkedin.com/in/sabine-cadic",
+        "id": 1
+    },
+    {
+        "nom": "Yann Cadic",
+        "diplomes": [
+            {
+                "nom": "Diplôme d’expertise Comptable",
+                "date": "1998"
+            }
+        ],
+        "experience": [
+            {
+                "nom": "Intégration de l’équipe formation",
+                "date": "2022 "
+            },
+            {
+                "nom": "Vacataire Cnam et IUT",
+                "date": "1995-2005"
+            }
+        ],
+        "qualite": [
+            "Expérience professionnelle",
+            "Compétences techniques",
+            "Capacité d’adaptation",
+            "Capacité d’analyse",
+            "A l’écoute"
+        ],
+        "pathToImage": "../images/sabine.png",
         "id": 1
     }
 ]
