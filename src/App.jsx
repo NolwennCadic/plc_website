@@ -15,6 +15,7 @@ import Footer from './component/Footer';
 import DialogNewsletter from './component/common/Newsletter/DialogNewsletter';
 import DialogContactForm from "./component/common/Contact/DialogContactForm";
 import { Unsubscribe } from './component/common/Newsletter/Unsubscribe';
+import QualiopiDisplay from './component/common/Qualiopi/QualiopiDisplay';
 
 class App extends React.Component {
   constructor() {
@@ -64,6 +65,7 @@ class App extends React.Component {
           <Route path='/menu-formation' element={<FormationMenu />} />
           <Route path='/desinscription' element={<Unsubscribe />} />
           <Route exact path='/' element={<HomePage />} />
+          <Route exact path='/qualiopi' element={<QualiopiDisplay />} />
           <Route path='/infos-pratiques' element={<PracticalInformation />} />
         </Routes>
         {/* <BottomMessage /> */}
