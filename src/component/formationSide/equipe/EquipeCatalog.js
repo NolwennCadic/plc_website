@@ -12,8 +12,6 @@ export function EquipeCatalog() {
     const goLeft = () => { setIndexMemberShown(indexMember => indexMember - 1) }
     const goRight = () => { setIndexMemberShown(indexMember => indexMember + 1) }
 
-    console.log(indexMemberShown)
-    console.log(team.length)
     return (
         <div>
             <div
@@ -27,29 +25,29 @@ export function EquipeCatalog() {
                 }}
                 id={"Equipe"}
             >
-                
-                <EquipeCard 
-                member={team[indexMemberShown]} 
-                key={`member${indexMemberShown}`} 
-                leftArrow={indexMemberShown > 0 ?
-                    <div>
-                        <ChevronLeft
-                            onClick={goLeft}
-                            style={{ transform: "scale(2)", cursor: "pointer" }}
-                        />
-                    </div>
-                    : <></>
-                }
-                rightArrow={indexMemberShown < team.length - 1 ?
-                    <div>
-                        <ChevronRight
-                            onClick={goRight}
-                            style={{ transform: "scale(2)", cursor: "pointer" }}
-                        />
-                    </div>
-                    : <></>
-                }/>
-                
+
+                <EquipeCard
+                    member={team[indexMemberShown]}
+                    key={`member${indexMemberShown}`}
+                    leftArrow={indexMemberShown > 0 ?
+                        <div>
+                            <ChevronLeft
+                                onClick={goLeft}
+                                style={{ transform: "scale(2)", cursor: "pointer" }}
+                            />
+                        </div>
+                        : <></>
+                    }
+                    rightArrow={indexMemberShown < team.length - 1 ?
+                        <div>
+                            <ChevronRight
+                                onClick={goRight}
+                                style={{ transform: "scale(2)", cursor: "pointer" }}
+                            />
+                        </div>
+                        : <></>
+                    } />
+
             </div>
         </div>
     )

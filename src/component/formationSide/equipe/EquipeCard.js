@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import member1 from "../../../images/sabine.jpg";
+import member2 from "../../../images/yann.jpg";
 import { BsAwardFill, BsFillBriefcaseFill, BsLinkedin, BsPatchPlusFill } from "react-icons/bs";
 import { Nav } from "react-bootstrap";
 import { ButtonEquipeCard } from "./ButtonEquipeCard";
 
 const memberMap = {
     1: member1,
+    2: member2,
 }
 export function EquipeCard(props) {
     const { member, leftArrow, rightArrow } = props
@@ -13,7 +15,6 @@ export function EquipeCard(props) {
     const [indexSelected, setIndexSelected] = useState(0);
 
     const changePartShown = (part, index) => {
-        console.log(" setPartShown index =", index);
         setPartShown(part);
         setIndexSelected(index);
     }

@@ -32,7 +32,6 @@
             "phrase": "Confronté à la roche, le ruisseau l'emporte toujours, non pas par la force, mais par la persévérance.",
             "auteur": "Confucius"
         },
-        "pathToImage": "../images/sabine.png",
         "linkedIn": "https://www.linkedin.com/in/sabine-cadic",
         "id": 1
     },
@@ -61,7 +60,6 @@
             "Capacité d’analyse",
             "A l’écoute"
         ],
-        "pathToImage": "../images/sabine.png",
-        "id": 1
+        "id": 2
     }
 ]
