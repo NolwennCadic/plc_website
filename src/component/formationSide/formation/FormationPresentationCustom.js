@@ -40,15 +40,15 @@ function FormationPresentationCustom(props) {
                 {content.map((submenu) => {
                     return (
                         <div key={`submenu${submenu.title}`} style={{ borderRight: `10px solid ${type.couleur2}`, borderLeft: `10px solid ${type.couleur2}` }}>
-                            <h2 style={{ color: type.couleur2 }} className={"formation-submenu-title"}>{submenu.title}</h2>
+                            <h2 style={{ color: type.couleur2, display: "flex", flexDirection: "column", alignContent: "flex-start", alignItems: "flex-start" }} className={"formation-submenu-title"}>{submenu.title}</h2>
                             {submenu.content.constructor === Array ?
-                                <div key={`submenuContent${submenu.title}`} className={"formation-submenu"}>
+                                <div key={`submenuContent${submenu.title}`} className={"formation-submenu"} style={{ display: "flex", flexDirection: "column", alignContent: "flex-start", alignItems: "flex-start" }}>
                                     {submenu.content.map((subsubmenu) => {
                                         if (subsubmenu.title) {
                                             return (
-                                                <div>
+                                                <div style={{ display: "flex", flexDirection: "column", alignContent: "flex-start", alignItems: "flex-start" }}>
                                                     <div className="bold">{subsubmenu.title}</div>
-                                                    <ul>
+                                                    <ul style={{ display: "flex", flexDirection: "column", alignContent: "flex-start", alignItems: "flex-start" }}>
                                                         {subsubmenu.content && subsubmenu.content.map((list) => {
                                                             if (list.constructor === Array) {
                                                                 return (

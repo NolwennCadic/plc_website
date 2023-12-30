@@ -1,10 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import formationList from "../../../data/formation/formationDetails.json";
 import ButtonFormation from "./ButtonFormation";
 import FormationCardBig from "./FormationCardBig";
 import typeList from "../../../data/formation/formationTypes.json";
-import { Modal } from "react-bootstrap";
-import FormationPresentation from "./FormationPresentation";
 import DialogContactForm from "../../common/Contact/DialogContactForm";
 
 const hasKey = (items, key) => {
@@ -51,6 +50,7 @@ function FormationsCatalogue() {
 
     const types = generateTypes(formationList, typeList).concat({ key: 5, type: "Tous", couleur1: "#e8eba9", couleur2: "##9e0e21" });
 
+    const navigate = useNavigate()
 
     return (
         <div className="body">
@@ -66,15 +66,9 @@ function FormationsCatalogue() {
             {
                 itemsToShow.map((formation, index) => {
                     return (
-                        <FormationCardBig formation={formation} key={`formation${index}`} setFormationClicked={clickFormation} />
+                        <FormationCardBig formation={formation} key={`formation${index}`} setFormationClicked={() => navigate(`/formation-personnalisee/${index}`)} />
                     )
                 })
-            }
-            {formationClicked !== undefined &&
-                <Modal size="lg" show={formationClicked !== undefined} onHide={() => { clickFormation(undefined) }}>
-                    <Modal.Header closeButton />
-                    <FormationPresentation title={formationClicked.name} content={formationClicked.content} type={typeList.filter(type => type.key === formationClicked.type)[0]} index={formationClicked.id} />
-                </Modal>
             }
             {showDialog &&
                 <DialogContactForm

@@ -3,7 +3,7 @@ import NavbarCustom from './component/NavbarCustom';
 
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './component/HomePage';
-import CustomFormation from './component/formationSide/formation/CustomFormation';
+import CustomFormationId from './component/formationSide/formation/CustomFormationId';
 import FormationsCatalog from './component/formationSide/formation/FormationsCatalogue';
 import FormationDescription from './component/formationSide/formation/FormationDescription';
 import FormationMenu from './component/formationSide/FormationMenu';
@@ -16,6 +16,7 @@ import DialogNewsletter from './component/common/Newsletter/DialogNewsletter';
 import DialogContactForm from "./component/common/Contact/DialogContactForm";
 import { Unsubscribe } from './component/common/Newsletter/Unsubscribe';
 import QualiopiDisplay from './component/common/Qualiopi/QualiopiDisplay';
+
 
 class App extends React.Component {
   constructor() {
@@ -59,14 +60,15 @@ class App extends React.Component {
         }
         <Routes>
           <Route path='/menu-cabinet' element={<CabinetMenu />} />
-          <Route path='/formation-personnalisee/:id' element={<CustomFormation index={0}/>} />
-          <Route path='/catalogue-formations' element={<FormationsCatalog />} />
+          <Route path='/formation-personnalisee/:id' element={<CustomFormationId index={0} />} />
+          <Route path='/formation-personnalisee' element={<FormationsCatalog />} />
           <Route path='/description-formation' element={<FormationDescription />} />
           <Route path='/menu-formation' element={<FormationMenu />} />
           <Route path='/desinscription' element={<Unsubscribe />} />
           <Route exact path='/' element={<HomePage />} />
           <Route exact path='/qualiopi' element={<QualiopiDisplay />} />
           <Route path='/infos-pratiques' element={<PracticalInformation />} />
+
         </Routes>
         {/* <BottomMessage /> */}
 
