@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ReactComponent as Cross } from "../../../images/icons/cross.svg";
 
 
@@ -43,6 +43,10 @@ function ButtonFormationClose(props) {
     const handleMouseLeave = () => {
         setButtonStyle(regularButton(color));
     }
+
+    useEffect(() => {
+        setButtonStyle(regularButton(color))
+    }, [color]);
     return (
         <button
             onClick={() => setTypeFiltered(type.key)}

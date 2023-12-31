@@ -10,17 +10,22 @@ import { ReactComponent as FilePen } from "../../../images/icons/file-pen.svg";
 // and if receive color than improved?
 function FilterMenu(props) {
     const [isOpen, setIsOpen] = useState(false);
-    let { types, onClickFunction, selectedType, isBig, onFilterClick, toggleShowDialog } = props;
+    let { types, onClickFunction, selectedType, resetSelectedType, isBig, onFilterClick, toggleShowDialog } = props;
     const togglemenu = () => {
         setIsOpen(b => !b);
         onFilterClick();
+        console.log("isOpen " + isOpen);
+        if (isOpen) resetSelectedType()
     };
+
+    console.log(selectedType);
 
     useEffect(() => {
         if (isOpen && !isBig) {
             setIsOpen(false)
         }
     }, [isBig, isOpen]);
+
     return (
         <div>
             <div style={{ display: "flex", flexDirection: "row", width: "100%", padding: "5px", alignItems: "center", justifyContent: "space-around" }}>
@@ -36,7 +41,7 @@ function FilterMenu(props) {
             {/* } */}
             {
                 isOpen && isBig ?
-                    <ul>
+                    <ul style={{ marginTop: "10px" }}>
                         {types.map((type, index) => {
                             return (
                                 <ButtonFormation type={type} color={type.couleur1} setTypeFiltered={() => onClickFunction(type)} key={`${index}Button`} />
@@ -47,8 +52,8 @@ function FilterMenu(props) {
             }
             {/* Ajouter une croix */}
             {
-                selectedType.type === "Tous" ?
-                    <></>
+                selectedType.type === "Tous"
+                    ? <></>
                     : <ButtonFormationClose type={selectedType} color={selectedType.couleur1} setTypeFiltered={() => onClickFunction(types.filter(t => t.type === "Tous")[0])} key={`selectedButton`} />
             }
         </div >

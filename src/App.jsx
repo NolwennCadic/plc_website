@@ -16,7 +16,7 @@ import DialogNewsletter from './component/common/Newsletter/DialogNewsletter';
 import DialogContactForm from "./component/common/Contact/DialogContactForm";
 import { Unsubscribe } from './component/common/Newsletter/Unsubscribe';
 import QualiopiDisplay from './component/common/Qualiopi/QualiopiDisplay';
-
+import NotFound from './component/common/NotFound';
 
 class App extends React.Component {
   constructor() {
@@ -68,7 +68,7 @@ class App extends React.Component {
           <Route exact path='/' element={<HomePage />} />
           <Route exact path='/qualiopi' element={<QualiopiDisplay />} />
           <Route path='/infos-pratiques' element={<PracticalInformation />} />
-
+          <Route path='/*' element={<NotFound />} />
         </Routes>
         {/* <BottomMessage /> */}
 

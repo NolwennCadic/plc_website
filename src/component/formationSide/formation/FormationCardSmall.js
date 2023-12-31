@@ -62,7 +62,7 @@ function FormationCardSmall(props) {
                     width: "40px",
                     height: (isBigAll && isHovered) ? "60px" : "50px",
                     opacity: isOpen ? "0.8" : "1",
-                    borderRadius: "10px 0 0 10px",                    
+                    borderRadius: "10px 0 0 10px",
                 }}
                 title={formation.name}
                 onMouseEnter={hoveringSmall} />
@@ -78,7 +78,7 @@ function FormationCardSmall(props) {
                         color: "black",
                         opacity: isOpen ? "0.8" : "1",
                         textDecoration: "none",
-                        transition: "width 0.1s",
+                        transition: "width 0.2s",
                     }}
                 >
                     {formation.name}

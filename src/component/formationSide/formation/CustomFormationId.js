@@ -65,6 +65,9 @@ function CustomFormationId(props) {
     // const types = generateTypes(formationList, typeList).concat({ key: 5, type: "Tous", couleur1: "#e8eba9", couleur2: "##9e0e21" }).filter(type => type.type !== selectedType);
     // calculate input:
 
+    const resetSelectedType = () => {
+        setSelectedType("Tous");
+    }
     return (
         <div className="body">
             <div style={{
@@ -78,11 +81,12 @@ function CustomFormationId(props) {
                     width: isPanelOpenAll ? "300px" : "50px",
                     overflow: "visible",
                     boxShadow: "10px 0 5px -2px #888",
-                    paddingRight: "5px"
+                    paddingRight: "5px",
+                    transition: "width 0.2s"
                 }}
                 >
                     <div style={{ width: "100%" }}>
-                        <FilterMenu types={types} onClickFunction={changeTypeFilteredOn} selectedType={completeSelectedType} isBig={isPanelOpenAll} onFilterClick={onFilterClick} toggleShowDialog={toggleShowDialog} />
+                        <FilterMenu types={types} onClickFunction={changeTypeFilteredOn} selectedType={completeSelectedType} resetSelectedType={resetSelectedType} isBig={isPanelOpenAll} onFilterClick={onFilterClick} toggleShowDialog={toggleShowDialog} />
                     </div>
                     <div style={{ width: "250px", zIndex: 10 }}>
                         {
@@ -95,16 +99,6 @@ function CustomFormationId(props) {
                     </div>
                 </div>
                 <div
-                    // style={{
-                    //     width: "20px",
-                    //     height: "50px",
-                    //     padding: "1px",
-                    //     cursor: "pointer",
-                    //     border: "1px solid black",
-                    //     borderRadius: "0 5px 5px 0",
-                    //     backgroundColor: "white"
-
-                    // }}
                     className="button-panel-formation"
                     onClick={onChevronClick}
                 >
