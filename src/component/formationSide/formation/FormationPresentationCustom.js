@@ -27,7 +27,7 @@ function FormationPresentationCustom(props) {
     let { formation, type } = props
     let title = formation.name
     let content = formation.content
-    let index = formation.index
+    let index = formation.id
     //props: title
     //props: content
     //props: type
@@ -36,19 +36,19 @@ function FormationPresentationCustom(props) {
         <div key={`main${title}`}>{
             content &&
             <div key={`content${title}`} style={{ margin: "2%" }}>
-                <h1 style={{ color: type.couleur1 }} className={"formation-title"}>{title}</h1>
+                <h1 key={`contenth1${title}`} style={{ color: type.couleur1 }} className={"formation-title"}>{title}</h1>
                 {content.map((submenu) => {
                     return (
                         <div key={`submenu${submenu.title}`} style={{ borderRight: `10px solid ${type.couleur2}`, borderLeft: `10px solid ${type.couleur2}` }}>
-                            <h2 style={{ color: type.couleur2, display: "flex", flexDirection: "column", alignContent: "flex-start", alignItems: "flex-start" }} className={"formation-submenu-title"}>{submenu.title}</h2>
+                            <h2 key={`submenuh2${submenu.title}`} style={{ color: type.couleur2, display: "flex", flexDirection: "column", alignContent: "flex-start", alignItems: "flex-start" }} className={"formation-submenu-title"}>{submenu.title}</h2>
                             {submenu.content.constructor === Array ?
                                 <div key={`submenuContent${submenu.title}`} className={"formation-submenu"} style={{ display: "flex", flexDirection: "column", alignContent: "flex-start", alignItems: "flex-start" }}>
                                     {submenu.content.map((subsubmenu) => {
                                         if (subsubmenu.title) {
                                             return (
-                                                <div style={{ display: "flex", flexDirection: "column", alignContent: "flex-start", alignItems: "flex-start" }}>
-                                                    <div className="bold">{subsubmenu.title}</div>
-                                                    <ul style={{ display: "flex", flexDirection: "column", alignContent: "flex-start", alignItems: "flex-start" }}>
+                                                <div key={`subsubmenuBox${subsubmenu.title}`} style={{ display: "flex", flexDirection: "column", alignContent: "flex-start", alignItems: "flex-start" }}>
+                                                    <div key={`subsubmenuTitle${subsubmenu.title}`} className="bold">{subsubmenu.title}</div>
+                                                    <ul key={`subsubmenuList${subsubmenu.title}`} style={{ display: "flex", flexDirection: "column", alignContent: "flex-start", alignItems: "flex-start" }}>
                                                         {subsubmenu.content && subsubmenu.content.map((list) => {
                                                             if (list.constructor === Array) {
                                                                 return (
@@ -59,14 +59,14 @@ function FormationPresentationCustom(props) {
                                                                     </ul>
                                                                 )
                                                             } else {
-                                                                return <li>{list}</li>
+                                                                return <li key={`list${list}`}>{list}</li>
                                                             }
                                                         })}
                                                     </ul>
                                                 </div>
                                             )
                                         } else
-                                            return <div style={{ margin: "5px 0 10px 0" }}>{subsubmenu.content}</div>
+                                            return <div key={`nosubsubmenu${subsubmenu.content}`} style={{ margin: "5px 0 10px 0" }}>{subsubmenu.content}</div>
                                     })
                                     }
                                 </div>
@@ -84,10 +84,10 @@ function FormationPresentationCustom(props) {
                 }
             </div>
         }
-            <div style={{ textAlign: "center", width: "100%", padding: "1% 0 1% 0", border: "1px solid lightGray" }}>
+            <div key={"boxDownload"} style={{ textAlign: "center", width: "100%", padding: "1% 0 1% 0", border: "1px solid lightGray" }}>
                 {/* <a href={pdfMap[index]} download style={{ font: "bold", color: type.couleur1, textDecoration: "none" }}> */}
-                <a href={pdfMap[index]} download>
-                    <button type="button" className="btn btn" style={{ backgroundColor: type.couleur1, color: "white" }}>
+                <a key={"aDownload"} href={pdfMap[index]} download>
+                    <button key={"buttonDownload"} type="button" className="btn btn" style={{ backgroundColor: type.couleur1, color: "white" }}>
                         <BsDownload style={{ fontSize: "30px" }} />
                         {/* <BsDownload style={{ fontSize: "30px", paddingRight: "5px" }} /> */}
                         {/* Telecharger la fiche */}

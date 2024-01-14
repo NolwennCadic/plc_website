@@ -55,6 +55,7 @@ function FormationCardSmall(props) {
             onMouseEnter={hoveringAllIn}
         >
             <div
+                key={`box${formationKey}`}
                 style={{
                     borderStyle: "solid",
                     borderColor: `${colorMap[formation.type][0]}`,
@@ -68,6 +69,7 @@ function FormationCardSmall(props) {
                 onMouseEnter={hoveringSmall} />
             {
                 (isBigAll || isHovered) ? <div
+                    key={`boxRight${formationKey}`}
                     style={{
                         borderStyle: "solid",
                         borderColor: `${colorMap[formation.type][0]}`,
@@ -82,7 +84,7 @@ function FormationCardSmall(props) {
                     }}
                 >
                     {formation.name}
-                </div> : <div style={{ width: "0px" }}></div>
+                </div> : <div key={`boxRightHidden${formationKey}`} style={{ width: "0px" }}></div>
             }
         </a>
     )
