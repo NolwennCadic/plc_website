@@ -118,6 +118,21 @@ code {
     -5px -5px 10px #ffffff;
 }
 
+.subpart-home-gray {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 3vw 10px 3vw;
+  background-color: #E7E6E6;
+  height: auto;
+  color: #004C38;
+  border-radius: 0.5em;
+  min-height: 20vh;
+  box-shadow: 5px 5px 10px #a4a4a4,
+    -5px -5px 10px #ffffff;
+}
+
 .InfoIconGreen {
   font-size: 25px;
   /* width: 500px; */

@@ -40,6 +40,7 @@ class PracticalInformationDisplay1 extends React.Component {//Should be Display1
                         <div className="subpart-info-gray">
                             <BsFillInfoCircleFill className="InfoIconGreen" />
                             <Nav.Link href={"https://www.societe.com/societe/plc-509593984.html"} className="InfoContent">Renseignements juridiques</Nav.Link>
+                            <Nav.Link href={"/qualiopi"} className="InfoContent">Accéder au certificat</Nav.Link>
                         </div>
                     </div>
                     <div className="subpart-info-gray-line">

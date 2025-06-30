@@ -36,6 +36,10 @@ class DialogNewsletter extends React.Component {
         this.setState({ showValidation: !this.state.showValidation });
     }
 
+    // I should close the form? --> I need to have the feedback that it went well
+    // --> a status
+    // What is the library we are using?
+    // 
     handleSubmit(event) {
         const newErrors = this.checkFormErrors();
         if (Object.keys(newErrors).length > 0) {
@@ -45,6 +49,7 @@ class DialogNewsletter extends React.Component {
             this.resetFormErrors();
             let formData = document.getElementById("subscription-form");
             // TODO: uncomment line, for now commented to prevent sending emails and using monthly email quota
+            // How do 
             sendEmail(this.templateId, formData, true);
             this.toggleShowValidation();
         }
