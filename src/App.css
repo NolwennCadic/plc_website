@@ -75,23 +75,52 @@
   left: 3px;
 }
 .qualiopo-outer-homepage{
-    width: 20vw;
+    width: 25vw;
     cursor: pointer;
     margin: 2vw;
   }
 
   .qualiopo-logo-homepage{
-    width: 20vw;
+    width: 25vw;
   }
   .qualiopo-text-homepage{
     font-family: Arial;
     color: #000091;
     background: #d9d7d8;
-    width: 20vw;
-    font-size: smaller;
+    width: 25vw;
+    font-size: small;
   }
 
 @media (max-width: 850px) {
+  .txt-homepage {
+    font-size: 40px;
+    position: absolute;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
+    width: 60vw;
+    left: 3px;
+  }
+
+  .qualiopo-outer-homepage{
+    width: 30vw;
+    cursor: pointer;
+    margin: 4vw;
+  }
+
+  .qualiopo-logo-homepage{
+    width: 30vw;
+  }
+
+  .qualiopo-text-homepage{
+    font-family: Arial;
+    color: #000091;
+    background: #d9d7d8;
+    width: 30vw;
+    font-size: x-small;
+  }
+}
+
+@media (max-width: 650px) {
   .txt-homepage {
     font-size: 30px;
     position: absolute;
@@ -99,52 +128,24 @@
     color: white;
     width: 60vw;
     left: 3px;
+    top: 10px;
   }
 
   .qualiopo-outer-homepage{
-    width: 20vw;
+    width: 30vw;
     cursor: pointer;
-    margin: 2vw;
+    margin: 8vh 3vw;
   }
 
   .qualiopo-logo-homepage{
-    width: 20vw;
+    width: 30vw;
   }
 
   .qualiopo-text-homepage{
     font-family: Arial;
     color: #000091;
     background: #d9d7d8;
-    width: 20vw;
-    font-size: x-small;
-  }
-}
-
-@media (max-width: 650px) {
-  .txt-homepage {
-    font-size: 20px;
-    position: absolute;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    color: white;
-    width: 60vw;
-    left: 3px;
-  }
-
-  .qualiopo-outer-homepage{
-    width: 25vw;
-    cursor: pointer;
-    margin: 2vw;
-  }
-
-  .qualiopo-logo-homepage{
-    width: 25vw;
-  }
-
-  .qualiopo-text-homepage{
-    font-family: Arial;
-    color: #000091;
-    background: #d9d7d8;
-    width: 25vw;
+    width: 30vw;
     font-size: xx-small;
   }
 }
